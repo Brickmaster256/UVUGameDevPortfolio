@@ -161,6 +161,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8172812278707847301}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: LeverTrigger
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2266062341461272874
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673784839588720633}
+  - component: {fileID: 8172812278707847301}
   m_Layer: 0
   m_Name: LeverPivot
   m_TagString: Untagged
@@ -185,14 +198,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2266062341461272874}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7660445, y: 0, z: 0, w: 0.64278764}
+  m_LocalRotation: {x: -0.6499563, y: -0, z: -0, w: 0.7599717}
   m_LocalPosition: {x: 0, y: 0.01, z: 0.006}
   m_LocalScale: {x: 0.39249, y: 0.313, z: 2.9371345}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8044880449644932943}
   m_Father: {fileID: 4070315348210561950}
-  m_LocalEulerAnglesHint: {x: -100, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -81.077, y: 0, z: 0}
+--- !u!95 &8172812278707847301
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266062341461272874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d81aba20a095bf45a593cb287952371, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4987660213194089020
 GameObject:
   m_ObjectHideFlags: 0
