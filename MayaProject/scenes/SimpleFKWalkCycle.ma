@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SimpleFKWalkCycle.ma
-//Last modified: Fri, Oct 03, 2025 09:55:00 AM
+//Last modified: Fri, Oct 03, 2025 10:01:49 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_FK_v1_0_1" -rfn "Ultimate_Walker_FK_v1_0_1RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/mcama/Documents/UVUProjects/UVUGameDevPortfolio/MayaProject//scenes/Ultimate_Walker_FK_v1.0.1.ma";
@@ -16,16 +16,16 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "E5707106-416D-A895-462C-6C9BAF96DC7E";
+fileInfo "UUID" "567F1FC8-4757-0CF2-8492-639269F49785";
 createNode transform -s -n "persp";
 	rename -uid "6C377CBA-43DB-3F50-CF70-5F84AF103BA4";
-	setAttr ".t" -type "double3" 12.272994152424218 2.775583793736959 0.26607240383062614 ;
+	setAttr ".t" -type "double3" 9.0459426054462888 2.4728773922628311 2.2982552196770936 ;
 	setAttr ".r" -type "double3" -4.5383527405424084 842.20000000074015 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1BA21C68-4D21-8DD4-297D-1AB9BF01132E";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.541008960690386;
+	setAttr ".coi" 8.7154031460032968;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -606,7 +606,7 @@ createNode animCurveTA -n "walker_rt_ball_fk_ctrl_rotateZ";
 	setAttr -s 9 ".kox[8]"  1;
 	setAttr -s 9 ".koy[8]"  0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "CDD41986-4C79-9D8F-01CA-C4B316C1EF85";
+	rename -uid "FD86F132-4579-9924-BB80-B7B522843417";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 23;
