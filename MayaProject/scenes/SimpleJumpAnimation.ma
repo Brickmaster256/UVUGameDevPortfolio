@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SimpleJumpAnimation.ma
-//Last modified: Sun, Oct 12, 2025 06:59:06 PM
+//Last modified: Sun, Oct 12, 2025 07:11:47 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/mcama/Documents/UVUProjects/UVUGameDevPortfolio/MayaProject//scenes/Ultimate_Bony_v1.0.5.ma";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "5BA421F8-473C-109D-2699-5F9C91E72534";
+fileInfo "UUID" "03C91D91-4409-EF40-E946-95A713F1A622";
 createNode transform -s -n "persp";
 	rename -uid "CF2EC896-4ED0-14D6-2876-D3B7CADBF122";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -25.104219961110342 8.5440397314831849 40.730040379781769 ;
+	setAttr ".t" -type "double3" -15.293291887373428 7.2765033771330314 25.150550989550194 ;
 	setAttr ".r" -type "double3" -3.938352725956801 687.79999999995277 2.3491641808131346e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E7376648-44EB-347A-2606-C3A22B678E1C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 44.821869662000921;
+	setAttr ".coi" 26.367020766982129;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1126,11 +1126,11 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min -2 -max 72 -ast -2 -aet 200 ";
 	setAttr ".st" 6;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "AF932416-4423-E7A7-5A4A-0CA5FE3222C9";
+	rename -uid "98E70C04-49F4-57E1-7288-C28CD12FF7E5";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 72;
-	setAttr ".unw" 72;
+	setAttr ".o" 23;
+	setAttr ".unw" 23;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
