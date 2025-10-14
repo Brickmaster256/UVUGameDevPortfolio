@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: CoinObject.ma
-//Last modified: Mon, Oct 13, 2025 01:24:10 PM
+//Last modified: Mon, Oct 13, 2025 10:13:40 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "ShaderfxGameHair" "shaderFXPlugin" "1.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A8E82D11-4B70-E53E-5381-618DF2FA299C";
+fileInfo "UUID" "E10135D6-4A95-072A-306C-24AA472C238D";
 createNode transform -s -n "persp";
 	rename -uid "C9C31A53-4C75-1A33-80E6-779263E0B93C";
 	setAttr ".v" no;
@@ -890,10 +890,10 @@ createNode shadingEngine -n "lambert2SG";
 createNode materialInfo -n "materialInfo2";
 	rename -uid "1425799B-44A1-E282-848A-F1B3FF05B03C";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "D1A1CA2B-45CF-4AA2-BCEE-ECB631EE1FFA";
+	rename -uid "91216391-4F88-2528-35F4-FEB8FD978769";
 	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "8D1AA8D6-4515-154A-5107-BBB093971821";
+	rename -uid "7A5FDE78-4C2C-DA84-DBD1-BF98CB3CFA96";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -68.210074142291433 -483.39988068452811 ;
 	setAttr ".tgi[0].vh" -type "double2" 138.87118926224167 112.59009691876223 ;
