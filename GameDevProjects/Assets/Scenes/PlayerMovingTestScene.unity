@@ -158,6 +158,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 4
   gravity: -9.81
+  is3D: 1
 --- !u!143 &13139035
 CharacterController:
   m_ObjectHideFlags: 0
