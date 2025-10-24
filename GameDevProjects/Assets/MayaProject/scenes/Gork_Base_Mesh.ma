@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Gork_Base_Mesh.ma
-//Last modified: Fri, Oct 24, 2025 10:40:24 AM
+//Last modified: Fri, Oct 24, 2025 11:16:23 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "0C5FEBA9-4A7B-8FA4-C67C-4789D8D41151";
+fileInfo "UUID" "4FD0F7A4-45C4-0BA4-2169-EBBFB35D6A86";
 createNode transform -s -n "persp";
 	rename -uid "679BCBBB-4E81-8825-A4B0-E2822FDB13AF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.287639551527295 6.2772490218130947 23.23497039982762 ;
-	setAttr ".r" -type "double3" -7.5383527296024706 27.400000000000016 -4.4780631405915365e-16 ;
+	setAttr ".t" -type "double3" -20.62329587293798 15.107783669528871 30.177689927518625 ;
+	setAttr ".r" -type "double3" -18.938352729602439 -36.200000000000053 9.853504049703304e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7A7C1B65-4B4F-CF1E-898F-BCABF82CEFF1";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 25.96704153244545;
+	setAttr ".coi" 37.365213643657817;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -13353,9 +13353,6 @@ createNode lambert -n "Gork_Base_Mesh:initialShadingGroup1";
 	rename -uid "C92F8D34-4FE9-70BF-7113-7783121D7E6C";
 	setAttr ".rfi" 0;
 	setAttr ".c" -type "float3" 0 0 0 ;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "84B9C8DD-4080-9221-BDE5-E49A78130743";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "69835677-4B1E-7625-5006-84A9F1428490";
 	setAttr ".b" -type "string" (
@@ -13407,6 +13404,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "DE92169B-4BAD-A78F-A150-FBB2AFA8C7C5";
 	setAttr ".b" -type "string" "playbackOptions -min -2 -max 24 -ast -2 -aet 134 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "9C45FF8E-43AB-98A1-6CDA-8685FF893358";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
