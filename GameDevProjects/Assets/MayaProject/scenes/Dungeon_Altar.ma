@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Dungeon_Altar.ma
-//Last modified: Thu, Oct 30, 2025 12:03:03 PM
+//Last modified: Thu, Oct 30, 2025 12:07:36 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "2DB4DCDB-4ABD-F9BF-2662-B3972AF5FA61";
+fileInfo "UUID" "F13BCD60-4305-8A2C-1624-878950BF47C2";
 createNode transform -s -n "persp";
 	rename -uid "83AFC903-4AD9-0048-AB4A-CB9A1DCC451D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -923.33922255497305 331.13406009120644 -183.87021314441111 ;
-	setAttr ".r" -type "double3" -6.9383527289626485 -462.9999999996628 0 ;
+	setAttr ".t" -type "double3" -921.32848458782985 399.38909196352233 -137.07880883842105 ;
+	setAttr ".r" -type "double3" -11.738352728962351 -459.79999999966242 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "25968E6F-4C2C-13C4-EB6B-33B994044FE3";
 	setAttr -k off ".v" no;
@@ -2365,7 +2365,7 @@ createNode polyBevel3 -n "polyBevel13";
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "0181995D-4978-0892-9D4A-7EB01979B9B6";
+	rename -uid "B20ABF26-4E76-61B2-A971-9DA515E4B79B";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
