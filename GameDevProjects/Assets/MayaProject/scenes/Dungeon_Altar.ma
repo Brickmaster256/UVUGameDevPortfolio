@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Dungeon_Altar.ma
-//Last modified: Thu, Oct 30, 2025 06:49:02 PM
+//Last modified: Thu, Oct 30, 2025 07:00:59 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "680DBFB3-4C55-290B-E141-68AF37426AF9";
+fileInfo "UUID" "53C92F72-452D-F4FF-713F-61BB0BB1D4D7";
 createNode transform -s -n "persp";
 	rename -uid "83AFC903-4AD9-0048-AB4A-CB9A1DCC451D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 869.75336032824782 848.72257816508159 479.41852559010579 ;
-	setAttr ".r" -type "double3" -30.338352731917137 1864.2000000000362 0 ;
+	setAttr ".t" -type "double3" -1069.0697476222258 268.435455020419 481.9316738034936 ;
+	setAttr ".r" -type "double3" 0.26164726812762568 1732.2000000000005 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "25968E6F-4C2C-13C4-EB6B-33B994044FE3";
 	setAttr -k off ".v" no;
@@ -8358,7 +8358,7 @@ createNode polyTweakUV -n "polyTweakUV35";
 		 0.1951372 -0.073091239 0.70604879 0.49448135 0.37818876 0.48922864 0.37938502 0.44201767
 		 0.39325914 0.1265533 0.70647812 0.49886927 0.37762108 0.51870775 0.39119738;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "87A1794D-4508-84F9-2764-86867B049091";
+	rename -uid "33422285-4B96-3500-697D-33883F76752C";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
