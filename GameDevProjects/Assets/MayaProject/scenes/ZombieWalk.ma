@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: ZombieWalk.ma
-//Last modified: Sun, Nov 02, 2025 04:29:13 PM
+//Last modified: Mon, Nov 03, 2025 07:55:56 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/mcama/Documents/UVUProjects/UVUGameDevPortfolio/GameDevProjects/Assets/MayaProject//scenes/Ultimate_Bony_v1.0.5.ma";
@@ -21,17 +21,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "128F92E9-4767-7C86-9CDC-1AABFCAF286E";
+fileInfo "UUID" "88462E47-48FD-822E-139E-BF9E151FDB8C";
 createNode transform -s -n "persp";
 	rename -uid "62011BA1-4171-2CEB-0494-BBBFFF646E0A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.2242843860536947 8.9953070407540068 23.176269771032278 ;
-	setAttr ".r" -type "double3" -7.538352729272269 -691.0000000000897 -4.5456251664271081e-16 ;
+	setAttr ".t" -type "double3" -9.2519089167070963 7.3015456336769722 22.260012092223914 ;
+	setAttr ".r" -type "double3" -5.1383527292724818 -699.40000000008297 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "261A7740-4EC6-7643-BE3F-45ADBE604095";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 36.768778403063386;
+	setAttr ".coi" 30.651850777450218;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -486,30 +486,30 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		"Ultimate_Bony_v1_0_5RN" 0
 		"Ultimate_Bony_v1_0_5RN" 56
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT" "translate" 
-		" -type \"double3\" -40.00566936011104247 0 -7.28048415763528123"
+		" -type \"double3\" -40.15018693004233796 0 -7.28048415763528123"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT" "rotate" 
 		" -type \"double3\" 0 -90 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
-		"translate" " -type \"double3\" 0 -0.12367941168223129 0"
+		"translate" " -type \"double3\" 0 -0.12231492011679707 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
-		"rotate" " -type \"double3\" 0 -7.42735722330421577 0"
+		"rotate" " -type \"double3\" 0 -7.55344715196735894 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_MainHipCG|Ultimate_Bony_v1_0_5:Bony_MainHipC" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_MainHipCG|Ultimate_Bony_v1_0_5:Bony_MainHipC" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine01FKCG|Ultimate_Bony_v1_0_5:Bony_Spine01FKC" 
-		"rotate" " -type \"double3\" 10.14680716707204056 0 0"
+		"rotate" " -type \"double3\" 10.04474027509420964 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_SpineTopIKCG|Ultimate_Bony_v1_0_5:Bony_SpineTopIKC" 
 		"translate" " -type \"double3\" 0 -0.49357175713373247 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_SpineTopIKCG|Ultimate_Bony_v1_0_5:Bony_SpineTopIKC" 
-		"rotate" " -type \"double3\" 0 1.54670558791254487 0"
+		"rotate" " -type \"double3\" 0 2.11864129607785134 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Neck01CG|Ultimate_Bony_v1_0_5:Bony_Neck01C" 
-		"rotate" " -type \"double3\" -28.83922892470553734 0 0"
+		"rotate" " -type \"double3\" -28.94845776196568821 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lFootIKCG|Ultimate_Bony_v1_0_5:Bony_lFootIKC" 
-		"translate" " -type \"double3\" 0.15158708757780842 -0.031827953770376727 0.062335295655810974"
+		"translate" " -type \"double3\" 0.15158708757780842 -0.033866217876495741 0.069607611834402894"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_lShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_lShoulderFKC" 
-		"rotate" " -type \"double3\" 0 4.79226609675116144 -68.84201959281843131"
+		"rotate" " -type \"double3\" 0 4.95636249164208387 -68.84201959281843131"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lClavicleCG|Ultimate_Bony_v1_0_5:Bony_lClavicleC" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lPalmCG|Ultimate_Bony_v1_0_5:Bony_lPalmC|Ultimate_Bony_v1_0_5:Bony_lFinger1J1CG|Ultimate_Bony_v1_0_5:Bony_lFinger1J1C" 
@@ -528,7 +528,7 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		"rotate" " -type \"double3\" -2.4532663863298132 14.65902344515492572 -9.60898735458767561"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_rShoulderFKC" 
-		"rotate" " -type \"double3\" 2.81207431465816571 -27.8070512831065848 -77.14015089719188722"
+		"rotate" " -type \"double3\" 2.81207431465816571 -27.91225742301600476 -77.1457810062585736"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rPalmCG|Ultimate_Bony_v1_0_5:Bony_rPalmC|Ultimate_Bony_v1_0_5:Bony_rFinger1J1CG|Ultimate_Bony_v1_0_5:Bony_rFinger1J1C" 
 		"rotate" " -type \"double3\" 0 0 -20.01375585557192593"
@@ -1365,10 +1365,7 @@ createNode animCurveTL -n "Bony_Main_CNT_translateX";
 	rename -uid "D4C73A78-4F92-B6C2-4245-85B6B249FEB6";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 4.4107873022830351 401 -40.228308240624294;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "5DBEA955-4E83-E492-FE20-E28FB216BB6E";
-	setAttr ".sst" -type "string" "";
+	setAttr -s 2 ".ktv[0:1]"  2 -9.0579053184217582 401 -40.228308240624294;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "5EC9DF58-40F7-E5EE-EF2C-23B282A8F6C5";
 	setAttr ".b" -type "string" (
@@ -1421,9 +1418,12 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "69FE4E66-4ACE-0962-CE5D-A6B3F48AC772";
 	setAttr ".b" -type "string" "playbackOptions -min -2 -max 400 -ast -2 -aet 400 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "9AB03705-48D7-86A5-A738-EE824F73EF7A";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 399;
-	setAttr ".unw" 399;
+	setAttr ".o" 400;
+	setAttr ".unw" 400;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
