@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SkiiBallCabinet.ma
-//Last modified: Thu, Nov 06, 2025 09:46:54 AM
+//Last modified: Thu, Nov 06, 2025 10:48:16 AM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "21B64BD6-458F-29D0-7B54-328E09758A6F";
+fileInfo "UUID" "A1B07F77-4006-AB42-0CF4-48B9DC983CD5";
 createNode transform -s -n "persp";
 	rename -uid "4AE88AD5-4A4A-A7B7-09CF-B198744B2846";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -168.83519894893357 -121.74103140931385 -137.23120435622263 ;
-	setAttr ".r" -type "double3" -334.53835273465234 -878.99999999972988 0 ;
+	setAttr ".t" -type "double3" -233.79027311042671 311.61528752601146 -728.47455793371728 ;
+	setAttr ".r" -type "double3" -378.93835273465055 -888.99999999972772 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "540B48F1-4513-A9F2-FF47-188F9D0DD21F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 312.87259521551329;
+	setAttr ".coi" 920.81240886959313;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1750,7 +1750,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.43527703139558432 0.37882910438259798 ;
+	setAttr ".pv" -type "double2" 0.50243175029754639 0.49335232377052307 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -8738,7 +8738,7 @@ createNode animCurveTL -n "pCube6Shape_pnts_9__pntz";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  -2 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "17BDB12C-4F0E-94FE-49AE-85A5CDAF2834";
+	rename -uid "09357839-451F-71A9-E102-3B821A84C145";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
