@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: ArcadeWalls.ma
-//Last modified: Fri, Nov 07, 2025 03:42:01 PM
+//Last modified: Fri, Nov 07, 2025 03:43:46 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "E86869EC-419D-A95F-6A9C-31A311FFCF82";
+fileInfo "UUID" "21BC7FE5-43E6-601C-9BA1-06B07F003CFB";
 createNode transform -s -n "persp";
 	rename -uid "8309F881-4ADA-9B51-9FFF-C89D721096E7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 832.21139820782355 1455.7655713258553 1506.4126948441008 ;
-	setAttr ".r" -type "double3" -754.53835272730657 764.19999999986373 0 ;
+	setAttr ".t" -type "double3" 667.55603223030016 1285.6668910352194 1966.1129378142691 ;
+	setAttr ".r" -type "double3" -741.93835272725801 757.79999999983943 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "38166B98-4E1C-D3A8-54B7-858C1ACEA5A8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2655.6877527774154;
+	setAttr ".coi" 2655.6877527710926;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -80,6 +80,9 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Arcade_Wall_Straight";
 	rename -uid "7A4F21D7-4B7C-9A63-CBC0-188198DE1A01";
+	setAttr ".t" -type "double3" -295.07501220703125 296.05248078557895 -34.243682861328125 ;
+	setAttr ".rp" -type "double3" 296.07501220703125 -296.05248078557895 35.243682861328125 ;
+	setAttr ".sp" -type "double3" 296.07501220703125 -296.05248078557895 35.243682861328125 ;
 createNode transform -n "pCube2" -p "Arcade_Wall_Straight";
 	rename -uid "3F305072-47AD-9839-7E9C-8CA26CEB2AD9";
 	setAttr ".rp" -type "double3" 296.07501220703125 -296.052490234375 20.749395370483395 ;
@@ -3093,6 +3096,9 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Arcade_Wall_Corner";
 	rename -uid "20523A77-4D09-E1E7-4F3E-C9AEB3BBC78A";
+	setAttr ".t" -type "double3" -295.07501220703125 296.05248078557895 -34.243682861328125 ;
+	setAttr ".rp" -type "double3" 296.07501220703125 -296.05248078557895 35.243682861328125 ;
+	setAttr ".sp" -type "double3" 296.07501220703125 -296.05248078557895 35.243682861328125 ;
 createNode transform -n "pCube6" -p "Arcade_Wall_Corner";
 	rename -uid "1C159952-4F36-5F44-5615-8CA4A99CDCE4";
 	setAttr ".rp" -type "double3" -984.64262306725618 -249.42069384120694 20.749395370483398 ;
@@ -7208,7 +7214,7 @@ createNode groupId -n "groupId24";
 	rename -uid "A2064D3D-4A27-E2D8-3579-4E8205B0FBA9";
 	setAttr ".ihi" 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "3826DA10-4504-6E3B-E140-5C9F8339BA6F";
+	rename -uid "ED262EA7-43D9-0910-62D4-CE917A363AC2";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
