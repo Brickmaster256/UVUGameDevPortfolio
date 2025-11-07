@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: ArcadeCeiling.ma
-//Last modified: Fri, Nov 07, 2025 10:29:14 AM
+//Last modified: Fri, Nov 07, 2025 10:56:30 AM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "6998278B-48AC-E516-6C8A-41A13F00AAE1";
+fileInfo "UUID" "8673A951-4002-B6C1-A02A-BC8636156737";
 createNode transform -s -n "persp";
 	rename -uid "BBCBF19E-48F7-10C3-2677-7DBE9CD9985E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 260.76905965184517 -434.48114088475006 -84.46096878335274 ;
+	setAttr ".t" -type "double3" 350.79526594695346 -814.46098392012232 -71.487994278734845 ;
 	setAttr ".r" -type "double3" -256.53835272995212 -2618.1999999996347 -2.5444437451708134e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3CD56575-4B3F-5647-92B8-8DAEF20E1DFA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 370.02463048103306;
+	setAttr ".coi" 760.73897242482622;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4593,7 +4593,7 @@ createNode polyTweakUV -n "polyTweakUV4";
 		 0.039003365 0.8224237 0.046901889 -0.031462647 -0.73045003 0.19623518 -0.73015136
 		 -0.13197124 0.60012877 0.032910764 -0.061962768;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "0AEAD0BB-4543-61A6-83BA-33BD9869A2CB";
+	rename -uid "F4130B3E-4EDF-1C9B-A00B-0FB9D7DB8A68";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
