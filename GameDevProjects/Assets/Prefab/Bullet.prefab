@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 5
-  useTrigger: 1
+  useTrigger: 0
 --- !u!143 &1295598592583725504
 CharacterController:
   m_ObjectHideFlags: 0
