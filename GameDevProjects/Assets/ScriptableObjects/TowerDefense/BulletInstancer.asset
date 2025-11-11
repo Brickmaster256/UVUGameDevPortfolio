@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17e842cc2663f46d98d43922a660ba8e, type: 3}
-  m_Name: AppleInstancer
+  m_Name: BulletInstancer
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2412396036389774727, guid: 995a677a75bcb3448a3192883548237f, type: 3}
+  prefab: {fileID: 2500770743719254487, guid: 6c904e8a93d71a3439400aecb7b5722f, type: 3}
   indexer: {fileID: 0}
