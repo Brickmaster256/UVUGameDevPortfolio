@@ -438,9 +438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
-
-'
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -711,7 +709,6 @@ GameObject:
   - component: {fileID: 1116739680}
   - component: {fileID: 1116739681}
   - component: {fileID: 1116739682}
-  - component: {fileID: 1116739683}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -922,24 +919,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   holdTime: 0.1
---- !u!114 &1116739683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116739674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffca75638fc5c1a4d97d8fa350194cdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformX: 0
-  transformY: 0
-  transformZ: 0
-  rotateX: 0
-  rotateY: 90
-  rotateZ: 0
 --- !u!1 &1218219604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1049,7 @@ Transform:
   m_GameObject: {fileID: 1316625799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.18, y: 2.68, z: -18.21}
+  m_LocalPosition: {x: 18.22, y: 2.06, z: -19.57}
   m_LocalScale: {x: 0.39895, y: 0.39895, z: 0.39895}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1088,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327ca5ce18ed4725ae75f76e0f07d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 4
+  seconds: 2
   event:
     m_PersistentCalls:
       m_Calls:
@@ -1099,18 +1078,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1316625801}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1116739683}
-        m_TargetAssemblyTypeName: SimpleTransformBehavior, Assembly-CSharp
-        m_MethodName: UpdateTransforms
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1161,18 +1128,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1116739683}
-        m_TargetAssemblyTypeName: SimpleTransformBehavior, Assembly-CSharp
-        m_MethodName: UpdateTransforms
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1627610435
 Transform:
   m_ObjectHideFlags: 0
@@ -1199,6 +1154,7 @@ GameObject:
   - component: {fileID: 1685398201}
   - component: {fileID: 1685398200}
   - component: {fileID: 1685398199}
+  - component: {fileID: 1685398202}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1245,11 +1201,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1273,13 +1229,47 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685398198}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.55128455, y: -0, z: -0, w: 0.8343173}
-  m_LocalPosition: {x: 0, y: 24.28, z: -12.19}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.38708368, y: -11.669177, z: -7.276889}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 66.91, y: 0, z: 0}
+--- !u!114 &1685398202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685398198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1692136066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,9 +1577,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1218219608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 363.5, y: -195.64}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -474.03, y: -195.64}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043531948
@@ -1612,7 +1602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /1
+  m_text: /10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
