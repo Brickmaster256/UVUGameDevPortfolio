@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 232438500252738707}
   - component: {fileID: 6035332584747500086}
   - component: {fileID: 8965408174968061348}
-  - component: {fileID: -7824940873677234285}
   m_Layer: 0
   m_Name: EnemyType2
   m_TagString: Untagged
@@ -280,52 +279,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &-7824940873677234285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059529381213891099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9380c5088918442908482eb5acf13274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdTime: 0.1
-  onCallEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8965408174968061348}
-        m_TargetAssemblyTypeName: IntDataNonScriptable, Assembly-CSharp
-        m_MethodName: SetInt
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  runEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  disableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  destroyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  applicationQuitEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1762968100917983072
