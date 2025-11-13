@@ -7,6 +7,9 @@ public class TestMover : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     public float jumpForce = 8f;
     public float gravity = -9.81f;
+    public float isGroundedRayLength = 0.8f;
+
+    public int maxJumps = 2;
     public bool hasGliderOn;
 
     private CharacterController controller;
@@ -25,7 +28,7 @@ public class TestMover : MonoBehaviour
 
 
         MoveCharacter();
-        setGravity();
+        //setGravity();
         ApplyGravity();
         KeepCharacterOnAxis();
     }
@@ -44,7 +47,7 @@ public class TestMover : MonoBehaviour
 
     private void ApplyGravity()
     {
-        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, .8f);
+        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, isGroundedRayLength);
 
         if (!isGrounded || velocity.y > 0)
         {
@@ -53,7 +56,7 @@ public class TestMover : MonoBehaviour
         else
         {
             velocity.y = 0;
-            hasGliderOn = false;
+            maxJumps = 2;
         }
 
         controller.Move(velocity * Time.deltaTime);
@@ -62,7 +65,7 @@ public class TestMover : MonoBehaviour
 
     private void MoveCharacter()
     {
-        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, .8f);
+        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, isGroundedRayLength);
         var moveInputX = Input.GetAxis("Horizontal");
         var moveInputY = Input.GetAxis("Vertical");
         var move = new Vector3(moveInputX, 0, moveInputY) * (moveSpeed * Time.deltaTime);
