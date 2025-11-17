@@ -2929,7 +2929,7 @@ Transform:
   m_GameObject: {fileID: 844476684}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -107, y: 148, z: 388}
+  m_LocalPosition: {x: -274, y: 138, z: 202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2946,9 +2946,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.76437044, g: 0.9433962, b: 0.6986472, a: 1}
   m_Intensity: 6
-  m_Range: 538.5
+  m_Range: 464.8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3612,7 +3612,7 @@ Transform:
   m_GameObject: {fileID: 1371714355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 396, y: 85, z: -77}
+  m_LocalPosition: {x: 208, y: -132, z: -125.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3629,9 +3629,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9716981, g: 0.40792987, b: 0.40792987, a: 1}
   m_Intensity: 6
-  m_Range: 453.5
+  m_Range: 275.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4810,13 +4810,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766109651}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -278, y: 166, z: -360}
+  m_LocalRotation: {x: 0.12878978, y: 0.032129556, z: 0.004174939, w: 0.9911426}
+  m_LocalPosition: {x: -3.2, y: 91.4, z: -144.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 635600940}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.775, y: 3.841, z: 0.981}
 --- !u!108 &1766109653
 Light:
   m_ObjectHideFlags: 0
@@ -4826,16 +4826,16 @@ Light:
   m_GameObject: {fileID: 1766109651}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.87890327, b: 0.4669811, a: 1}
   m_Intensity: 6
-  m_Range: 651.7
-  m_SpotAngle: 30
+  m_Range: 123.6
+  m_SpotAngle: 123
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4868,9 +4868,9 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 175.07715, y: 96.82989}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
