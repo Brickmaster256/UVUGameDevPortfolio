@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: LoliDrop.ma
-//Last modified: Mon, Nov 17, 2025 11:09:36 AM
+//Last modified: Tue, Nov 18, 2025 10:58:31 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "3EC71A61-4F4D-62EF-2A1A-58A39CA67DAE";
+fileInfo "UUID" "4683A312-4F9E-D410-2DDF-B78A418A9768";
 createNode transform -s -n "persp";
 	rename -uid "1BCC0545-4BBB-258A-FE6F-F6BD39D6B1B1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -75.732257334749789 60.254948814408571 -76.014991920370932 ;
-	setAttr ".r" -type "double3" -16.538352728857372 -492.59999999963321 0 ;
+	setAttr ".t" -type "double3" 30.473859631094349 54.27386132536946 -111.99546715624898 ;
+	setAttr ".r" -type "double3" -13.538352728853438 -551.39999999961674 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F94C71ED-4F8F-AD74-2329-439722526EBA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 118.29472130734104;
+	setAttr ".coi" 118.29472130736346;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5199,7 +5199,7 @@ createNode mesh -n "pCylinderShape7" -p "pCylinder7";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder8";
 	rename -uid "0B47919A-42F3-CD41-C359-88BB66202772";
-	setAttr ".t" -type "double3" 5.5328315468849212 5.6927115257001422 0 ;
+	setAttr ".t" -type "double3" 5.5328315468849167 13.140206076392804 0 ;
 	setAttr ".s" -type "double3" 4.6154959377180553 4.6154959377180553 4.6154959377180553 ;
 createNode mesh -n "pCylinderShape8" -p "pCylinder8";
 	rename -uid "DFB937C5-4FE4-B244-9CE5-43A172918E34";
@@ -5214,7 +5214,7 @@ createNode mesh -n "pCylinderShape8" -p "pCylinder8";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCylinder9";
 	rename -uid "5519E1F1-4AF0-9AB3-87C5-09B1EE886EE7";
-	setAttr ".t" -type "double3" -4.7920142369678072 5.6927115257001422 0 ;
+	setAttr ".t" -type "double3" -4.7920142369678116 13.140206076392804 0 ;
 	setAttr ".s" -type "double3" 4.5179466491271167 4.5179466491271167 4.5179466491271167 ;
 createNode mesh -n "pCylinderShape9" -p "pCylinder9";
 	rename -uid "871DBF49-4A12-A13E-1AAE-A9AFDCF70F5D";
@@ -5698,90 +5698,21 @@ createNode mesh -n "pCylinderShape9" -p "pCylinder9";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube1";
-	rename -uid "75DC207B-466F-CB34-F7A0-2C81B24A1768";
-	setAttr ".t" -type "double3" -5.882677537744887 7.8926525386679129 2.1207751114154387 ;
-	setAttr ".s" -type "double3" 3.3756610900088608 11.672742979607971 1 ;
-	setAttr ".rp" -type "double3" -0.5 -0.5000001679715762 -0.50000003899579681 ;
-	setAttr ".sp" -type "double3" -0.5 -0.5000001679715762 -0.50000003899579681 ;
-createNode mesh -n "pCubeShape1" -p "pCube1";
-	rename -uid "0DBCDD0A-44DA-EE46-930F-3D86E6AD3938";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube2";
-	rename -uid "EAE99DD3-40C0-E9AE-AA47-EBA13ACD8809";
-	setAttr ".t" -type "double3" 3.3853447302188693 7.8926525386679334 2.1207751114154387 ;
-	setAttr ".s" -type "double3" 3.3756610900088608 11.672742979607971 1 ;
-	setAttr ".rp" -type "double3" -0.5 -0.5000001679715762 -0.50000003899579681 ;
-	setAttr ".sp" -type "double3" -0.5 -0.5000001679715762 -0.50000003899579681 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
-	rename -uid "A9FCB22A-42F5-99ED-EE2C-C6A0555E1586";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "BFC67506-49F0-279B-15AE-1A871536B6D3";
+	rename -uid "7E8F8BE8-425E-16F6-FCDC-46AB115E9347";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5DFECA75-44C7-6A76-4E89-AA9C5A7393E4";
+	rename -uid "B1B8B29B-4BDA-F49B-9244-82B1B0170F16";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DED1AB72-47B5-1D2A-7E67-2291E5FF29C3";
+	rename -uid "B7AFC648-442E-9A26-698C-02AAD945F0F4";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F5341158-4B66-EFDB-646E-0A9CCFD5E676";
+	rename -uid "98871AE1-47A0-7CA5-4CC9-88A363AD3933";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "ABF202C4-4D08-DB71-D59E-D08AF0CE952F";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C48DC627-41D9-B9AA-1C0E-C68B79CB074D";
+	rename -uid "7B1AB5B5-453A-DBDE-1114-4DB6DAC7C703";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C55A1718-4F04-2D17-8EC8-A5AE6785BDF6";
 	setAttr ".g" yes;
@@ -5984,11 +5915,8 @@ createNode polyBevel3 -n "polyBevel3";
 	setAttr ".mv" yes;
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
-createNode polyCube -n "polyCube1";
-	rename -uid "656522CB-4FEC-1227-3A1D-DD915CA71DCB";
-	setAttr ".cuv" 4;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "07240FC9-4B1A-53F5-E78C-E6AC41E2B488";
+	rename -uid "6D95937A-476C-5491-BB7A-DA98706C3450";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -6038,7 +5966,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 13 ".dsm";
+	setAttr -s 11 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -6130,7 +6058,6 @@ connectAttr "polyCylinder2.out" "pCylinderShape4.i";
 connectAttr "polyExtrudeFace1.out" "pSphereShape1.i";
 connectAttr "polySphere2.out" "pSphereShape3.i";
 connectAttr "polyBevel3.out" "pCylinderShape8.i";
-connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -6164,6 +6091,4 @@ connectAttr "pSphereShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape7.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape8.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 // End of LoliDrop.ma
