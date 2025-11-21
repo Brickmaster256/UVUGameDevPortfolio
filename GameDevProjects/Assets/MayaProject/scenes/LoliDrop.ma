@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: LoliDrop.ma
-//Last modified: Thu, Nov 20, 2025 04:01:34 PM
+//Last modified: Thu, Nov 20, 2025 04:03:02 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "F3969882-48C6-3AF3-7BBD-9A97B0547599";
+fileInfo "UUID" "978C26B2-4A7B-D423-C286-699564CE8E60";
 createNode transform -s -n "persp";
 	rename -uid "1BCC0545-4BBB-258A-FE6F-F6BD39D6B1B1";
 	setAttr ".v" no;
@@ -7490,7 +7490,7 @@ createNode polySplit -n "polySplit12";
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "E1D993B2-4AB1-3ECF-644E-3A822840AD8C";
+	rename -uid "0EA7C0C6-415F-532B-A936-D1AEE16E073B";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
