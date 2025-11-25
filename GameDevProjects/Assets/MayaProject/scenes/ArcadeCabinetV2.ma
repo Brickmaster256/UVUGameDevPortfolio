@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: ArcadeCabinetV2.ma
-//Last modified: Fri, Nov 21, 2025 10:26:46 AM
+//Last modified: Mon, Nov 24, 2025 01:36:56 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "1B24A1B6-4B2C-CF0C-07AA-D1935C2BD068";
+fileInfo "UUID" "E6F39BA8-47F0-FFA8-A533-08AC6A263EC8";
 createNode transform -s -n "persp";
 	rename -uid "11B75D01-4244-A8F5-E481-C097296B2366";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -17.639163213419938 172.04540167855362 -104.75248440418292 ;
+	setAttr ".t" -type "double3" -78.346815069859289 675.01812055532935 -702.40818121068173 ;
 	setAttr ".r" -type "double3" -39.93835273019333 -894.19999999993263 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4593F960-4A72-1AAC-85ED-0B952E827D52";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 153.06988259436878;
+	setAttr ".coi" 936.56162272535471;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -7651,7 +7651,7 @@ createNode mesh -n "DirrectionPadArcadeCabinetpCube17Shape" -p "DirrectionPadArc
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.75727910113025021 0.89814365847988165 ;
+	setAttr ".pv" -type "double2" 0.50142613053321838 0.50487248599529266 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -12039,7 +12039,7 @@ createNode polyTweakUV -n "polyTweakUV34";
 		 0.54800832 1.040848374 0.56294036 1.050258875 0.55558228 1.05437386 0.54664278 1.045652151
 		 0.55077052 1.053029776 0.55289268 1.054683805 0.55175674 1.054093361;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "B4A6E1D6-49D4-FEA9-D6FF-68B6D0CB37FD";
+	rename -uid "931DA9A1-49B5-696F-BD58-08858F4A10C7";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
