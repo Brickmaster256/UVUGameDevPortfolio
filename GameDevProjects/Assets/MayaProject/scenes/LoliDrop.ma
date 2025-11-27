@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: LoliDrop.ma
-//Last modified: Tue, Nov 25, 2025 10:07:07 AM
+//Last modified: Thu, Nov 27, 2025 10:57:34 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "13569421-45DF-920F-960B-BA8C850FF77C";
+fileInfo "UUID" "91F758EE-452C-BC7B-2227-6DBA5BD1033C";
 createNode transform -s -n "persp";
 	rename -uid "1BCC0545-4BBB-258A-FE6F-F6BD39D6B1B1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.205727059999655 8.5917148413198863 -70.948669325246442 ;
-	setAttr ".r" -type "double3" 729.86164724272658 -1269.000000000543 0 ;
+	setAttr ".t" -type "double3" 3.3570072907247805 69.936804796890272 -98.107983906925085 ;
+	setAttr ".r" -type "double3" 698.66164724271005 -1259.8000000005063 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F94C71ED-4F8F-AD74-2329-439722526EBA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 72.477818602062058;
+	setAttr ".coi" 104.29178746097625;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -97,7 +97,6 @@ createNode mesh -n "pCylinderShape1" -p "transform3";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".ciog[0].cog";
 	setAttr ".pv" -type "double2" 0.65131622552871704 0.13210803270339966 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
@@ -1446,7 +1445,6 @@ createNode mesh -n "pCylinderShape3" -p "transform13";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 3 ".ciog[0].cog";
 	setAttr ".pv" -type "double2" 0.49617628753185272 0.84374997019767761 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
@@ -1687,34 +1685,20 @@ createNode mesh -n "pCylinderShape5" -p "transform6";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".ciog[0].cog";
 	setAttr ".pv" -type "double2" 0.49999988079071045 0.53520733118057251 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 23 ".pt";
-	setAttr ".pt[42]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[43]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[44]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[45]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[46]" -type "float3" 2.220446e-16 0.059398122 0 ;
-	setAttr ".pt[47]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[48]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[49]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[50]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[51]" -type "float3" 3.6082248e-16 0.059398122 0 ;
-	setAttr ".pt[52]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[53]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[54]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[55]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[56]" -type "float3" -3.3306691e-16 0.059398122 0 ;
-	setAttr ".pt[57]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[58]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[59]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[60]" -type "float3" 4.4408921e-16 0.059398122 0 ;
-	setAttr ".pt[61]" -type "float3" 3.6082248e-16 0.059398122 0 ;
+	setAttr -s 20 ".pt[42:61]" -type "float3"  4.4408921e-16 0.059398122 
+		0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 
+		0 2.220446e-16 0.059398122 0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 
+		0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 0 3.6082248e-16 0.059398122 
+		0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 
+		0 4.4408921e-16 0.059398122 0 -3.3306691e-16 0.059398122 0 4.4408921e-16 0.059398122 
+		0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 0 4.4408921e-16 0.059398122 
+		0 3.6082248e-16 0.059398122 0;
 createNode transform -n "pSphere1";
 	rename -uid "7F2B44E0-47DE-8741-C3C7-7AB747750AB7";
 	setAttr ".t" -type "double3" -17.124269629037585 17.507024531416786 0 ;
@@ -1857,7 +1841,7 @@ createNode mesh -n "pSphereShape2" -p "transform9";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 23 ".pt";
+	setAttr -s 16 ".pt";
 	setAttr ".pt[260]" -type "float3" 0 -5.9604645e-08 0 ;
 	setAttr ".pt[261]" -type "float3" 1.4901161e-08 0 0 ;
 	setAttr ".pt[262]" -type "float3" -3.7252903e-09 0 0 ;
@@ -5664,8 +5648,7 @@ createNode mesh -n "polySurface2Shape" -p "transform4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 3 ".pt";
-	setAttr ".pt[171]" -type "float3" 0 -0.14037363 0 ;
+	setAttr ".pt[171]" -type "float3"  0 -0.14037363 0;
 createNode transform -n "polySurface3";
 	rename -uid "A05FD953-45B5-3956-4BF8-6EBC9088FC06";
 	setAttr ".rp" -type "double3" 3.4526217165069442 25.294963725467319 0 ;
@@ -5701,7 +5684,6 @@ createNode mesh -n "polySurfaceShape3" -p "transform8";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".ciog[0].cog";
 	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
@@ -5790,27 +5772,15 @@ createNode mesh -n "polySurface6Shape" -p "transform11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 26 ".pt";
-	setAttr ".pt[64]" -type "float3" 0.89842606 0.5436039 0.0010716021 ;
-	setAttr ".pt[65]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[66]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[67]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[68]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[69]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[70]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[71]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[72]" -type "float3" 0.89842606 0.5436039 0.0010716021 ;
-	setAttr ".pt[73]" -type "float3" 0.89842606 0.5436039 0.0010718191 ;
-	setAttr ".pt[74]" -type "float3" 0.89842606 0.5436039 0.0010716021 ;
-	setAttr ".pt[75]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[76]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[77]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[78]" -type "float3" 0.89842606 0.5436039 0.0010700226 ;
-	setAttr ".pt[79]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[80]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[81]" -type "float3" 0.89842606 0.5436039 0.0010717511 ;
-	setAttr ".pt[82]" -type "float3" 0.89842606 0.5436039 0.0010716021 ;
-	setAttr ".pt[83]" -type "float3" 0.89842606 0.5436039 0.0010718191 ;
+	setAttr -s 20 ".pt[64:83]" -type "float3"  0.89842606 0.5436039 0.0010716021 
+		0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 
+		0.0010717511 0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 0.0010717511 
+		0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 
+		0.0010716021 0.89842606 0.5436039 0.0010718191 0.89842606 0.5436039 0.0010716021 
+		0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 
+		0.0010717511 0.89842606 0.5436039 0.0010700226 0.89842606 0.5436039 0.0010717511 
+		0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 0.0010717511 0.89842606 0.5436039 
+		0.0010716021 0.89842606 0.5436039 0.0010718191;
 createNode transform -n "pSphere5";
 	rename -uid "D3E22DD3-4423-1C0E-056B-E2B97D2FA62D";
 	setAttr ".rp" -type "double3" -0.25835590214439108 25.262945098364675 -4.6068328329873509e-07 ;
@@ -5844,14 +5814,13 @@ createNode mesh -n "polySurfaceShape5" -p "transform14";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 3 ".ciog[0].cog";
 	setAttr ".pv" -type "double2" 0.5 1 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 76 ".pt[51:75]" -type "float3"  -0.067663431 -0.033671618 
+	setAttr -s 25 ".pt[51:75]" -type "float3"  -0.067663431 -0.033671618 
 		0.031252742 0 0 0 0 0 0 0 0 0 -0.038061202 -0.00090289116 0.0096336603 -0.049297519 
 		0.038787127 -0.06836611 -0.024479821 0.013090134 -0.065428466 -0.0089070648 0.029262543 
 		-0.12833756 0.039331138 0.0090649128 -0.1764539 0.069746643 0.0076658726 -0.12940004 
@@ -5899,20 +5868,20 @@ createNode mesh -n "polySurface9Shape" -p "polySurface9";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "47CD4E0E-4833-5943-D183-85913F3548CD";
+	rename -uid "4C4CBDCA-4830-3CF7-0994-638196147646";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "16990C70-4D3A-9839-E0C0-C3BEAAE6381F";
+	rename -uid "2E6867D3-4DDF-E968-0292-A1A415EE8E22";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "95C6ED91-4233-BBEB-D464-BEAEC03F0DD7";
+	rename -uid "D28C20F4-4FEF-1B75-2B26-7AA49BA134B4";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "19CAB8A7-4C9A-4C5A-44B7-FF959EA296C5";
+	rename -uid "5A593AE5-45AB-8C31-6F59-BE806E85972D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "ABF202C4-4D08-DB71-D59E-D08AF0CE952F";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "02BB8700-4C9A-4573-5B33-46B3B2EE544D";
+	rename -uid "1D2C7779-4B67-EAEC-705F-6284C71176D1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C55A1718-4F04-2D17-8EC8-A5AE6785BDF6";
 	setAttr ".g" yes;
@@ -5988,7 +5957,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 311\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1319\n            -height 668\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -5997,28 +5966,32 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n"
 		+ "            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n"
-		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 1\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
-		+ "                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
-		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
-		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
-		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
-		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n"
-		+ "                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
-		+ "                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
-		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
-		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 668\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 668\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
+		+ "                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 1\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
+		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
+		+ "                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n"
+		+ "                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n"
+		+ "                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n"
+		+ "                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
+		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
+		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 668\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 668\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -6409,7 +6382,7 @@ createNode polyAppendVertex -n "polyAppendVertex32";
 createNode polyTweak -n "polyTweak11";
 	rename -uid "133EFA25-4FE8-D646-8C62-9E98D45157C4";
 	setAttr ".uopa" yes;
-	setAttr -s 47 ".tk[38:46]" -type "float3"  0.010620349 -0.0045012534
+	setAttr -s 9 ".tk[38:46]" -type "float3"  0.010620349 -0.0045012534
 		 0.11207581 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode polyAppendVertex -n "polyAppendVertex31";
 	rename -uid "F0F37D41-4145-9644-A684-43B2E7C6C5A9";
@@ -6652,7 +6625,7 @@ createNode polyAppendVertex -n "polyAppendVertex2";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "F6831010-40DD-12CF-B029-07928BABB4C9";
 	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk[1:5]" -type "float3"  -0.10222185 -0.010289729 0.096533179
+	setAttr -s 5 ".tk[1:5]" -type "float3"  -0.10222185 -0.010289729 0.096533179
 		 0 0 0 0 0 0 -0.060426116 -0.0060546398 -0.15755072 0.014994144 -0.022669882 0.029427379;
 createNode polyAppendVertex -n "polyAppendVertex1";
 	rename -uid "89F73A84-4CB6-0435-A254-C1A2997A7363";
@@ -6787,7 +6760,7 @@ createNode polyAppendVertex -n "polyAppendVertex80";
 createNode polyTweak -n "polyTweak29";
 	rename -uid "A5B335F0-446B-FD35-5C25-30B19CFE92E9";
 	setAttr ".uopa" yes;
-	setAttr -s 94 ".tk[53:93]" -type "float3"  -0.0051805973 -0.00032112002
+	setAttr -s 41 ".tk[53:93]" -type "float3"  -0.0051805973 -0.00032112002
 		 -0.062170744 -0.0061879158 -0.044153035 -0.0066537857 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -6888,7 +6861,7 @@ createNode polyAppendVertex -n "polyAppendVertex95";
 createNode polyTweak -n "polyTweak30";
 	rename -uid "42A8F937-4E73-E54F-817B-59B893739694";
 	setAttr ".uopa" yes;
-	setAttr -s 111 ".tk[101:110]" -type "float3"  -0.16891241 0.0015574396 0.20245838
+	setAttr -s 10 ".tk[101:110]" -type "float3"  -0.16891241 0.0015574396 0.20245838
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.35961342 0.0032611787 -0.39403546 -0.31719017
 		 0.0098240674 -0.15738177;
 createNode polyAppendVertex -n "polyAppendVertex96";
@@ -7046,7 +7019,7 @@ createNode polyBridgeEdge -n "polyBridgeEdge1";
 createNode polyTweak -n "polyTweak34";
 	rename -uid "4276E155-4A0C-B728-2055-9C9BC4975B12";
 	setAttr ".uopa" yes;
-	setAttr -s 10 ".tk";
+	setAttr -s 8 ".tk";
 	setAttr ".tk[114]" -type "float3" 0.27579394 -0.12229204 0.036762744 ;
 	setAttr ".tk[115]" -type "float3" 0.12390522 -0.046554442 0.031803995 ;
 	setAttr ".tk[116]" -type "float3" -0.061713994 0.059460398 0.0058733327 ;
@@ -7067,8 +7040,7 @@ createNode polyBridgeEdge -n "polyBridgeEdge2";
 createNode polyTweak -n "polyTweak35";
 	rename -uid "9483AD65-4AF4-BD4F-8EFA-FBA37723843D";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
-	setAttr ".tk[171]" -type "float3" 0.3288008 0 0 ;
+	setAttr ".tk[171]" -type "float3"  0.3288008 0 0;
 createNode polyCloseBorder -n "polyCloseBorder1";
 	rename -uid "08F1BA49-45FF-59DE-0F5A-D0BD0410BFE3";
 	setAttr ".ics" -type "componentList" 2 "e[333:334]" "e[349:350]";
@@ -7089,11 +7061,8 @@ createNode polyBridgeEdge -n "polyBridgeEdge3";
 createNode polyTweak -n "polyTweak36";
 	rename -uid "59F2F529-4662-5801-CC3D-8CB1849E9765";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
-	setAttr ".tk[172]" -type "float3" 0.18329464 0 0 ;
-	setAttr ".tk[173]" -type "float3" 0.18329464 0 0 ;
-	setAttr ".tk[174]" -type "float3" 0.15903902 0 0 ;
-	setAttr ".tk[175]" -type "float3" 0.16146138 0 0 ;
+	setAttr -s 4 ".tk[172:175]" -type "float3"  0.18329464 0 0 0.18329464
+		 0 0 0.15903902 0 0 0.16146138 0 0;
 createNode polyBridgeEdge -n "polyBridgeEdge4";
 	rename -uid "B9D66A12-4FDA-FE17-68AD-34A83CF8C1E7";
 	setAttr ".ics" -type "componentList" 2 "e[338]" "e[352]";
@@ -7150,11 +7119,8 @@ createNode polyBridgeEdge -n "polyBridgeEdge8";
 createNode polyTweak -n "polyTweak37";
 	rename -uid "FA25CA80-45B6-8247-D88C-14A68278057B";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
-	setAttr ".tk[178]" -type "float3" 2.9802322e-08 0 0 ;
-	setAttr ".tk[179]" -type "float3" 0.11272787 0 0 ;
-	setAttr ".tk[180]" -type "float3" 0.11272787 0 0 ;
-	setAttr ".tk[181]" -type "float3" 2.9802322e-08 0 0 ;
+	setAttr -s 4 ".tk[178:181]" -type "float3"  2.9802322e-08 0 0 0.11272787
+		 0 0 0.11272787 0 0 2.9802322e-08 0 0;
 createNode polyBridgeEdge -n "polyBridgeEdge9";
 	rename -uid "BD78DDFA-4CCF-88E8-2529-54862CA1EFA8";
 	setAttr ".ics" -type "componentList" 2 "e[219]" "e[347]";
@@ -7236,47 +7202,18 @@ createNode polySplit -n "polySplit4";
 createNode polyTweak -n "polyTweak38";
 	rename -uid "B885BE16-4FDD-77B6-64FC-B4B111E71824";
 	setAttr ".uopa" yes;
-	setAttr -s 44 ".tk";
-	setAttr ".tk[347]" -type "float3" 3.3986728 2.4692812 0 ;
-	setAttr ".tk[348]" -type "float3" 3.9953816 1.298178 0 ;
-	setAttr ".tk[349]" -type "float3" 4.2009869 0 0 ;
-	setAttr ".tk[350]" -type "float3" 3.9953783 -1.298175 0 ;
-	setAttr ".tk[351]" -type "float3" 3.3986721 -2.4692812 0 ;
-	setAttr ".tk[352]" -type "float3" 2.469281 -3.3986726 0 ;
-	setAttr ".tk[353]" -type "float3" 1.2981782 -3.9953778 0 ;
-	setAttr ".tk[354]" -type "float3" 3.9003945e-07 -4.2009878 0 ;
-	setAttr ".tk[355]" -type "float3" -1.2981727 -3.9953778 0 ;
-	setAttr ".tk[356]" -type "float3" -2.4692812 -3.3986726 0 ;
-	setAttr ".tk[357]" -type "float3" -3.3986719 -2.4692812 0 ;
-	setAttr ".tk[358]" -type "float3" -3.9953783 -1.298178 0 ;
-	setAttr ".tk[359]" -type "float3" -4.2009869 0 0 ;
-	setAttr ".tk[360]" -type "float3" -3.9953783 1.298175 0 ;
-	setAttr ".tk[361]" -type "float3" -3.3986721 2.4692812 0 ;
-	setAttr ".tk[362]" -type "float3" -2.4692812 3.3986709 0 ;
-	setAttr ".tk[363]" -type "float3" -1.2981783 3.9953778 0 ;
-	setAttr ".tk[364]" -type "float3" 5.1747668e-07 4.2009878 0 ;
-	setAttr ".tk[365]" -type "float3" 1.2981787 3.9953778 0 ;
-	setAttr ".tk[366]" -type "float3" 2.4692822 3.3986731 0 ;
-	setAttr ".tk[367]" -type "float3" 3.9953783 1.2981775 0 ;
-	setAttr ".tk[368]" -type "float3" 4.2009859 0 0 ;
-	setAttr ".tk[369]" -type "float3" 3.9953763 -1.2981763 0 ;
-	setAttr ".tk[370]" -type "float3" 3.39867 -2.4692786 0 ;
-	setAttr ".tk[371]" -type "float3" 2.4692783 -3.3986704 0 ;
-	setAttr ".tk[372]" -type "float3" 1.2981765 -3.9953763 0 ;
-	setAttr ".tk[373]" -type "float3" 3.9003942e-07 -4.2009859 0 ;
-	setAttr ".tk[374]" -type "float3" -1.2981759 -3.9953763 0 ;
-	setAttr ".tk[375]" -type "float3" -2.4692776 -3.3986704 0 ;
-	setAttr ".tk[376]" -type "float3" -3.3986695 -2.4692786 0 ;
-	setAttr ".tk[377]" -type "float3" -3.9953763 -1.2981775 0 ;
-	setAttr ".tk[378]" -type "float3" -4.2009864 0 0 ;
-	setAttr ".tk[379]" -type "float3" -3.9953763 1.2981763 0 ;
-	setAttr ".tk[380]" -type "float3" -3.39867 2.4692786 0 ;
-	setAttr ".tk[381]" -type "float3" -2.4692786 3.3986685 0 ;
-	setAttr ".tk[382]" -type "float3" -1.2981764 3.9953763 0 ;
-	setAttr ".tk[383]" -type "float3" 5.1747662e-07 4.2009859 0 ;
-	setAttr ".tk[384]" -type "float3" 1.2981774 3.9953763 0 ;
-	setAttr ".tk[385]" -type "float3" 2.4692793 3.3986716 0 ;
-	setAttr ".tk[386]" -type "float3" 3.3986716 2.4692786 0 ;
+	setAttr -s 40 ".tk[347:386]" -type "float3"  3.39867282 2.4692812 0 3.99538159
+		 1.29817796 0 4.20098686 0 0 3.99537826 -1.29817498 0 3.3986721 -2.4692812 0 2.46928096
+		 -3.39867258 0 1.2981782 -3.99537778 0 3.9003945e-07 -4.20098782 0 -1.29817271 -3.99537778
+		 0 -2.4692812 -3.39867258 0 -3.39867187 -2.4692812 0 -3.99537826 -1.29817796 0 -4.20098686
+		 0 0 -3.99537826 1.29817498 0 -3.3986721 2.4692812 0 -2.4692812 3.39867091 0 -1.29817832
+		 3.99537778 0 5.1747668e-07 4.20098782 0 1.29817867 3.99537778 0 2.46928215 3.39867306
+		 0 3.99537826 1.29817748 0 4.20098591 0 0 3.99537635 -1.29817629 0 3.39866996 -2.46927857
+		 0 2.46927834 -3.39867043 0 1.29817653 -3.99537635 0 3.9003942e-07 -4.20098591 0 -1.29817593
+		 -3.99537635 0 -2.46927762 -3.39867043 0 -3.39866948 -2.46927857 0 -3.99537635 -1.29817748
+		 0 -4.20098639 0 0 -3.99537635 1.29817629 0 -3.39866996 2.46927857 0 -2.46927857 3.39866853
+		 0 -1.29817641 3.99537635 0 5.1747662e-07 4.20098591 0 1.29817736 3.99537635 0 2.46927929
+		 3.39867163 0 3.39867163 2.46927857 0;
 createNode deleteComponent -n "deleteComponent9";
 	rename -uid "CB30593E-4B65-C969-25D1-72B8220C46E8";
 	setAttr ".dc" -type "componentList" 4 "f[199]" "f[239]" "f[297:302]" "f[361]";
@@ -7294,7 +7231,7 @@ createNode polyMergeVert -n "polyMergeVert1";
 createNode polyTweak -n "polyTweak39";
 	rename -uid "F66BEB11-4FB9-6BA2-E4BE-77BF968DEF76";
 	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[97]" -type "float3" -0.046185493 0.0062942505 0.0019391775 ;
 	setAttr ".tk[354]" -type "float3" 0.046185493 -0.0062961578 -0.0019392967 ;
 createNode polyMergeVert -n "polyMergeVert2";
@@ -7305,7 +7242,7 @@ createNode polyMergeVert -n "polyMergeVert2";
 createNode polyTweak -n "polyTweak40";
 	rename -uid "2940372A-4719-9CBF-BD28-BCB20A5D6BD6";
 	setAttr ".uopa" yes;
-	setAttr -s 3 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[98]" -type "float3" 0.036175728 -0.059408188 0.0097128153 ;
 	setAttr ".tk[330]" -type "float3" -0.036175728 0.059408188 -0.0097126961 ;
 createNode polyMergeVert -n "polyMergeVert3";
@@ -7316,7 +7253,7 @@ createNode polyMergeVert -n "polyMergeVert3";
 createNode polyTweak -n "polyTweak41";
 	rename -uid "0A37DCD7-4AB3-86D8-9B3A-27959D4A4D33";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[93]" -type "float3" -0.022294044 -0.052574158 0.0018048286 ;
 	setAttr ".tk[352]" -type "float3" 0.022294044 0.05257225 -0.0018048286 ;
 createNode polyMergeVert -n "polyMergeVert4";
@@ -7327,7 +7264,7 @@ createNode polyMergeVert -n "polyMergeVert4";
 createNode polyTweak -n "polyTweak42";
 	rename -uid "41D97C3F-4482-DE12-B4B7-83A4AF8828A6";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[79]" -type "float3" -0.014609337 -0.006565094 0.0018311739 ;
 	setAttr ".tk[351]" -type "float3" 0.014609337 0.0065670013 -0.0018312931 ;
 createNode polyMergeVert -n "polyMergeVert5";
@@ -7338,7 +7275,7 @@ createNode polyMergeVert -n "polyMergeVert5";
 createNode polyTweak -n "polyTweak43";
 	rename -uid "0D242D0C-49CB-53A7-A823-238B3E65E00D";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[84]" -type "float3" -0.033818245 0.024765015 0.0018669367 ;
 	setAttr ".tk[350]" -type "float3" 0.033818245 -0.024766922 -0.0018668175 ;
 createNode polyMergeVert -n "polyMergeVert6";
@@ -7349,7 +7286,7 @@ createNode polyMergeVert -n "polyMergeVert6";
 createNode polyTweak -n "polyTweak44";
 	rename -uid "E7474222-4EA1-DFE9-1552-65AB3471FCF1";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[82]" -type "float3" 0.056512833 0.052270889 0.0094717741 ;
 	setAttr ".tk[262]" -type "float3" -0.056512833 -0.052268982 -0.0094717741 ;
 createNode polyMergeVert -n "polyMergeVert7";
@@ -7415,7 +7352,7 @@ createNode polyMergeVert -n "polyMergeVert12";
 createNode polyTweak -n "polyTweak50";
 	rename -uid "10185C67-48F7-CAA7-79AB-DAB39938D9F6";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[88]" -type "float3" 0.042251337 0.31163713 -0.0454497 ;
 	setAttr ".tk[189]" -type "float3" 0.0020141602 -0.0099582672 0.01550293 ;
 createNode polyMergeVert -n "polyMergeVert13";
@@ -7426,7 +7363,7 @@ createNode polyMergeVert -n "polyMergeVert13";
 createNode polyTweak -n "polyTweak51";
 	rename -uid "713E173B-4A3C-0D4E-17B3-779E5980EFCF";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[85]" -type "float3" 0.068172336 0.19337903 0.63932598 ;
 	setAttr ".tk[259]" -type "float3" 0.0241642 -0.0041675568 0.023158431 ;
 createNode polyBridgeEdge -n "polyBridgeEdge11";
@@ -7441,9 +7378,8 @@ createNode polyBridgeEdge -n "polyBridgeEdge11";
 createNode polyTweak -n "polyTweak52";
 	rename -uid "63A2E293-4CCD-7B0D-E683-73AB25CFE0D1";
 	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk";
-	setAttr ".tk[86]" -type "float3" 0.14075036 0.15328665 1.3205775 ;
-	setAttr ".tk[87]" -type "float3" 0.14075036 0.15328665 -0.45665014 ;
+	setAttr -s 2 ".tk[86:87]" -type "float3"  0.14075036 0.15328665 1.3205775
+		 0.14075036 0.15328665 -0.45665014;
 createNode polyBridgeEdge -n "polyBridgeEdge12";
 	rename -uid "47F562DF-4316-BE42-BE19-D69C0040D40B";
 	setAttr ".ics" -type "componentList" 2 "e[156]" "e[369]";
@@ -7533,7 +7469,7 @@ createNode polyMergeVert -n "polyMergeVert16";
 createNode polyTweak -n "polyTweak53";
 	rename -uid "68E59B3F-4C7B-2C43-F630-F2B81D86F1EC";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[101]" -type "float3" 0.10005964 -0.036598206 0.59220976 ;
 	setAttr ".tk[325]" -type "float3" 0.033620834 0.036598206 -0.025686383 ;
 createNode polyMergeVert -n "polyMergeVert17";
@@ -7544,7 +7480,7 @@ createNode polyMergeVert -n "polyMergeVert17";
 createNode polyTweak -n "polyTweak54";
 	rename -uid "ADFE82F5-450A-C7E4-5525-E38EF5C79BAE";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[110]" -type "float3" 0.045000397 -0.039585114 -0.056487143 ;
 	setAttr ".tk[256]" -type "float3" 0.032084465 0.039587021 0.0058175325 ;
 createNode polyMergeVert -n "polyMergeVert18";
@@ -7555,7 +7491,7 @@ createNode polyMergeVert -n "polyMergeVert18";
 createNode polyTweak -n "polyTweak55";
 	rename -uid "9E26AE41-425A-EDF1-EC36-17BF18E6DBA3";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[109]" -type "float3" 0.22317722 -0.10292365 -0.52461129 ;
 	setAttr ".tk[253]" -type "float3" 0.10015678 0.043558121 -0.01434195 ;
 createNode polyBridgeEdge -n "polyBridgeEdge19";
@@ -7591,8 +7527,7 @@ createNode polyCloseBorder -n "polyCloseBorder7";
 createNode polyTweak -n "polyTweak56";
 	rename -uid "5AD829EA-46E2-18F6-1153-789117F6788A";
 	setAttr ".uopa" yes;
-	setAttr -s 9 ".tk";
-	setAttr ".tk[63]" -type "float3" 0.2845712 0 0 ;
+	setAttr ".tk[63]" -type "float3"  0.2845712 0 0;
 createNode groupId -n "groupId8";
 	rename -uid "C90F0920-46D7-7588-B0A9-21A9E6647B07";
 	setAttr ".ihi" 0;
@@ -7671,7 +7606,7 @@ createNode polyAppendVertex -n "polyAppendVertex174";
 createNode polyTweak -n "polyTweak75";
 	rename -uid "19BC9483-4506-BDD0-B147-24AEA9FD509D";
 	setAttr ".uopa" yes;
-	setAttr -s 52 ".tk[1:51]" -type "float3"  -0.015527129 -0.0038690865
+	setAttr -s 51 ".tk[1:51]" -type "float3"  -0.015527129 -0.0038690865
 		 -0.030475229 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 -0.0033926964 -0.030579239 -0.0017286539 0 0 0 0 0 0 0.0038977861 0.014495343
 		 -0.0076481104 0 0 0 0 0 0 0.011767983 0.034730226 0.011767149 0 0 0 0 0 0 0 0 0 0
@@ -7703,7 +7638,7 @@ createNode polyAppendVertex -n "polyAppendVertex170";
 createNode polyTweak -n "polyTweak74";
 	rename -uid "DCF642EE-421F-8395-E59D-1DAA684DD70B";
 	setAttr ".uopa" yes;
-	setAttr -s 52 ".tk[32:51]" -type "float3"  0.081753731 -0.0079782009
+	setAttr -s 20 ".tk[32:51]" -type "float3"  0.081753731 -0.0079782009
 		 0.001416564 0 0 0 -0.0043470263 -0.00070512295 4.7683716e-07 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode deleteComponent -n "deleteComponent41";
@@ -7781,7 +7716,7 @@ createNode deleteComponent -n "deleteComponent18";
 createNode polyTweak -n "polyTweak73";
 	rename -uid "3FFA4708-4C1E-0711-15C5-5982941C44E9";
 	setAttr ".uopa" yes;
-	setAttr -s 69 ".tk[53:68]" -type "float3"  0.00017881393 -0.00010961294
+	setAttr -s 16 ".tk[53:68]" -type "float3"  0.00017881393 -0.00010961294
 		 -0.0011288971 0 0 0 0 0 0 0 0 0 0.0012443066 2.9802322e-06 -0.0024425983 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode polyAppendVertex -n "polyAppendVertex169";
@@ -8124,7 +8059,7 @@ createNode deleteComponent -n "deleteComponent12";
 createNode polyTweak -n "polyTweak59";
 	rename -uid "76D6BC9A-4013-1E34-2ECD-E0AD9F0A121F";
 	setAttr ".uopa" yes;
-	setAttr -s 36 ".tk[27:35]" -type "float3"  0.63165677 -0.047336251 -0.034208059
+	setAttr -s 9 ".tk[27:35]" -type "float3"  0.63165677 -0.047336251 -0.034208059
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.77397788 0.017451912 0.24093187;
 createNode polyAppendVertex -n "polyAppendVertex131";
 	rename -uid "92104851-409D-2617-0FB7-2DBD0D640688";
@@ -8577,7 +8512,7 @@ createNode polyAppendVertex -n "polyAppendVertex210";
 createNode polyTweak -n "polyTweak82";
 	rename -uid "BE61607E-4D8B-D16B-83FB-7C918301172C";
 	setAttr ".uopa" yes;
-	setAttr -s 73 ".tk[71:72]" -type "float3"  0.074894428 0.017052412 4.7683716e-07
+	setAttr -s 2 ".tk[71:72]" -type "float3"  0.074894428 0.017052412 4.7683716e-07
 		 0 0 0;
 createNode polySplitRing -n "polySplitRing2";
 	rename -uid "5D884151-4AE2-7D64-F4B7-78B1FE1C20B7";
@@ -8665,7 +8600,7 @@ createNode polyMergeVert -n "polyMergeVert26";
 createNode polyTweak -n "polyTweak84";
 	rename -uid "E81D6F36-4220-F4D7-3542-2DB0378BE443";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[68]" -type "float3" -0.049375534 -0.027935028 0.0016652942 ;
 	setAttr ".tk[99]" -type "float3" 0.049375534 0.027935028 -0.0016652942 ;
 createNode polyMergeVert -n "polyMergeVert27";
@@ -8676,7 +8611,7 @@ createNode polyMergeVert -n "polyMergeVert27";
 createNode polyTweak -n "polyTweak85";
 	rename -uid "AE8AE978-4DF1-9274-C4E1-B2A59BAD56DA";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[67]" -type "float3" -0.050748825 -0.025665283 0.0022008419 ;
 	setAttr ".tk[99]" -type "float3" 0.050749779 0.025663376 -0.0022008419 ;
 createNode polyMergeVert -n "polyMergeVert28";
@@ -8687,7 +8622,7 @@ createNode polyMergeVert -n "polyMergeVert28";
 createNode polyTweak -n "polyTweak86";
 	rename -uid "8646DB94-46C1-6F73-6E5C-81AE76A3FAB1";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[50]" -type "float3" -0.052774429 -0.022317886 0.0013036132 ;
 	setAttr ".tk[99]" -type "float3" 0.052773476 0.022317886 -0.0013036132 ;
 createNode polyMergeVert -n "polyMergeVert29";
@@ -8698,7 +8633,7 @@ createNode polyMergeVert -n "polyMergeVert29";
 createNode polyTweak -n "polyTweak87";
 	rename -uid "F43E1B08-40DF-32C0-9700-B1B2B665D2FA";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[62]" -type "float3" -0.052362442 -0.022996902 -0.0011780858 ;
 	setAttr ".tk[99]" -type "float3" 0.052363396 0.022994995 0.0011780858 ;
 createNode polyMergeVert -n "polyMergeVert30";
@@ -8709,7 +8644,7 @@ createNode polyMergeVert -n "polyMergeVert30";
 createNode polyTweak -n "polyTweak88";
 	rename -uid "C76DE37F-45BD-38D0-9903-5597F9F78CA4";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[51]" -type "float3" -0.048807144 -0.028869629 -0.00029158592 ;
 	setAttr ".tk[99]" -type "float3" 0.048808098 0.028867722 0.00029164553 ;
 createNode polyMergeVert -n "polyMergeVert31";
@@ -8720,7 +8655,7 @@ createNode polyMergeVert -n "polyMergeVert31";
 createNode polyTweak -n "polyTweak89";
 	rename -uid "987A1BF0-49E7-BBB4-A7C0-ACB39BF3215E";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[52]" -type "float3" -0.052103043 -0.023424149 -0.0069366097 ;
 	setAttr ".tk[99]" -type "float3" 0.052102089 0.023424149 0.0069366097 ;
 createNode polyMergeVert -n "polyMergeVert32";
@@ -8731,7 +8666,7 @@ createNode polyMergeVert -n "polyMergeVert32";
 createNode polyTweak -n "polyTweak90";
 	rename -uid "1AA59B43-45A9-A566-1D01-96B7119D5BB6";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[63]" -type "float3" -0.048350334 -0.029624939 0.00031101704 ;
 	setAttr ".tk[99]" -type "float3" 0.04834938 0.029624939 -0.00031101704 ;
 createNode polyMergeVert -n "polyMergeVert33";
@@ -8742,7 +8677,7 @@ createNode polyMergeVert -n "polyMergeVert33";
 createNode polyTweak -n "polyTweak91";
 	rename -uid "094007DA-42EE-D940-BA31-4393141DDFC5";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[53]" -type "float3" -0.049180031 -0.028251648 -0.0081671476 ;
 	setAttr ".tk[99]" -type "float3" 0.049180984 0.028249741 0.0081671476 ;
 createNode polyMergeVert -n "polyMergeVert34";
@@ -8753,7 +8688,7 @@ createNode polyMergeVert -n "polyMergeVert34";
 createNode polyTweak -n "polyTweak92";
 	rename -uid "98D753C4-404F-ACBF-5CCB-D2820967BCD6";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[54]" -type "float3" -0.04827404 -0.029748917 -0.0028873011 ;
 	setAttr ".tk[99]" -type "float3" 0.048273087 0.029748917 0.0028873011 ;
 createNode polyMergeVert -n "polyMergeVert35";
@@ -8764,7 +8699,7 @@ createNode polyMergeVert -n "polyMergeVert35";
 createNode polyTweak -n "polyTweak93";
 	rename -uid "98B236A3-4693-A2A3-5A24-C19DA0BB75FD";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[64]" -type "float3" -0.048792839 -0.02889061 0.0034460127 ;
 	setAttr ".tk[99]" -type "float3" 0.048792839 0.02889061 -0.0034460425 ;
 createNode polyMergeVert -n "polyMergeVert36";
@@ -8775,7 +8710,7 @@ createNode polyMergeVert -n "polyMergeVert36";
 createNode polyTweak -n "polyTweak94";
 	rename -uid "7C6C3E82-403B-B163-7F1D-B39758B22E77";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[55]" -type "float3" -0.046898842 -0.032018661 -0.0031113625 ;
 	setAttr ".tk[99]" -type "float3" 0.046898842 0.032020569 0.0031113029 ;
 createNode polyMergeVert -n "polyMergeVert37";
@@ -8786,7 +8721,7 @@ createNode polyMergeVert -n "polyMergeVert37";
 createNode polyTweak -n "polyTweak95";
 	rename -uid "14475388-4E7B-932C-D676-CA8FE7E97A66";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[65]" -type "float3" -0.041809082 -0.040430069 -0.0065944791 ;
 	setAttr ".tk[99]" -type "float3" 0.041810036 0.040430069 0.0065945387 ;
 createNode polyMergeVert -n "polyMergeVert38";
@@ -8797,7 +8732,7 @@ createNode polyMergeVert -n "polyMergeVert38";
 createNode polyTweak -n "polyTweak96";
 	rename -uid "0DC4FBBE-428C-CF57-67FF-4FB788C7833C";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[57]" -type "float3" -0.039279938 -0.044612885 -0.0028238893 ;
 	setAttr ".tk[99]" -type "float3" 0.039278984 0.044610977 0.0028238297 ;
 createNode polyMergeVert -n "polyMergeVert39";
@@ -8808,7 +8743,7 @@ createNode polyMergeVert -n "polyMergeVert39";
 createNode polyTweak -n "polyTweak97";
 	rename -uid "CAD5621A-41F4-A66C-B432-A08EC30EB98A";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[56]" -type "float3" -0.050954819 -0.02532196 0.00074726343 ;
 	setAttr ".tk[99]" -type "float3" 0.050953865 0.02532196 -0.00074726343 ;
 createNode polyMergeVert -n "polyMergeVert40";
@@ -8819,7 +8754,7 @@ createNode polyMergeVert -n "polyMergeVert40";
 createNode polyTweak -n "polyTweak98";
 	rename -uid "2D304018-41F3-3B20-DFD4-E68DD55A963A";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[60]" -type "float3" -0.044977188 -0.035200119 0.0034787059 ;
 	setAttr ".tk[94]" -type "float3" 0.044976234 0.035198212 -0.0034787059 ;
 createNode polyMergeVert -n "polyMergeVert41";
@@ -8830,7 +8765,7 @@ createNode polyMergeVert -n "polyMergeVert41";
 createNode polyTweak -n "polyTweak99";
 	rename -uid "5FCE81D3-4EA4-693F-DEBF-F7B5A4AAEF34";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[59]" -type "float3" -0.046354294 -0.032924652 0.004168272 ;
 	setAttr ".tk[94]" -type "float3" 0.046354294 0.032926559 -0.004168272 ;
 createNode polyMergeVert -n "polyMergeVert42";
@@ -8841,7 +8776,7 @@ createNode polyMergeVert -n "polyMergeVert42";
 createNode polyTweak -n "polyTweak100";
 	rename -uid "6A510A7A-4339-CEB1-8DAC-1A81E2F83F40";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[58]" -type "float3" -0.048663139 -0.029109955 -0.00029027462 ;
 	setAttr ".tk[94]" -type "float3" 0.048663139 0.029111862 0.00029027462 ;
 createNode polyMergeVert -n "polyMergeVert43";
@@ -8852,7 +8787,7 @@ createNode polyMergeVert -n "polyMergeVert43";
 createNode polyTweak -n "polyTweak101";
 	rename -uid "1877042B-4110-1F2B-B476-D9A85FFCC873";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[61]" -type "float3" -0.048304558 -0.02970314 0.0025373995 ;
 	setAttr ".tk[94]" -type "float3" 0.048304558 0.02970314 -0.0025373697 ;
 createNode polyMergeVert -n "polyMergeVert44";
@@ -8863,7 +8798,7 @@ createNode polyMergeVert -n "polyMergeVert44";
 createNode polyTweak -n "polyTweak102";
 	rename -uid "3F6107E6-4F6C-A005-9BEA-4AAF7AD3CF62";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[49]" -type "float3" -0.048651695 -0.029129028 -0.0016920641 ;
 	setAttr ".tk[94]" -type "float3" 0.048651695 0.029130936 0.0016920641 ;
 createNode polyMergeVert -n "polyMergeVert45";
@@ -8874,7 +8809,7 @@ createNode polyMergeVert -n "polyMergeVert45";
 createNode polyTweak -n "polyTweak103";
 	rename -uid "90297315-4067-F2C8-6986-7FB47A22E605";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[30]" -type "float3" 0.063999519 -0.14295183 -0.012177467 ;
 	setAttr ".tk[298]" -type "float3" -0.0088319778 -1.5258789e-05 0.012177467 ;
 createNode polyMergeVert -n "polyMergeVert46";
@@ -8885,7 +8820,7 @@ createNode polyMergeVert -n "polyMergeVert46";
 createNode polyTweak -n "polyTweak104";
 	rename -uid "14BD9C22-485C-7EE3-CCFA-EF9B2562214C";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[28]" -type "float3" 0.0028648376 -0.0056228638 3.2424927e-05 ;
 	setAttr ".tk[361]" -type "float3" -0.0028657913 0.0056228638 -3.2424927e-05 ;
 createNode polyMergeVert -n "polyMergeVert47";
@@ -8896,7 +8831,7 @@ createNode polyMergeVert -n "polyMergeVert47";
 createNode polyTweak -n "polyTweak105";
 	rename -uid "7E6AE4B3-40A8-BA15-FEBC-0CBD0D834449";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[41]" -type "float3" -0.0032892227 -0.13058528 -2.3841858e-07 ;
 	setAttr ".tk[363]" -type "float3" 0.003288269 0.0094623566 2.3841858e-07 ;
 createNode polyMergeVert -n "polyMergeVert48";
@@ -8907,7 +8842,7 @@ createNode polyMergeVert -n "polyMergeVert48";
 createNode polyTweak -n "polyTweak106";
 	rename -uid "DE603590-4538-02CB-377F-6F84CD96DA89";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[48]" -type "float3" 0.012033463 -0.0054588318 -2.3841858e-07 ;
 	setAttr ".tk[406]" -type "float3" -0.012034416 0.0054569244 2.3841858e-07 ;
 createNode polyMergeVert -n "polyMergeVert49";
@@ -8918,7 +8853,7 @@ createNode polyMergeVert -n "polyMergeVert49";
 createNode polyTweak -n "polyTweak107";
 	rename -uid "CA244E2D-4F9B-FFC2-4821-8C88989420FF";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[37]" -type "float3" 0.027485847 -0.1370423 -0.01989216 ;
 	setAttr ".tk[300]" -type "float3" -0.027485847 0.010660172 -0.019892693 ;
 createNode polyMergeVert -n "polyMergeVert50";
@@ -8929,7 +8864,7 @@ createNode polyMergeVert -n "polyMergeVert50";
 createNode polyTweak -n "polyTweak108";
 	rename -uid "E2C4BE44-4A62-6137-3FF2-BF8180E71052";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[72]" -type "float3" 0.17862767 -0.1179603 0.08055155 ;
 	setAttr ".tk[390]" -type "float3" 0.024367332 -0.0137043 0.080551505 ;
 createNode polyMergeVert -n "polyMergeVert51";
@@ -8940,7 +8875,7 @@ createNode polyMergeVert -n "polyMergeVert51";
 createNode polyTweak -n "polyTweak109";
 	rename -uid "11CC4E92-4C49-4D7B-6918-0BA9F0493963";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[70]" -type "float3" 0.023451805 -0.02456665 -0.051247992 ;
 	setAttr ".tk[390]" -type "float3" -0.023451805 0.024564743 -0.051248431 ;
 createNode polyMergeVert -n "polyMergeVert52";
@@ -8951,7 +8886,7 @@ createNode polyMergeVert -n "polyMergeVert52";
 createNode polyTweak -n "polyTweak110";
 	rename -uid "86F9DEF5-4382-D447-BA29-FB82607FEE42";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[38]" -type "float3" 0.011325836 0.10139168 2.3841858e-07 ;
 	setAttr ".tk[390]" -type "float3" -0.011324883 -0.0034141541 -2.3841858e-07 ;
 createNode polyMergeVert -n "polyMergeVert53";
@@ -8962,7 +8897,7 @@ createNode polyMergeVert -n "polyMergeVert53";
 createNode polyTweak -n "polyTweak111";
 	rename -uid "7BBFCFB5-4B1A-2F0D-F8D6-BAB25F7C370F";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[9]" -type "float3" -0.032977778 0.057447635 -0.023354292 ;
 	setAttr ".tk[294]" -type "float3" -0.025216103 0.0084323883 -0.0025533438 ;
 createNode polyMergeVert -n "polyMergeVert54";
@@ -8973,7 +8908,7 @@ createNode polyMergeVert -n "polyMergeVert54";
 createNode polyTweak -n "polyTweak112";
 	rename -uid "500B5B4F-47E1-AB82-FA5F-A9BD8A23D927";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[11]" -type "float3" -0.00893116 0.094581671 0.024024487 ;
 	setAttr ".tk[355]" -type "float3" 0.0089302063 -0.018175125 -0.024024367 ;
 createNode polyMergeVert -n "polyMergeVert55";
@@ -8984,7 +8919,7 @@ createNode polyMergeVert -n "polyMergeVert55";
 createNode polyTweak -n "polyTweak113";
 	rename -uid "D893474C-4CA2-6C7F-B2C4-ABBE54CFEF14";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[45]" -type "float3" -0.011491776 0.15774114 0.00048923492 ;
 	setAttr ".tk[357]" -type "float3" 0.011491776 -0.010726929 -0.00048923492 ;
 createNode polyMergeVert -n "polyMergeVert56";
@@ -8995,7 +8930,7 @@ createNode polyMergeVert -n "polyMergeVert56";
 createNode polyTweak -n "polyTweak114";
 	rename -uid "FF9845E2-4306-A18E-4E07-6AB8DB08688C";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[46]" -type "float3" -0.0044706631 0.054122489 -2.3841858e-07 ;
 	setAttr ".tk[400]" -type "float3" -0.019626617 -0.011220932 2.3841858e-07 ;
 createNode polyMergeVert -n "polyMergeVert57";
@@ -9006,7 +8941,7 @@ createNode polyMergeVert -n "polyMergeVert57";
 createNode polyTweak -n "polyTweak115";
 	rename -uid "B0D2D60A-49BC-43F7-6018-14A6140F99DC";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[47]" -type "float3" 0.08735276 -0.028209651 0.032351367 ;
 	setAttr ".tk[399]" -type "float3" -0.020295143 0.010408401 0.032351851 ;
 createNode polyBridgeEdge -n "polyBridgeEdge22";
@@ -9062,7 +8997,7 @@ createNode polyMergeVert -n "polyMergeVert58";
 createNode polyTweak -n "polyTweak116";
 	rename -uid "02B95CF1-46E9-92A7-FF08-7BAB90673676";
 	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[33]" -type "float3" -0.055721406 0.10665589 2.3841858e-07 ;
 	setAttr ".tk[296]" -type "float3" -0.00040626526 -0.0044708252 -2.3841858e-07 ;
 createNode polyBridgeEdge -n "polyBridgeEdge27";
@@ -9108,7 +9043,7 @@ createNode deleteComponent -n "deleteComponent72";
 createNode polyTweak -n "polyTweak117";
 	rename -uid "094F8BD7-40A9-489E-3896-358D1B522CCA";
 	setAttr ".uopa" yes;
-	setAttr -s 9 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[12]" -type "float3" -0.15643834 0.58382887 0 ;
 	setAttr ".tk[34]" -type "float3" -0.15643834 0.58382887 0 ;
 createNode deleteComponent -n "deleteComponent73";
@@ -9165,7 +9100,7 @@ createNode polySplitRing -n "polySplitRing3";
 createNode polyTweak -n "polyTweak118";
 	rename -uid "1EA0548F-4331-2B24-65CF-6FAE6A588F5B";
 	setAttr ".uopa" yes;
-	setAttr -s 19 ".tk";
+	setAttr -s 5 ".tk";
 	setAttr ".tk[0]" -type "float3" 0 0 -2.7939677e-09 ;
 	setAttr ".tk[1]" -type "float3" 1.4901161e-08 -7.4505806e-09 2.2351742e-08 ;
 	setAttr ".tk[14]" -type "float3" 0 0 7.4505806e-09 ;
@@ -9249,27 +9184,16 @@ createNode polySplit -n "polySplit14";
 createNode polyTweak -n "polyTweak119";
 	rename -uid "4EB242A8-4EEC-5D3E-D74E-5DB8C2B144DF";
 	setAttr ".uopa" yes;
-	setAttr -s 35 ".tk";
-	setAttr ".tk[208]" -type "float3" -0.3529129 0.21469307 -0.00015637279 ;
-	setAttr ".tk[209]" -type "float3" -0.35302925 0.21474457 -0.0001565218 ;
-	setAttr ".tk[210]" -type "float3" -0.35323906 0.21486855 -0.0001565218 ;
-	setAttr ".tk[211]" -type "float3" -0.35353088 0.21504021 -0.0001565218 ;
-	setAttr ".tk[212]" -type "float3" -0.35387421 0.21524048 -0.00015628338 ;
-	setAttr ".tk[213]" -type "float3" -0.35421371 0.21548653 -0.0001565218 ;
-	setAttr ".tk[214]" -type "float3" -0.35455894 0.21568489 -0.0001565218 ;
-	setAttr ".tk[215]" -type "float3" -0.35485268 0.21585655 -0.0001565218 ;
-	setAttr ".tk[216]" -type "float3" -0.35506248 0.21598816 -0.00015637279 ;
-	setAttr ".tk[217]" -type "float3" -0.35518074 0.21604347 -0.00015660461 ;
-	setAttr ".tk[218]" -type "float3" -0.35518265 0.21604347 -0.00015637279 ;
-	setAttr ".tk[219]" -type "float3" -0.35506821 0.21599007 -0.0001565218 ;
-	setAttr ".tk[220]" -type "float3" -0.35485458 0.215868 -0.0001565218 ;
-	setAttr ".tk[221]" -type "float3" -0.35456657 0.21569443 -0.0001565218 ;
-	setAttr ".tk[222]" -type "float3" -0.35422325 0.21549606 -0.0001565218 ;
-	setAttr ".tk[223]" -type "float3" -0.35388184 0.21525002 -0.0001565218 ;
-	setAttr ".tk[224]" -type "float3" -0.35353661 0.21505165 -0.0001565218 ;
-	setAttr ".tk[225]" -type "float3" -0.35324478 0.21487999 -0.0001565218 ;
-	setAttr ".tk[226]" -type "float3" -0.35303307 0.21474838 -0.00015637279 ;
-	setAttr ".tk[227]" -type "float3" -0.35291481 0.21469307 -0.00015603837 ;
+	setAttr -s 20 ".tk[208:227]" -type "float3"  -0.3529129 0.21469307 -0.00015637279
+		 -0.35302925 0.21474457 -0.0001565218 -0.35323906 0.21486855 -0.0001565218 -0.35353088
+		 0.21504021 -0.0001565218 -0.35387421 0.21524048 -0.00015628338 -0.35421371 0.21548653
+		 -0.0001565218 -0.35455894 0.21568489 -0.0001565218 -0.35485268 0.21585655 -0.0001565218
+		 -0.35506248 0.21598816 -0.00015637279 -0.35518074 0.21604347 -0.00015660461 -0.35518265
+		 0.21604347 -0.00015637279 -0.35506821 0.21599007 -0.0001565218 -0.35485458 0.215868
+		 -0.0001565218 -0.35456657 0.21569443 -0.0001565218 -0.35422325 0.21549606 -0.0001565218
+		 -0.35388184 0.21525002 -0.0001565218 -0.35353661 0.21505165 -0.0001565218 -0.35324478
+		 0.21487999 -0.0001565218 -0.35303307 0.21474838 -0.00015637279 -0.35291481 0.21469307
+		 -0.00015603837;
 createNode deleteComponent -n "deleteComponent97";
 	rename -uid "028A7189-4DA1-822C-872D-349BA2CDB2C2";
 	setAttr ".dc" -type "componentList" 1 "f[200:219]";
@@ -9415,7 +9339,7 @@ createNode polyAppendVertex -n "polyAppendVertex218";
 createNode polyTweak -n "polyTweak122";
 	rename -uid "C85370C9-40B7-F8E4-4A22-E882988C6246";
 	setAttr ".uopa" yes;
-	setAttr -s 11 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[8]" -type "float3" 0.11219099 -0.017768741 0.10538852 ;
 	setAttr ".tk[12]" -type "float3" 0.16584396 -0.026268542 0.02657789 ;
 createNode polyAppendVertex -n "polyAppendVertex219";
@@ -9457,7 +9381,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge1";
 createNode polyTweak -n "polyTweak124";
 	rename -uid "F64F1503-4632-5774-C41F-C78BC1ACA3E3";
 	setAttr ".uopa" yes;
-	setAttr -s 20 ".tk[16:19]" -type "float3"  -0.13341808 -0.021130085 0.014732718
+	setAttr -s 4 ".tk[16:19]" -type "float3"  -0.13341808 -0.021130085 0.014732718
 		 -0.021458149 -0.0033990145 0.081132531 0 0 0 0 0 0;
 createNode polyMergeVert -n "polyMergeVert59";
 	rename -uid "EEB785DD-4A9A-BD3C-3A45-7F85F5C996E8";
@@ -9586,8 +9510,7 @@ createNode polyAppendVertex -n "polyAppendVertex233";
 createNode polyTweak -n "polyTweak131";
 	rename -uid "9DC17438-4F96-4D06-102B-43A6AB1B6ABC";
 	setAttr ".uopa" yes;
-	setAttr -s 29 ".tk";
-	setAttr ".tk[30]" -type "float3" -0.03523539 0.036607981 -0.032373667 ;
+	setAttr ".tk[30]" -type "float3"  -0.03523539 0.036607981 -0.032373667;
 createNode polyAppendVertex -n "polyAppendVertex234";
 	rename -uid "1ED188DF-4641-827C-6916-E6A5084F2E9E";
 	setAttr ".uopa" yes;
@@ -9873,8 +9796,7 @@ createNode polyAppendVertex -n "polyAppendVertex271";
 createNode polyTweak -n "polyTweak139";
 	rename -uid "4EBEB2DA-4C23-5347-9DD0-90BCB06DEBD0";
 	setAttr ".uopa" yes;
-	setAttr -s 2 ".tk";
-	setAttr ".tk[223]" -type "float3" -0.15460095 -0.3933394 -0.0075659454 ;
+	setAttr ".tk[223]" -type "float3"  -0.15460095 -0.3933394 -0.0075659454;
 createNode deleteComponent -n "deleteComponent102";
 	rename -uid "8F368AF9-44AC-0F03-DEA4-EF94A1F167EA";
 	setAttr ".dc" -type "componentList" 1 "vtx[431]";
@@ -9899,7 +9821,7 @@ createNode deleteComponent -n "deleteComponent108";
 createNode polyTweak -n "polyTweak140";
 	rename -uid "459253F2-474B-F795-E73A-65A165346A58";
 	setAttr ".uopa" yes;
-	setAttr -s 24 ".tk";
+	setAttr -s 21 ".tk";
 	setAttr ".tk[22]" -type "float3" 0.005091548 0.010689497 0.0016196966 ;
 	setAttr ".tk[42]" -type "float3" 0.022039652 0.046265841 0.0070105791 ;
 	setAttr ".tk[63]" -type "float3" 0.036135077 0.075861454 0.011495233 ;
@@ -10335,7 +10257,7 @@ createNode polyMergeVert -n "polyMergeVert63";
 createNode polyTweak -n "polyTweak142";
 	rename -uid "4F9A29A6-4301-8163-7542-769BBEBF0E27";
 	setAttr ".uopa" yes;
-	setAttr -s 3 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[20]" -type "float3" -0.063854694 -0.010112762 0.029769063 ;
 	setAttr ".tk[1164]" -type "float3" 0.063854456 0.010116577 -0.029769063 ;
 createNode polyMergeVert -n "polyMergeVert64";
@@ -10346,7 +10268,7 @@ createNode polyMergeVert -n "polyMergeVert64";
 createNode polyTweak -n "polyTweak143";
 	rename -uid "37805AD7-42B0-527F-16D2-AFA5AF1E95FE";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[19]" -type "float3" 0.0067888498 0.0010757446 0.015789866 ;
 	setAttr ".tk[1160]" -type "float3" -0.0067888498 -0.0010757446 -0.015789866 ;
 createNode polyMergeVert -n "polyMergeVert65";
@@ -10357,7 +10279,7 @@ createNode polyMergeVert -n "polyMergeVert65";
 createNode polyTweak -n "polyTweak144";
 	rename -uid "880B971E-4FC4-EDE8-C835-EDAEB669BBF6";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[24]" -type "float3" 0.000893116 -0.0001411438 0.032046795 ;
 	setAttr ".tk[1156]" -type "float3" -0.00089335442 0.0001449585 -0.032046795 ;
 createNode polyMergeVert -n "polyMergeVert66";
@@ -10368,7 +10290,7 @@ createNode polyMergeVert -n "polyMergeVert66";
 createNode polyTweak -n "polyTweak145";
 	rename -uid "F7571BF5-474E-9585-4DF7-1EB40E5D0C50";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[26]" -type "float3" 0.030433178 -0.015506744 0.034487605 ;
 	setAttr ".tk[1152]" -type "float3" -0.030433655 0.015506744 -0.034487605 ;
 createNode polyMergeVert -n "polyMergeVert67";
@@ -10379,7 +10301,7 @@ createNode polyMergeVert -n "polyMergeVert67";
 createNode polyTweak -n "polyTweak146";
 	rename -uid "A2F147CD-4643-EE18-B2F6-07AE65013B84";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[27]" -type "float3" 0.018777847 -0.0095672607 -0.030870795 ;
 	setAttr ".tk[1093]" -type "float3" -0.018777847 0.0095672607 0.030870795 ;
 createNode polyMergeVert -n "polyMergeVert68";
@@ -10390,7 +10312,7 @@ createNode polyMergeVert -n "polyMergeVert68";
 createNode polyTweak -n "polyTweak147";
 	rename -uid "967E4220-4C8D-667E-6DC8-ACA7DD47C95D";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[23]" -type "float3" -0.050191879 0.02557373 -0.018650055 ;
 	setAttr ".tk[1096]" -type "float3" 0.050191641 -0.02557373 0.018650055 ;
 createNode polyMergeVert -n "polyMergeVert69";
@@ -10401,11 +10323,11 @@ createNode polyMergeVert -n "polyMergeVert69";
 createNode polyTweak -n "polyTweak148";
 	rename -uid "FDA440C4-4EFD-31F6-7280-03B2B2B19EE1";
 	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
+	setAttr -s 2 ".tk";
 	setAttr ".tk[16]" -type "float3" 0.045753241 0.0072479248 -0.01049304 ;
 	setAttr ".tk[1099]" -type "float3" -0.045753241 -0.0072441101 0.010493159 ;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "C7C04D3E-40E0-3237-12EE-DEB4E5C36825";
+	rename -uid "8DC42D53-46D1-1D47-93BA-0DB2224F7A87";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -10539,8 +10461,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwcc";
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupParts9.og" "pCylinderShape1.i";
 connectAttr "groupId6.id" "pCylinderShape1.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinderShape1.iog.og[1].gco";
