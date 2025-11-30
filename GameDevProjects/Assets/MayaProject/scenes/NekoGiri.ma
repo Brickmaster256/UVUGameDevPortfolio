@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: NekoGiri.ma
-//Last modified: Thu, Nov 27, 2025 05:10:45 PM
+//Last modified: Thu, Nov 27, 2025 05:13:16 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "3EF920F4-45E6-9E0E-260E-FD935A1AF525";
+fileInfo "UUID" "E4C8448A-4BC7-842C-9C7C-4F8497FD7FD2";
 createNode transform -s -n "persp";
 	rename -uid "3CEDAA3E-4952-18A0-80AC-91861B2298FD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.141464338034138 11.170797532763723 9.2620645840319842 ;
-	setAttr ".r" -type "double3" -23.138352719738954 1492.1999999984369 5.1892936496574526e-15 ;
+	setAttr ".t" -type "double3" 19.44135139229045 7.3529352764672389 2.8770333877032233 ;
+	setAttr ".r" -type "double3" -7.5383527198359204 1521.7999999982856 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BE8215B9-49E1-E81A-408E-4EAF3F7AD4BC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.206052536968318;
+	setAttr ".coi" 19.440155795049378;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -13462,7 +13462,7 @@ createNode polySoftEdge -n "polySoftEdge4";
 		 0 0 0.30539739321718884 0 2.4125578293655749 4.5501994185040555 0.52881267300418722 1;
 	setAttr ".a" 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "D8FFE999-4364-4285-C875-CCB637AADFC0";
+	rename -uid "2D15BF52-4BD7-CECC-E88D-188D1A84D9DD";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
