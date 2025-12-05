@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: DungeonRoom.ma
-//Last modified: Thu, Dec 04, 2025 05:05:57 PM
+//Last modified: Fri, Dec 05, 2025 09:10:55 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "29E2C8CE-429B-39D7-C664-BFA0A4443503";
+fileInfo "UUID" "18E04FA5-466C-A5DB-FF8C-F3B13CE06E3D";
 createNode transform -s -n "persp";
 	rename -uid "9F70B509-468E-253E-4C0B-D7A91698FAAD";
 	setAttr ".v" no;
@@ -419,7 +419,7 @@ createNode mesh -n "FloorShape" -p "Floor";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "SceneCamera";
 	rename -uid "933CF317-43B0-0ECB-6FC9-579C182972EA";
-	setAttr ".t" -type "double3" -100.80807599199211 155.9810327524157 -236.05523187263611 ;
+	setAttr ".t" -type "double3" -109.75825542663095 205.0972669333018 -39.001530375843004 ;
 	setAttr ".r" -type "double3" 3946.0689036206618 717.13387301812077 6838.930345525253 ;
 	setAttr ".s" -type "double3" 32.635 32.635 32.635 ;
 	setAttr ".rp" -type "double3" -2.8985702726913585e-14 1.4492851363456793e-14 -3.4782843272296305e-13 ;
@@ -432,7 +432,7 @@ createNode camera -n "SceneCameraShape" -p "SceneCamera";
 	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
-	setAttr ".coi" 246.4412952762992;
+	setAttr ".coi" 449.72108139781972;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -15555,7 +15555,7 @@ createNode mesh -n "Screw_14_BarrelShape" -p "Screw_14_Barrel";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.91892771471529178 0.33873304332181403 ;
+	setAttr ".pv" -type "double2" 1.0129412710666656 0.4994644969701767 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -30603,7 +30603,7 @@ createNode polyTweakUV -n "polyTweakUV45";
 		 0.29203436 -0.34217322 -0.46581697 0.12178901 -0.46581402 0.12178811 -0.46581545
 		 0.1217896 -0.46581629 0.12178859 -0.46621001 0.12358341 -0.46625006 0.12362358;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "B0D0931A-43FC-FB16-A91F-4E97C5332889";
+	rename -uid "0314DADF-47A1-765A-A92B-C593E2E46E24";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -30737,6 +30737,9 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwcc";
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 connectAttr "groupId23.id" "BarrelShape5.iog.og[8].gid";
 connectAttr ":initialShadingGroup.mwc" "BarrelShape5.iog.og[8].gco";
 connectAttr "groupId24.id" "BarrelShape5.iog.og[9].gid";
