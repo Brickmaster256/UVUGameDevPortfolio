@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: DungeonRoom.ma
-//Last modified: Fri, Dec 05, 2025 10:03:02 AM
+//Last modified: Sun, Dec 07, 2025 06:57:17 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "6837C6A9-4D25-D16D-98BD-EEA26DF9874D";
+fileInfo "UUID" "54C43B53-4666-DCED-1A81-0D9293809730";
 createNode transform -s -n "persp";
 	rename -uid "9F70B509-468E-253E-4C0B-D7A91698FAAD";
 	setAttr ".v" no;
@@ -30686,7 +30686,7 @@ createNode polyTweakUV -n "polyTweakUV47";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "E7672AF3-4122-59B5-0C9E-8094A4E96B63";
+	rename -uid "14D24E41-4265-D279-A65F-298EB42AE761";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -30820,6 +30820,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwcc";
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
 connectAttr "groupId23.id" "BarrelShape5.iog.og[8].gid";
 connectAttr ":initialShadingGroup.mwc" "BarrelShape5.iog.og[8].gco";
 connectAttr "groupId24.id" "BarrelShape5.iog.og[9].gid";
