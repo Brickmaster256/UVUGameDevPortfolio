@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BossFightScenes/BossFightMainMenu.unity
+    guid: d6615711c786dd045a1c8eaf99510b9a
+  - enabled: 1
+    path: Assets/Scenes/BossFightScenes/BossFIghtScene.unity
+    guid: 74037937810c71e4ea562e783d8bd5da
+  - enabled: 1
+    path: Assets/Scenes/BossFightScenes/BossFightGameOverScene.unity
+    guid: 8ce9ed62cc0ad1746b032a534529a4f4
+  - enabled: 1
+    path: Assets/Scenes/BossFightScenes/BossFightWinScene.unity
+    guid: 0c512c5ee6807e348ae5830279dbe41f
   m_configObjects: {}
