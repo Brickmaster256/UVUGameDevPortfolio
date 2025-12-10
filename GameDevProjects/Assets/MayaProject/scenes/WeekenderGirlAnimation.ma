@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: WeekenderGirlAnimation.ma
-//Last modified: Tue, Dec 09, 2025 01:29:49 PM
+//Last modified: Tue, Dec 09, 2025 05:49:49 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/mcama/Documents/UVUProjects/UVUGameDevPortfolio/GameDevProjects/Assets/MayaProject//scenes/Ultimate_Bony_v1.0.5.ma";
@@ -21,7 +21,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "954173C3-4008-F244-5A21-9EA37FB6A5A5";
+fileInfo "UUID" "2FD3CAB6-40C6-D5F5-B486-73840BC9F557";
 createNode transform -s -n "persp";
 	rename -uid "BB9129F3-419C-5869-9B79-349362A8B6B6";
 	setAttr ".v" no;
@@ -32,6 +32,7 @@ createNode transform -s -n "persp";
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "49C50616-4DB8-592A-F62D-8A849ECCAE73";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".coi" 81.132371047129737;
 	setAttr ".imn" -type "string" "persp";
@@ -120,7 +121,6 @@ createNode transform -n "RenderCamera";
 createNode camera -n "RenderCameraShape" -p "RenderCamera";
 	rename -uid "7F1C8EFB-46B5-6D53-6122-70BE8EFAB304";
 	setAttr -k off ".v";
-	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".coi" 140.15812447269062;
@@ -150,6 +150,8 @@ createNode renderLayer -n "defaultRenderLayer";
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "AF489678-4C99-A001-66E7-FC8019D58506";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr ".abort_on_error" no;
+	setAttr ".AA_samples" 1;
 	setAttr ".version" -type "string" "5.3.4.1";
 	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
@@ -157,7 +159,8 @@ createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	setAttr ".ai_translator" -type "string" "gaussian";
 createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	rename -uid "659CA40D-4401-FE90-C7C1-99A2674C3028";
-	setAttr ".ai_translator" -type "string" "exr";
+	setAttr ".ai_translator" -type "string" "jpeg";
+	setAttr ".color_management" 1;
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "361D5C36-4824-F3E9-B756-F7A48AE6E610";
 	setAttr ".ai_translator" -type "string" "maya";
@@ -250,39 +253,40 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lClavicleCG|Ultimate_Bony_v1_0_5:Bony_lClavicleC" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lArmIKFKG|Ultimate_Bony_v1_0_5:Bony_lShoulderJIK" 
-		"rotate" " -type \"double3\" -4.99306753600698094 42.42335624809836503 4.46699344737895387"
+		"rotate" " -type \"double3\" 0.36221002046171402 -60.60147285499105152 -3.59280615779654644"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lArmIKFKG|Ultimate_Bony_v1_0_5:Bony_lShoulderJIK|Ultimate_Bony_v1_0_5:Bony_lElbowJIK" 
-		"rotate" " -type \"double3\" 0 -55.00536474795768527 0"
+		"rotate" " -type \"double3\" 0 0.024990553017125917 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lLegIKFKG|Ultimate_Bony_v1_0_5:Bony_lHipJIK" 
-		"rotate" " -type \"double3\" 12.77210650798673619 13.16449761991868783 50.4718345293394961"
+		"rotate" " -type \"double3\" -41.72637338142904895 4.20304378540738544 -26.49003648631823182"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lLegIKFKG|Ultimate_Bony_v1_0_5:Bony_lHipJIK|Ultimate_Bony_v1_0_5:Bony_lKneeJIK" 
-		"rotate" " -type \"double3\" 0 -0.00081590861988088616 -40.23805050186324195"
+		"rotate" " -type \"double3\" 0 -0.00034027799954977622 -17.36438812591089231"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lLegIKFKG|Ultimate_Bony_v1_0_5:Bony_lHipJIK|Ultimate_Bony_v1_0_5:Bony_lKneeJIK|Ultimate_Bony_v1_0_5:Bony_lAnkleJIK" 
-		"rotate" " -type \"double3\" -23.20197525934751326 -16.83932726329670615 -5.69605749280341911"
+		"rotate" " -type \"double3\" 10.53653451631348581 -8.34509576310692935 10.70404028626809634"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lLegIKFKG|Ultimate_Bony_v1_0_5:Bony_lHipJIK|Ultimate_Bony_v1_0_5:Bony_lKneeJIK|Ultimate_Bony_v1_0_5:Bony_lAnkleJIK|Ultimate_Bony_v1_0_5:Bony_lBallJIK" 
-		"rotate" " -type \"double3\" -2.8151549877284831e-05 0 0"
+		"rotate" " -type \"double3\" 2.5725649374424408e-08 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lToeIKCG|Ultimate_Bony_v1_0_5:Bony_lToeIKC" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rClavicleCG|Ultimate_Bony_v1_0_5:Bony_rClavicleC" 
 		"rotate" " -type \"double3\" 0 0 -24.44891558685967681"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rArmIKFKG|Ultimate_Bony_v1_0_5:Bony_rShoulderJIK" 
-		"rotate" " -type \"double3\" -3.09093801718323613 21.45048219852367311 24.94195033686552065"
+		"rotate" " -type \"double3\" 6.89241730360764393 71.79855094210635968 33.76826548751417789"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rArmIKFKG|Ultimate_Bony_v1_0_5:Bony_rShoulderJIK|Ultimate_Bony_v1_0_5:Bony_rElbowJIK" 
 		"rotate" " -type \"double3\" 0 0.024984681375595189 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rLegIKFKG|Ultimate_Bony_v1_0_5:Bony_rHipJIK" 
-		"rotate" " -type \"double3\" 5.9141628462617124 6.02615477672632771 0.48318440990283079"
+		"rotate" " -type \"double3\" 7.70509361541629278 -19.21990272832623248 1.89919034839952539"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rLegIKFKG|Ultimate_Bony_v1_0_5:Bony_rHipJIK|Ultimate_Bony_v1_0_5:Bony_rKneeJIK" 
-		"rotate" " -type \"double3\" 0 -0.00038435407994968484 -19.48406112121303835"
+		"rotate" " -type \"double3\" 0 0.0036446584416480895 3.22579980574544045"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rLegIKFKG|Ultimate_Bony_v1_0_5:Bony_rHipJIK|Ultimate_Bony_v1_0_5:Bony_rKneeJIK|Ultimate_Bony_v1_0_5:Bony_rAnkleJIK" 
-		"rotate" " -type \"double3\" -20.90698851072191289 -0.46367904361019691 24.4803015564551707"
+		"rotate" " -type \"double3\" 19.9833215699264457 3.03205797113889153 -11.66118921015441323"
 		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rLegIKFKG|Ultimate_Bony_v1_0_5:Bony_rHipJIK|Ultimate_Bony_v1_0_5:Bony_rKneeJIK|Ultimate_Bony_v1_0_5:Bony_rAnkleJIK|Ultimate_Bony_v1_0_5:Bony_rBallJIK" 
-		"rotate" " -type \"double3\" -1.6557189071913044e-07 0 0"
+		"rotate" " -type \"double3\" 0.11391735356574867 0.10556273556762297 -0.084565625090039051"
+		
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rToeIKCG|Ultimate_Bony_v1_0_5:Bony_rToeIKC" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:BonyExtraNodes|Ultimate_Bony_v1_0_5:Bony_ribbonBlend|Ultimate_Bony_v1_0_5:Bony_ribbonBlendShape" 
@@ -1653,15 +1657,15 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[24].y" -466.41293334960938;
 	setAttr ".tgi[0].ni[24].nvs" 1923;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "30BC06CF-4171-ED3D-36E3-80B7A9C561F8";
+	rename -uid "AE6ED902-4D6A-CB40-6EBE-A2ADE26E46DA";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 190;
-	setAttr ".unw" 190;
+	setAttr -k on ".o" 230;
+	setAttr ".unw" 230;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1735,18 +1739,23 @@ select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".outf" 51;
-	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".imfkey" -type "string" "jpeg";
+	setAttr ".an" yes;
+	setAttr ".ef" 230;
+	setAttr ".pff" yes;
+	setAttr ".peie" 0;
+	setAttr ".ifp" -type "string" "DanceAnimation";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -av ".w";
-	setAttr -av ".h";
+	setAttr -av ".w" 1920;
+	setAttr -av ".h" 1080;
 	setAttr -av ".pa" 1;
 	setAttr -av -k on ".al";
-	setAttr -av ".dar";
+	setAttr -av ".dar" 1.7769999504089355;
 	setAttr -av -k on ".ldar";
 	setAttr -k on ".dpi";
 	setAttr -av -k on ".off";
