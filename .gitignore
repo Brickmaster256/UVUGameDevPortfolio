@@ -744,3 +744,35 @@ GameDevProjects/Assets/XR/Settings/OpenXR Package Settings.asset
 GameDevProjects/heu_session.txt
 GameDevProjects/Packages/manifest.json
 GameDevProjects/Packages/packages-lock.json
+GameDevProjects/Assets/Oculus Hands.meta
+GameDevProjects/Assets/Oculus Hands/Animations.meta
+GameDevProjects/Assets/Oculus Hands/Animations/l_hand_default_anim.fbx
+GameDevProjects/Assets/Oculus Hands/Animations/l_hand_default_anim.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Animations/l_hand_fist_anim.fbx
+GameDevProjects/Assets/Oculus Hands/Animations/l_hand_fist_anim.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Animations/l_hand_pinch_anim.fbx
+GameDevProjects/Assets/Oculus Hands/Animations/l_hand_pinch_anim.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Animations/Left Hand Animator.controller
+GameDevProjects/Assets/Oculus Hands/Animations/Left Hand Animator.controller.meta
+GameDevProjects/Assets/Oculus Hands/Animations/r_hand_default_anim.fbx
+GameDevProjects/Assets/Oculus Hands/Animations/r_hand_default_anim.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Animations/r_hand_fist_anim.fbx
+GameDevProjects/Assets/Oculus Hands/Animations/r_hand_fist_anim.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Animations/r_hand_pinch_anim.fbx
+GameDevProjects/Assets/Oculus Hands/Animations/r_hand_pinch_anim.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Animations/Right Hand Animator.controller
+GameDevProjects/Assets/Oculus Hands/Animations/Right Hand Animator.controller.meta
+GameDevProjects/Assets/Oculus Hands/Materials.meta
+GameDevProjects/Assets/Oculus Hands/Materials/Hands_solid.mat
+GameDevProjects/Assets/Oculus Hands/Materials/Hands_solid.mat.meta
+GameDevProjects/Assets/Oculus Hands/Models.meta
+GameDevProjects/Assets/Oculus Hands/Models/l_hand_skeletal_lowres.fbx
+GameDevProjects/Assets/Oculus Hands/Models/l_hand_skeletal_lowres.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Models/r_hand_skeletal_lowres.fbx
+GameDevProjects/Assets/Oculus Hands/Models/r_hand_skeletal_lowres.fbx.meta
+GameDevProjects/Assets/Oculus Hands/Prefabs.meta
+GameDevProjects/Assets/Oculus Hands/Prefabs/Left Hand Model.prefab
+GameDevProjects/Assets/Oculus Hands/Prefabs/Left Hand Model.prefab.meta
+GameDevProjects/Assets/Oculus Hands/Prefabs/Right Hand Model.prefab
+GameDevProjects/Assets/Oculus Hands/Prefabs/Right Hand Model.prefab.meta
+GameDevProjects/Assets/VRResturauntSim/Scripts/AnimateHand.cs
