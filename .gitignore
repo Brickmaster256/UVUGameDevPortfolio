@@ -494,3 +494,253 @@ GameDevProjects/Assets/HoudiniEngineUnity/Shaders/URP/StandardLitAlpha.shadergra
 GameDevProjects/Assets/MayaProject/scenes/Rigging/Simple_HUmanoid_Rig_Practice.ma.meta
 GameDevProjects/Assets/object_mcama.ROCK.1.0.hdanc
 GameDevProjects/Assets/object_mcama.ROCK.1.0.hdanc.meta
+GameDevProjects/Assets/XR/Loaders/OpenXRLoader.asset.meta
+GameDevProjects/Assets/XR/Settings/OpenXR Package Settings.asset
+GameDevProjects/Assets/XRI.meta
+GameDevProjects/Assets/XRI/Settings.meta
+GameDevProjects/Assets/XRI/Settings/Resources.meta
+GameDevProjects/Assets/XRI/Settings/Resources/InteractionLayerSettings.asset
+GameDevProjects/Assets/XRI/Settings/Resources/InteractionLayerSettings.asset.meta
+GameDevProjects/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset
+GameDevProjects/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset.meta
+GameDevProjects/Assets/XRI/Settings/XRInteractionEditorSettings.asset
+GameDevProjects/Assets/XRI/Settings/XRInteractionEditorSettings.asset.meta
+GameDevProjects/Packages/manifest.json
+GameDevProjects/Packages/packages-lock.json
+GameDevProjects/Assets/XR/Settings/OpenXR Package Settings.asset
+GameDevProjects/Packages/manifest.json
+GameDevProjects/Packages/packages-lock.json
+GameDevProjects/Assets/XR/Settings/OpenXR Package Settings.asset
+GameDevProjects/Packages/manifest.json
+GameDevProjects/Packages/packages-lock.json
+GameDevProjects/Assets/Samples.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/.sample.json
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Animations.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Animations/ArrowBounce.anim
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Animations/ArrowBounce.anim.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Animations/Climb Teleport Arrow.controller
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Animations/Climb Teleport Arrow.controller.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoScene.unity
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoScene.unity.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/AffordanceThemes.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/AffordanceThemes/InteractionColorAffordanceTheme.asset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/AffordanceThemes/InteractionColorAffordanceTheme.asset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Audio.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models/Primitive_Pyramid.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models/Primitive_Pyramid.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models/Primitive_Torus.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models/Primitive_Torus.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models/PushButton.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Models/PushButton.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climb Sample.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climb Sample.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climbing Wall.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climbing Wall.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Ladder.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Ladder.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi Floor Ladder.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi Floor Ladder.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi-Anchor Teleport Reticle.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi-Anchor Teleport Reticle.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Single Floor Ladder.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Climb/Single Floor Ladder.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Instant Pyramid.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Instant Pyramid.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Kinematic Torus.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Kinematic Torus.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Simple Cube.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Simple Cube.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Velocity Tracked Wedge.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Velocity Tracked Wedge.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interaction Affordance.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interaction Affordance.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Push Button.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Push Button.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Snapping Teleport Anchor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Snapping Teleport Anchor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Anchor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Anchor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Area.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Area.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleportation Environment.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/Teleportation Environment.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI Sample.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI Sample.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Dropdown.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Dropdown.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Button.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Button.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Toggle.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Toggle.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Interactive Controls.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Interactive Controls.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/MinMaxSlider.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/MinMaxSlider.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Text Toggle.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/Text Toggle.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/TextButton.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Prefabs/UI/TextButton.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Settings.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Settings/FurthestGazedAtTeleportAnchorFilter.asset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Settings/FurthestGazedAtTeleportAnchorFilter.asset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Settings/MultiFloorTeleportVolumeDestinationSettings.asset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Settings/MultiFloorTeleportVolumeDestinationSettings.asset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Asset.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Asset.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Checkmark.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Checkmark.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60 Outline 4.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60 Outline 4.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60_Horizontal.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60_Horizontal.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Forward.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Forward.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/LegibilityMask.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/LegibilityMask.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Editor.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Editor/Scripts.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Editor/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.asmdef
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Editor/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.asmdef.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Filters.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Filters/AnyGazedAtTeleportAnchorFilter.asset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Filters/AnyGazedAtTeleportAnchorFilter.asset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Materials.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Materials/UI-NoZTest.mat
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Materials/UI-NoZTest.mat.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/Primitive_Cylinder.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/Primitive_Cylinder.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/Primitive_Wedge.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/Primitive_Wedge.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/Reticle_Torus.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/Reticle_Torus.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/XRControllerLeft.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/XRControllerLeft.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/XRControllerRight.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Models/XRControllerRight.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Controllers.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Direct Interactor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Direct Interactor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Gaze Interactor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Gaze Interactor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Poke Interactor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Poke Interactor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Ray Interactor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Ray Interactor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport/Blocking Teleport Reticle.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport/Blocking Teleport Reticle.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport/Climb Teleport Arrow.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport/Climb Teleport Arrow.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport/Directional Teleport Reticle.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/Teleport/Directional Teleport Reticle.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/XR Interaction Setup.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/XR Interaction Setup.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/XR Origin (XR Rig).prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Prefabs/XR Origin (XR Rig).prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Continuous Move.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Continuous Move.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Continuous Turn.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Continuous Turn.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Gaze Controller.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Gaze Controller.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Left ActionBasedControllerManager.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Left ActionBasedControllerManager.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Left Controller.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Left Controller.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Left Grab Move.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Left Grab Move.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Right ActionBasedControllerManager.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Right ActionBasedControllerManager.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Right Controller.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Right Controller.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Right Grab Move.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Right Grab Move.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Snap Turn.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default Snap Turn.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default XR Screen Space Controller.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default XR Screen Space Controller.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default XR UI Input Module.preset
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Presets/XRI Default XR UI Input Module.preset.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ActionBasedControllerManager.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ActionBasedControllerManager.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/DestroySelf.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/DestroySelf.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/DynamicMoveProvider.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/DynamicMoveProvider.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/GazeInputManager.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/GazeInputManager.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ObjectSpawner.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ObjectSpawner.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/RotationAxisLockGrabTransformer.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/RotationAxisLockGrabTransformer.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ToggleComponentZone.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/ToggleComponentZone.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/XRPokeFollowAffordance.cs
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Scripts/XRPokeFollowAffordance.cs.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Shaders.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Shaders/UI-NoZTest.shader
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Shaders/UI-NoZTest.shader.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignette.mat
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignette.mat.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignette.prefab
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignette.prefab.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignette.shader
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignette.shader.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignetteHemisphere.fbx
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignetteHemisphere.fbx.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef.meta
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/XRI Default Input Actions.inputactions
+GameDevProjects/Assets/Samples/XR Interaction Toolkit/2.6.5/Starter Assets/XRI Default Input Actions.inputactions.meta
+GameDevProjects/Assets/XR/Settings/OpenXR Package Settings.asset
+GameDevProjects/heu_session.txt
+GameDevProjects/Packages/manifest.json
+GameDevProjects/Packages/packages-lock.json
