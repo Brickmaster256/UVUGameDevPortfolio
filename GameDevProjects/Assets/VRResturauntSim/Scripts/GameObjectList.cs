@@ -17,4 +17,9 @@ public class GameObjectList : ScriptableObject
     {
         gameObjectList.Remove(go);
     }
-}
+
+    public void ClearList()
+    {
+        gameObjectList.Clear();
+    }
+}   

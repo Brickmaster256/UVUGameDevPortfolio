@@ -18,4 +18,5 @@ public class TriggerGameObjectList : MonoBehaviour
     {
         gameObjectList.Remove(other.gameObject);
     }
+    
 }
