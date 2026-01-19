@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Pirate_Coin.ma
-//Last modified: Sun, Jan 18, 2026 06:59:33 PM
+//Last modified: Sun, Jan 18, 2026 07:40:40 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "C5F8D5B1-4EB1-0E2E-7406-5AA7841FD87E";
+fileInfo "UUID" "45A22FFC-4AB7-B07F-BC47-79992F70D8AE";
 createNode transform -s -n "persp";
 	rename -uid "5D6F3351-401A-6E4B-486C-9F9D099E59E9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.7470578816562998 3.9046845591751262 -12.120129507300021 ;
-	setAttr ".r" -type "double3" 352.46164726912997 -1241.4000000000894 0 ;
+	setAttr ".t" -type "double3" 8.260417429182926 5.8797336139832943 -14.732040420004946 ;
+	setAttr ".r" -type "double3" 336.86164726912995 -1261.4000000000869 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8C1C18BC-4FF1-CDB1-91D0-089B5611C3F9";
 	setAttr -k off ".v" no;
@@ -25689,7 +25689,7 @@ createNode mesh -n "Coin_Front4Shape" -p "Coin_Front4";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 21 "f[3:4]" "f[14:23]" "f[51:56]" "f[76]" "f[78]" "f[81]" "f[83:84]" "f[92:93]" "f[98:105]" "f[126:130]" "f[146:147]" "f[155:156]" "f[162:163]" "f[170:171]" "f[181:182]" "f[187]" "f[189]" "f[191]" "f[193:204]" "f[353:377]" "f[405:410]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 17 "f[0]" "f[8:10]" "f[24:31]" "f[63:68]" "f[79]" "f[87]" "f[90:91]" "f[106:111]" "f[136:140]" "f[150:151]" "f[154]" "f[160:161]" "f[168:169]" "f[178:180]" "f[185]" "f[228:250]" "f[378:393]";
-	setAttr ".pv" -type "double2" 0.76641604021487086 0.81097520130198397 ;
+	setAttr ".pv" -type "double2" 0.49961639940738678 0.50088433921337128 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 558 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.90163511 0.59466302 0.90325904
@@ -36321,7 +36321,7 @@ createNode mesh -n "Coin_Base27Shape" -p "Coin_Base27";
 	setAttr ".gtag[8].gtagcmp" -type "componentList" 7 "f[12:22]" "f[43:62]" "f[81:100]" "f[103:110]" "f[135:138]" "f[159:178]" "f[199:238]";
 	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
 	setAttr ".gtag[9].gtagcmp" -type "componentList" 0;
-	setAttr ".pv" -type "double2" 0.032822627628894846 0.56154678194203533 ;
+	setAttr ".pv" -type "double2" 0.49995124526321888 0.50070336752105504 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 300 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.46921089 0.78197211 0.46969971
@@ -82254,7 +82254,7 @@ createNode polyTweakUV -n "polyTweakUV8";
 		 0.78662896 -0.64760375 0.77786064 -0.67623866 0.76317245 -0.72090089 0.79332632 -0.86189842
 		 0.84946406 -0.16054048 0.79306066 -0.19751529 0.79722047 -0.22588365 0.80082047 -0.2540876;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "BF860FA8-4E0A-6955-22F8-8A92FEC11FF9";
+	rename -uid "E86E6C9B-4244-C9EE-CA70-F8AF6EC20BBF";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
