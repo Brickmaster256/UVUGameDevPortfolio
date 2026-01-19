@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameObjectList : ScriptableObject
 {
     public List<GameObject> gameObjectList;
+    
 
     public void AddToList(GameObject go)
     {
@@ -22,4 +23,15 @@ public class GameObjectList : ScriptableObject
     {
         gameObjectList.Clear();
     }
+    
+    public List<GameObject> GetList()
+    {
+        return gameObjectList;
+    }
+
+    public void CompareWithOtherList(List<GameObjectList> otherList)
+    {
+        
+    }
+    
 }   
