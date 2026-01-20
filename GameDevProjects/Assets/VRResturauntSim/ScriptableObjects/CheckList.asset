@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  otherList: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}

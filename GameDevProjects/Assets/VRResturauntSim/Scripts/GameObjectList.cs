@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameObjectList : ScriptableObject
 {
     public List<GameObject> gameObjectList;
+    public GameObjectList otherList;
     
 
     public void AddToList(GameObject go)
@@ -29,9 +30,28 @@ public class GameObjectList : ScriptableObject
         return gameObjectList;
     }
 
-    public void CompareWithOtherList(List<GameObjectList> otherList)
+    public void CompareWithOtherList()
     {
+        int countTarget = gameObjectList.Count;
+        int currentCount = 0;
+        List<GameObject> currentList = otherList.GetList();
+        foreach (GameObject go in gameObjectList)
+        {
+            if (currentList.Contains(go))
+            {
+                currentCount++;
+                currentList.Remove(go);
+            }
+        }
         
+        if (currentCount == countTarget)
+        {
+            Debug.Log("You Got All the Food");
+        }
+        else
+        {
+            Debug.Log("You Missed Something");
+        }
     }
     
 }   

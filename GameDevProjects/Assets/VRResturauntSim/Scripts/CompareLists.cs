@@ -43,4 +43,9 @@ public class CompareLists : MonoBehaviour
         }
         
     }
+
+    public void CompareTwoLists(GameObject ListOne,  GameObject ListTwo)
+    {
+        
+    }
 }
