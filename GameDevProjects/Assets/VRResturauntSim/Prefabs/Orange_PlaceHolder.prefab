@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4083893150272873183}
   - component: {fileID: 6439794275098361848}
   - component: {fileID: 5665246286496645357}
+  - component: {fileID: 2247853765169905020}
   m_Layer: 0
   m_Name: Orange_PlaceHolder
   m_TagString: Untagged
@@ -287,6 +288,19 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &2247853765169905020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611116806801083954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e78bdf5ed9784e75a92c53169c936b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
 --- !u!1 &8917105625442478050
 GameObject:
   m_ObjectHideFlags: 0
