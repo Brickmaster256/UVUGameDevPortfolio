@@ -8,7 +8,6 @@ public class GameObjectList : ScriptableObject
 {
     public List<GameObject> gameObjectList;
     public GameObjectList otherList;
-    
 
     public void AddToList(GameObject go)
     {

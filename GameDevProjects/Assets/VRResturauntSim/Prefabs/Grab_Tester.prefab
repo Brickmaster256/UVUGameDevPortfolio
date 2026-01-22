@@ -190,19 +190,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 8b4aff2da8bf950449a27675fd929752, type: 2}
-        m_TargetAssemblyTypeName: Instancer, Assembly-CSharp
-        m_MethodName: InstanceFromV3TransformObj
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -340,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7123890746244722686}
   - component: {fileID: 4359785748772817773}
-  - component: {fileID: 1199220692732314085}
+  - component: {fileID: 3192186194877908525}
   m_Layer: 9
   m_Name: TrayTrigger
   m_TagString: Untagged
@@ -384,7 +372,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1199220692732314085
+--- !u!114 &3192186194877908525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,54 +381,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 8891963121599614322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Script: {fileID: 11500000, guid: 20a8862fefc9a40de8a865b36e083f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHoldTime: 0.1
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEvent:
+  id: {fileID: 11400000, guid: 2ec31da8b7680374a8453ab15a4032bf, type: 2}
+  matchEnterEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
-        m_TargetAssemblyTypeName: GameObjectList, Assembly-CSharp
+        m_TargetAssemblyTypeName: IDList, Assembly-CSharp
         m_MethodName: AddToList
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7599139006333261466}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Id, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerEnterRepeatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEndEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerExitEvent:
+  matchExitEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
-        m_TargetAssemblyTypeName: GameObjectList, Assembly-CSharp
+        m_TargetAssemblyTypeName: IDList, Assembly-CSharp
         m_MethodName: RemoveFromList
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7599139006333261466}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Id, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerHoldTime: 0.01
-  repeatHoldTime: 0.01
-  canRepeat: 0
-  canRepeatWithLimits: 0
-  repeatTimes: 10
+  noMatchEvent:
+    m_PersistentCalls:
+      m_Calls: []

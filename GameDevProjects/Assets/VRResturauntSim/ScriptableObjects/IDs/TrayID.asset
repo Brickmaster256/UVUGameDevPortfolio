@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c6cea0a69b52347bbefc9340791c17, type: 3}
-  m_Name: TrayList
+  m_Script: {fileID: 11500000, guid: 9347c961167f8468c988f9233de6c87d, type: 3}
+  m_Name: TrayID
   m_EditorClassIdentifier: 
-  idList: []
-  otherList: {fileID: 0}

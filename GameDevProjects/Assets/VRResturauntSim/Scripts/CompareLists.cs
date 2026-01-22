@@ -8,6 +8,9 @@ public class CompareLists : MonoBehaviour
     {
         List<GameObjectList> tempFirst =  new List<GameObjectList>();
         List<GameObjectList> tempSecond = new List<GameObjectList>();
+        
+        
+        
         foreach (GameObjectList go in firstList)
         {
             tempFirst.Add(go);
