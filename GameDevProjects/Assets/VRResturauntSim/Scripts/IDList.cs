@@ -31,7 +31,14 @@ public class IDList : ScriptableObject
     {
         int countTarget = idList.Count;
         int currentCount = 0;
-        List<Id> currentList = otherList.GetIDList();
+        List<Id> currentList = new List<Id>();
+
+        foreach (Id id in otherList.GetIDList())
+        {
+            currentList.Add(id);
+        }
+
+        
         foreach (Id go in idList)
         {
             if (currentList.Contains(go))
@@ -41,6 +48,8 @@ public class IDList : ScriptableObject
             }
         }
         
+        
+        
         if (currentCount == countTarget)
         {
             Debug.Log("You Got All the Food");
@@ -49,6 +58,8 @@ public class IDList : ScriptableObject
         {
             Debug.Log("You Missed Something");
         }
+        
+        
     }
     
 }
