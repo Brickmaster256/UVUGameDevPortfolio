@@ -378,12 +378,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
-        m_TargetAssemblyTypeName: GameObjectList, Assembly-CSharp
+        m_TargetAssemblyTypeName: IDList, Assembly-CSharp
         m_MethodName: AddToList
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4611116806801083954}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Id, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -399,12 +399,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
-        m_TargetAssemblyTypeName: GameObjectList, Assembly-CSharp
+        m_TargetAssemblyTypeName: IDList, Assembly-CSharp
         m_MethodName: RemoveFromList
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4611116806801083954}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Id, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
