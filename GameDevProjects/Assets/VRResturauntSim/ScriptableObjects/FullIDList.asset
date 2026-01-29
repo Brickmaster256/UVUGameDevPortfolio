@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c6cea0a69b52347bbefc9340791c17, type: 3}
-  m_Name: CheckList
+  m_Name: FullIDList
   m_EditorClassIdentifier: 
   idList:
+  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
   - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
   - {fileID: 11400000, guid: ba417aea8f7493d479f07a1c9e8d988f, type: 2}
-  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
-  otherList: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
-  singleList: {fileID: 11400000, guid: 219d54ff8570945439ff504ab75cc353, type: 2}
+  otherList: {fileID: 0}
+  singleList: {fileID: 0}

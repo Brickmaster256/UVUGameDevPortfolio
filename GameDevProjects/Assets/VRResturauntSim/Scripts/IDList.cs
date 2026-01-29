@@ -7,6 +7,7 @@ public class IDList : ScriptableObject
     public List<Id> idList;
 
     public IDList otherList;
+    public IDList singleList;
 
     public void AddToList(Id id)
     {
@@ -25,6 +26,18 @@ public class IDList : ScriptableObject
     public List<Id> GetIDList()
     {
         return idList;
+    }
+
+    public void AddRandomtolist(int times)
+    {
+        List<Id> fullList = new List<Id>();
+        fullList = singleList.GetIDList();
+        for (int index = 0; index < times; index++)
+        {
+            int randomIndex =  Random.Range(0, fullList.Count);
+            idList.Add(fullList[randomIndex]);
+            
+        }
     }
 
     public void CompareOtherList()
