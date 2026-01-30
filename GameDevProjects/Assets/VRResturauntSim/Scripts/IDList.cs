@@ -40,6 +40,27 @@ public class IDList : ScriptableObject
         }
     }
 
+    public int GetIDCount(Id id)
+    {
+        int count = 0;
+        List<Id> tempList = new List<Id>();
+        foreach (Id currentID in idList)
+        {
+            tempList.Add(currentID);
+        }
+
+        foreach (Id currentID in tempList)
+
+        {
+            if (currentID == id) 
+            { 
+                count++;
+            }
+        }
+        
+        return count;
+    }
+
     public void CompareOtherList()
     {
         int countTarget = idList.Count;
