@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 [CreateAssetMenu]
 public class IDList : ScriptableObject
 {
@@ -8,6 +9,8 @@ public class IDList : ScriptableObject
 
     public IDList otherList;
     public IDList singleList;
+    
+    public UnityEvent OnMatch, OnNoMatch;
 
     public void AddToList(Id id)
     {
@@ -86,11 +89,11 @@ public class IDList : ScriptableObject
         
         if (currentCount == countTarget)
         {
-            Debug.Log("You Got All the Food");
+            OnMatch.Invoke();
         }
         else
         {
-            Debug.Log("You Missed Something");
+            OnNoMatch.Invoke();
         }
         
         
