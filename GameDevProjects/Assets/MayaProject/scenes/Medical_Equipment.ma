@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Medical_Equipment.ma
-//Last modified: Thu, Jan 29, 2026 04:08:15 PM
+//Last modified: Mon, Feb 02, 2026 11:09:48 AM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "12F27E6D-4B71-7959-82D5-03A29205081D";
+fileInfo "UUID" "C9C9CC43-49FF-7931-E104-31A90713BF06";
 createNode transform -s -n "persp";
 	rename -uid "84B3C769-4F26-B684-45F8-9187845A88CD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -32.148468687019481 9.4316219002984027 -4.382105752520606 ;
-	setAttr ".r" -type "double3" -8.738352729632437 -96.599999999972624 0 ;
+	setAttr ".t" -type "double3" -24.273425230865772 15.374412929139524 24.221679702558582 ;
+	setAttr ".r" -type "double3" -22.538352729629771 -64.599999999972439 3.7075007778285281e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C0C61A49-46E9-D4CF-AF4A-1683DC1E00B4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 34.542626650288199;
+	setAttr ".coi" 34.542626650289812;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12871,7 +12871,7 @@ createNode polyTweak -n "polyTweak10";
 		 -0.23121297 0 0 -0.23121297 0 0 -0.23121297 0 0 -0.23121297 0 0 -0.23121297 0 0 -0.23121297
 		 0 0 -0.23121297 0 0 -0.23121297 0 0 -0.23121297 0 0 -0.23121297 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "C0656DB4-49C5-5B04-AB5E-90B9C7555BCF";
+	rename -uid "FC0FC736-4351-B9D6-4E60-12B48C709AE8";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
