@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Robot_Rig.ma
-//Last modified: Tue, Feb 03, 2026 11:21:27 AM
+//Last modified: Tue, Feb 03, 2026 11:58:53 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "0672A827-4EC6-CFCC-3892-D4A764C4DA89";
+fileInfo "UUID" "1F7C4978-42B9-C843-DC32-BEABAB94CE77";
 createNode transform -s -n "persp";
 	rename -uid "F1F41B70-42F0-A45C-A9FB-87B296C4FC4C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 17.206774752715233 9.9962343490049435 -3.8844922267883395 ;
-	setAttr ".r" -type "double3" 349.46164725435608 449.39999999957291 0 ;
+	setAttr ".t" -type "double3" 10.034450358299376 14.930311511009887 -13.15905981520512 ;
+	setAttr ".r" -type "double3" 335.66164725420293 467.39999999944655 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "33BA2929-4E4A-D6E0-5054-96BA97F93964";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.315269691771617;
+	setAttr ".coi" 9.5309759171246604;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -64,14 +64,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "307F3643-402B-E27D-1CD8-CAB7D635F83E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1018559534841 9.8258555933926477 -10.057404397342202 ;
+	setAttr ".t" -type "double3" 1000.1018559534841 9.7812098271220744 -12.178494551454815 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "D02A7B17-459A-AED5-FA98-6584972A01CA";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1044207413488;
-	setAttr ".ow" 3.1889414568592778;
+	setAttr ".ow" 34.52968584440324;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -130,7 +130,11 @@ createNode camera -n "RobotArm_Model1:backShape" -p "RobotArm_Model1:back";
 	setAttr ".hc" -type "string" "viewSet -b %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "RobotArm_Model1:base";
+createNode transform -n "Robot_Arm";
+	rename -uid "37F7D735-49C7-2141-CB25-F7BE45FEDCEB";
+createNode transform -n "Geometry" -p "Robot_Arm";
+	rename -uid "A61FA0D0-4876-B126-3EC9-30B1580DF98A";
+createNode transform -n "RobotArm_Model1:base" -p "Geometry";
 	rename -uid "F7BA888C-44F8-F7CD-1E9D-33AEFC1A52B0";
 createNode mesh -n "RobotArm_Model1:baseShape" -p "RobotArm_Model1:base";
 	rename -uid "A2996DE1-4F66-CFAB-C342-28A9788D8E46";
@@ -1214,7 +1218,47 @@ createNode mesh -n "baseShapeOrig" -p "RobotArm_Model1:base";
 		373 0 
 		379 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:lowerArm";
+createNode parentConstraint -n "base_parentConstraint1" -p "RobotArm_Model1:base";
+	rename -uid "EFA108C9-47EE-CB0C-1FA8-F287DDCDF000";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Base_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -3.1904182325989127e-12 4.325066188414586e-18 
+		7.8455196301346549e-07 ;
+	setAttr ".tg[0].tor" -type "double3" 90.00007767258731 89.999974109143423 0 ;
+	setAttr ".lr" -type "double3" -6.3452509532605879e-15 3.509424035813932e-11 5.1781713149586515e-05 ;
+	setAttr ".rst" -type "double3" 0 -4.0389678347315804e-28 0 ;
+	setAttr ".rsrr" -type "double3" -6.3452509532605879e-15 3.509424035813932e-11 5.1781713149586515e-05 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "base_scaleConstraint1" -p "RobotArm_Model1:base";
+	rename -uid "E9787B75-40D5-4114-CD76-4D96CDB097FA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Base_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:lowerArm" -p "Geometry";
 	rename -uid "136DAB73-43FD-4D7D-AA96-48954C7CD250";
 	setAttr ".rp" -type "double3" -7.6617866605352443e-16 1.9999999999999991 -8.9106933365662374e-16 ;
 	setAttr ".sp" -type "double3" -7.6617866605352443e-16 1.9999999999999991 -8.9106933365662374e-16 ;
@@ -2104,7 +2148,47 @@ createNode mesh -n "RobotArm_Model1:polySurfaceShape1" -p "RobotArm_Model1:lower
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:hinge";
+createNode parentConstraint -n "lowerArm_parentConstraint1" -p "RobotArm_Model1:lowerArm";
+	rename -uid "850F772F-42F2-936A-AF41-4199A078B99C";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Lower_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 3.5762786732007612e-07 -3.5762786776391307e-07 
+		-1.1920928878458358e-07 ;
+	setAttr ".tg[0].tor" -type "double3" 90.000000000000014 90 0 ;
+	setAttr ".lr" -type "double3" 6.3611093629270304e-15 6.3611093629270304e-15 -6.3611093629270304e-15 ;
+	setAttr ".rst" -type "double3" 3.168101978792063e-24 0 -9.4924804183688604e-24 ;
+	setAttr ".rsrr" -type "double3" 6.3611093629270304e-15 6.3611093629270304e-15 -6.3611093629270304e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "lowerArm_scaleConstraint1" -p "RobotArm_Model1:lowerArm";
+	rename -uid "6B13C3F0-49F4-7CE2-E665-759E35820D8B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Lower_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:hinge" -p "Geometry";
 	rename -uid "A62F2A9B-4947-5375-93FA-9898C710AF4D";
 	setAttr ".rp" -type "double3" 0.11927807491701098 9.7463106433848079 0.2473821563858668 ;
 	setAttr ".sp" -type "double3" 0.11927807491701098 9.7463106433848079 0.2473821563858668 ;
@@ -2832,7 +2916,44 @@ createNode mesh -n "hingeShapeOrig" -p "RobotArm_Model1:hinge";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:topArm";
+createNode parentConstraint -n "hinge_parentConstraint1" -p "RobotArm_Model1:hinge";
+	rename -uid "3C650577-4144-60CF-695F-74813CF20791";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Hinge_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.8039078037241616 -0.10389141009858485 0.12184286278169307 ;
+	setAttr ".tg[0].tor" -type "double3" -90 -90 0 ;
+	setAttr ".rst" -type "double3" 0 0 -5.5511151231257827e-17 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "hinge_scaleConstraint1" -p "RobotArm_Model1:hinge";
+	rename -uid "EAEA3CF9-48A6-756A-A2D6-DEAA1B7853A3";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Hinge_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:topArm" -p "Geometry";
 	rename -uid "67C27F65-48E8-EA47-83F3-21B1B3F1BBD2";
 	setAttr ".rp" -type "double3" -0.01090008020401001 10.287533283233643 -5.0738691117665873 ;
 	setAttr ".sp" -type "double3" -0.01090008020401001 10.287533283233643 -5.0738691117665873 ;
@@ -5104,7 +5225,47 @@ createNode mesh -n "topArmShapeOrig" -p "RobotArm_Model1:topArm";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:hand";
+createNode parentConstraint -n "topArm_parentConstraint1" -p "RobotArm_Model1:topArm";
+	rename -uid "9A0FD0CE-4003-937F-D68D-DC960FEDCA78";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Top_jntW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 5.0726507197713504 -0.28784808277016261 0.0010905348087354647 ;
+	setAttr ".tg[0].tor" -type "double3" 179.99633856223835 89.885977124028628 -6.428124279293487e-10 ;
+	setAttr ".lr" -type "double3" -6.4279646223313944e-10 -6.3611093700991881e-15 -1.2785829819482976e-12 ;
+	setAttr ".rst" -type "double3" -3.4694469519536142e-18 -1.7763568394002505e-15 8.8817841970012523e-16 ;
+	setAttr ".rsrr" -type "double3" -6.4279646223313944e-10 -6.3611093700991881e-15 
+		-1.2785829819482976e-12 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "topArm_scaleConstraint1" -p "RobotArm_Model1:topArm";
+	rename -uid "D2237EA7-4D4D-E525-7E3E-C1BA695544D7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Top_jntW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:hand" -p "Geometry";
 	rename -uid "55AD7723-4A77-8A80-5A33-F88F48D18E27";
 	setAttr ".rp" -type "double3" 0.0055276714190943821 9.9558916091918945 -10.972304109208732 ;
 	setAttr ".sp" -type "double3" 0.0055276714190943821 9.9558916091918945 -10.972304109208732 ;
@@ -6816,7 +6977,45 @@ createNode mesh -n "RobotArm_Model1:handShape" -p "RobotArm_Model1:hand";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:f0";
+createNode parentConstraint -n "hand_parentConstraint1" -p "RobotArm_Model1:hand";
+	rename -uid "A819B17C-4695-FACB-9A50-A48F5D3FA645";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_hand_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.97230410920873567 0.044108390808105469 -0.0055338703021493834 ;
+	setAttr ".tg[0].tor" -type "double3" 180 89.999999999993065 0 ;
+	setAttr ".lr" -type "double3" 6.96600489396697e-15 6.9336092055904662e-12 -6.9420629894813582e-12 ;
+	setAttr ".rsrr" -type "double3" 6.96600489396697e-15 6.9336092055904662e-12 -6.9420629894813582e-12 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "hand_scaleConstraint1" -p "RobotArm_Model1:hand";
+	rename -uid "E27FEAAA-40F1-F772-E676-FFB4266E1DF1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_hand_jntW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:f0" -p "Geometry";
 	rename -uid "874DD4BB-4543-8684-A7B2-5F8130CF7DD0";
 	setAttr ".rp" -type "double3" 0.20639439007802074 9.7445417000095471 -11.739030705330617 ;
 	setAttr ".sp" -type "double3" 0.20639439007802074 9.7445417000095471 -11.739030705330617 ;
@@ -7307,7 +7506,48 @@ createNode mesh -n "fShape0Orig" -p "RobotArm_Model1:f0";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:f0b";
+createNode parentConstraint -n "f0_parentConstraint1" -p "RobotArm_Model1:f0";
+	rename -uid "7494C18B-4BD5-0888-9793-16B96660863A";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Base_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.00034891211772603015 2.4390432162846309e-06 
+		-0.20823626139600282 ;
+	setAttr ".tg[0].tor" -type "double3" -6.2338802141323999e-24 -89.999999971925106 
+		0 ;
+	setAttr ".lr" -type "double3" 7.9532002963280411e-24 2.8074877034356357e-08 -2.8074897428884315e-08 ;
+	setAttr ".rst" -type "double3" 2.7755575615628914e-17 0 -1.7763568394002505e-15 ;
+	setAttr ".rsrr" -type "double3" 7.9532002963280411e-24 2.8074877034356357e-08 -2.8074897428884315e-08 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "f0_scaleConstraint1" -p "RobotArm_Model1:f0";
+	rename -uid "876DD4EF-42C8-231B-5B5F-58BD0E4B921F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Base_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:f0b" -p "Geometry";
 	rename -uid "3C3A950A-4F94-9DFE-4B73-F5807462E0FC";
 	setAttr ".rp" -type "double3" 0.39921824029451219 9.7176918262084602 -12.765342427175629 ;
 	setAttr ".sp" -type "double3" 0.39921824029451208 9.7176918262084602 -12.765342427175632 ;
@@ -7747,7 +7987,45 @@ createNode mesh -n "f0bShapeOrig" -p "RobotArm_Model1:f0b";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:f2";
+createNode parentConstraint -n "f0b_parentConstraint1" -p "RobotArm_Model1:f0b";
+	rename -uid "FDE501A0-40CD-673E-948A-89B9A744DC80";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Tip_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.0054948650998856152 -0.026847434663389791 
+		-0.015412411166353612 ;
+	setAttr ".tg[0].tor" -type "double3" 0 -89.999999999999986 0 ;
+	setAttr ".rst" -type "double3" 0 0 1.7763568394002505e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "f0b_scaleConstraint1" -p "RobotArm_Model1:f0b";
+	rename -uid "64E245DC-434B-994F-4947-159B01B10ADA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Tip_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:f2" -p "Geometry";
 	rename -uid "2ADBD879-4605-688D-749A-C3A4DB517DEA";
 	setAttr ".rp" -type "double3" 0.64250314332613623 10.132185770319353 -11.739030705330617 ;
 	setAttr ".sp" -type "double3" 0.64250314332613623 10.132185770319353 -11.739030705330617 ;
@@ -8238,7 +8516,47 @@ createNode mesh -n "fShape2Orig" -p "RobotArm_Model1:f2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:f2b";
+createNode parentConstraint -n "f2_parentConstraint1" -p "RobotArm_Model1:f2";
+	rename -uid "31441E8C-435F-DB70-5182-7F90CC164CA4";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Base_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.00034891211772958286 1.656548036521599e-07 
+		-0.20823624827037429 ;
+	setAttr ".tg[0].tor" -type "double3" 180 89.999999999999972 0 ;
+	setAttr ".lr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr ".rst" -type "double3" 1.1102230246251565e-16 0 -1.7763568394002505e-15 ;
+	setAttr ".rsrr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "f2_scaleConstraint1" -p "RobotArm_Model1:f2";
+	rename -uid "D78B9FFF-44A9-2715-BF1F-BA8F164E211B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Base_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:f2b" -p "Geometry";
 	rename -uid "726918A8-4FAD-6FB7-944E-49977591FF49";
 	setAttr ".rp" -type "double3" 0.44967929310964472 10.15903564412044 -12.765342427175629 ;
 	setAttr ".sp" -type "double3" 0.44967929310964483 10.15903564412044 -12.765342427175632 ;
@@ -8677,7 +8995,47 @@ createNode mesh -n "f2bShapeOrig" -p "RobotArm_Model1:f2b";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:f1";
+createNode parentConstraint -n "f2b_parentConstraint1" -p "RobotArm_Model1:f2b";
+	rename -uid "A0376C0F-4221-B710-3A0A-B18A1F6EB9D8";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Tip_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.0054948490883486301 -0.026849708146281515 
+		-0.015412398053883114 ;
+	setAttr ".tg[0].tor" -type "double3" 180 89.999999999999972 0 ;
+	setAttr ".lr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr ".rst" -type "double3" -5.5511151231257827e-17 -1.7763568394002505e-15 -1.7763568394002505e-15 ;
+	setAttr ".rsrr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "f2b_scaleConstraint1" -p "RobotArm_Model1:f2b";
+	rename -uid "CECA648B-430B-3A0C-DEBE-4B9B1D35703D";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Tip_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:f1" -p "Geometry";
 	rename -uid "CFE71027-431E-4A4F-7DD7-A7B3586A5D37";
 	setAttr ".rp" -type "double3" -0.22476073263408081 10.132185770319353 -11.739030705330617 ;
 	setAttr ".sp" -type "double3" -0.22476073263408081 10.132185770319353 -11.739030705330617 ;
@@ -9168,7 +9526,47 @@ createNode mesh -n "fShape1Orig" -p "RobotArm_Model1:f1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "RobotArm_Model1:f1b";
+createNode parentConstraint -n "f1_parentConstraint1" -p "RobotArm_Model1:f1";
+	rename -uid "AF27A0F5-4FDD-A5E5-7CA5-20829F3A3A31";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Base_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.00034891211772958286 1.6565473259788632e-07 
+		-0.20823622586011489 ;
+	setAttr ".tg[0].tor" -type "double3" 180 89.999999999999972 0 ;
+	setAttr ".lr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr ".rst" -type "double3" -8.3266726846886741e-17 0 -3.5527136788005009e-15 ;
+	setAttr ".rsrr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "f1_scaleConstraint1" -p "RobotArm_Model1:f1";
+	rename -uid "8776EF4E-4B50-70B6-CAA0-F49CB6CE579F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Base_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "RobotArm_Model1:f1b" -p "Geometry";
 	rename -uid "3BBFBC53-4D44-FBC0-38F3-7D8E8B0B97A2";
 	setAttr ".rp" -type "double3" -0.41758458285057232 10.15903564412044 -12.765342427175629 ;
 	setAttr ".sp" -type "double3" -0.41758458285057221 10.15903564412044 -12.765342427175632 ;
@@ -9609,83 +10007,821 @@ createNode mesh -n "f1bShapeOrig" -p "RobotArm_Model1:f1b";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode joint -n "Robot_Arm_Base";
+createNode parentConstraint -n "f1b_parentConstraint1" -p "RobotArm_Model1:f1b";
+	rename -uid "48D8BD6C-4384-F5E6-C81C-D69CE0133B27";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Tip_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.0054948490883450773 -0.026849708146352569 
+		-0.0154123756436228 ;
+	setAttr ".tg[0].tor" -type "double3" 180 89.999999999999972 0 ;
+	setAttr ".lr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr ".rst" -type "double3" 0 -1.7763568394002505e-15 -1.7763568394002505e-15 ;
+	setAttr ".rsrr" -type "double3" -7.0167092985348752e-15 1.2722218725854067e-14 -7.016709298534876e-15 ;
+	setAttr -k on ".w0";
+createNode transform -n "Controls" -p "Robot_Arm";
+	rename -uid "F8C62A18-4553-B58E-B805-009C9418576F";
+createNode transform -n "Robot_Arm_Base_ctrl_grp" -p "Controls";
+	rename -uid "A370E214-4364-6A6D-099E-40BE9B6E2F6A";
+	setAttr ".t" -type "double3" 7.8455196301194369e-07 3.5449421176281248e-12 0 ;
+	setAttr ".r" -type "double3" -90 7.7672587308097457e-05 90.000025890856563 ;
+createNode transform -n "Robot_Arm_Base_ctrl" -p "Robot_Arm_Base_ctrl_grp";
+	rename -uid "01179D8A-42CA-D191-8B27-F183397FCF99";
+	setAttr ".rp" -type "double3" -8.0779356694631609e-28 0 2.1175823681357508e-22 ;
+	setAttr ".sp" -type "double3" -8.0779356694631609e-28 0 2.1175823681357508e-22 ;
+createNode nurbsCurve -n "Robot_Arm_Base_ctrlShape" -p "Robot_Arm_Base_ctrl";
+	rename -uid "38A52F70-441E-D9D6-73FC-13902B552EF2";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373410288628e-17 4.7472038228278182 -4.7472038228278191
+		-6.7857323231513019e-17 4.1108699005865017e-16 -6.713560029592502
+		-4.7982373410288616e-17 -4.7472038228278182 -4.7472038228278173
+		-4.0390030120877708e-28 -6.7135600295925046 -3.48032673007948e-16
+		4.7982373409480828e-17 -4.7472038228278182 4.7472038228278182
+		6.7857323230705274e-17 -6.7250189977578101e-16 6.7135600295925055
+		4.7982373409480822e-17 4.7472038228278182 4.7472038228278173
+		-4.0388752979394792e-28 6.7135600295925046 9.1552527527832923e-16
+		-4.7982373410288628e-17 4.7472038228278182 -4.7472038228278191
+		-6.7857323231513019e-17 4.1108699005865017e-16 -6.713560029592502
+		-4.7982373410288616e-17 -4.7472038228278182 -4.7472038228278173
+		;
+createNode transform -n "Robot_Arm_Lower_ctrl_grp" -p "Robot_Arm_Base_ctrl";
+	rename -uid "CFC90E60-4F17-ECA7-2E16-D7A3096B91AE";
+	setAttr ".t" -type "double3" 1.9999996423674373 -2.3536564207762709e-06 2.7995659057715146e-14 ;
+	setAttr ".r" -type "double3" -0.4177787922859601 -0.021113355293978051 -2.8966774764211753 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999967 0.99999999999999978 ;
+createNode transform -n "Robot_Arm_Lower_ctrl" -p "Robot_Arm_Lower_ctrl_grp";
+	rename -uid "2FDB0E33-4BE2-9BCD-FFE2-4CAA28DC8439";
+	setAttr ".rp" -type "double3" 0 0 2.6480367513537564e-19 ;
+	setAttr ".sp" -type "double3" 0 0 2.6480367513537564e-19 ;
+createNode nurbsCurve -n "Robot_Arm_Lower_ctrlShape" -p "Robot_Arm_Lower_ctrl";
+	rename -uid "20C57C9F-463A-8ACD-C9F7-29BCDFB378B1";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373409884738e-17 1.4479183014121007 -1.4479183014121011
+		-6.7857323231109134e-17 1.2538336220420168e-16 -2.0476656990652069
+		-4.7982373409884725e-17 -1.4479183014121007 -1.4479183014121004
+		-3.5177356190060272e-33 -2.0476656990652078 -1.0626359507474378e-16
+		4.7982373409884731e-17 -1.4479183014121007 1.4479183014121007
+		6.7857323231109171e-17 -2.051160735380584e-16 2.0476656990652082
+		4.7982373409884725e-17 1.4479183014121007 1.4479183014121004
+		9.2536792101100989e-33 2.0476656990652078 2.7912720475162864e-16
+		-4.7982373409884738e-17 1.4479183014121007 -1.4479183014121011
+		-6.7857323231109134e-17 1.2538336220420168e-16 -2.0476656990652069
+		-4.7982373409884725e-17 -1.4479183014121007 -1.4479183014121004
+		;
+createNode transform -n "Robot_Arm_Hinge_ctrl_grp" -p "Robot_Arm_Lower_ctrl";
+	rename -uid "8BAD1D01-4889-AA20-6168-58951F9FEE81";
+	setAttr ".t" -type "double3" 6.9512849244588146 7.7715611723760958e-16 -2.4591873941014008e-15 ;
+	setAttr ".r" -type "double3" -179.58168805361902 0 2.896676873923806 ;
+	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
+createNode transform -n "Robot_Arm_Hinge_ctrl" -p "Robot_Arm_Hinge_ctrl_grp";
+	rename -uid "52B1C247-4374-CF9F-41F3-70BACC73571B";
+createNode nurbsCurve -n "Robot_Arm_Hinge_ctrlShape" -p "Robot_Arm_Hinge_ctrl";
+	rename -uid "20E64F04-4335-6078-F413-32B1C371C3F4";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373409884731e-17 1.106176891845607 -1.1061768918456072
+		-6.7857323231109122e-17 9.5790057876145743e-17 -1.5643703628317731
+		-4.7982373409884719e-17 -1.106176891845607 -1.1061768918456067
+		-3.5177356190060272e-33 -1.5643703628317738 -8.1097235856303958e-17
+		4.7982373409884725e-17 -1.106176891845607 1.106176891845607
+		6.7857323231109171e-17 -1.5670404916673991e-16 1.564370362831774
+		4.7982373409884719e-17 1.106176891845607 1.1061768918456067
+		9.2536792101100989e-33 1.5643703628317738 2.1333263403488013e-16
+		-4.7982373409884731e-17 1.106176891845607 -1.1061768918456072
+		-6.7857323231109122e-17 9.5790057876145743e-17 -1.5643703628317731
+		-4.7982373409884719e-17 -1.106176891845607 -1.1061768918456067
+		;
+createNode transform -n "Robot_Arm_Top_ctrl_grp" -p "Robot_Arm_Hinge_ctrl";
+	rename -uid "1CFFAB4D-464E-A14E-CA15-C9A736DBFDAC";
+	setAttr ".t" -type "double3" 1.0569581985473633 -0.35251823812723154 -0.017339706420898379 ;
+	setAttr ".r" -type "double3" -179.99999999999881 -0.11402287597133862 -89.996338562881178 ;
+	setAttr ".s" -type "double3" 1 1.0000000000000004 1 ;
+createNode transform -n "Robot_Arm_Top_ctrl" -p "Robot_Arm_Top_ctrl_grp";
+	rename -uid "ECFE95BE-40CA-07FE-DBEC-8C8293C7855F";
+	setAttr ".rp" -type "double3" 4.3368086899420177e-19 0 0 ;
+	setAttr ".sp" -type "double3" 4.3368086899420177e-19 0 0 ;
+createNode nurbsCurve -n "Robot_Arm_Top_ctrlShape" -p "Robot_Arm_Top_ctrl";
+	rename -uid "E9831D2C-420D-B420-0831-158C238F169B";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.80761469344006009 0.80761469344006021 -1.1421396526347229
+		-6.642111535985317e-21 1.3964828443180521e-16 -1.6152293868801202
+		-0.80761469344006009 -0.80761469344006021 -1.1421396526347225
+		-1.1421396526347227 -1.1421396526347229 -8.3733776644000898e-17
+		-0.80761469344006009 -0.80761469344006021 1.1421396526347225
+		-4.4479668772112703e-17 -1.8456827618444817e-16 1.6152293868801211
+		0.80761469344006009 0.80761469344006021 1.1421396526347225
+		1.1421396526347227 1.1421396526347229 2.2026826118715948e-16
+		0.80761469344006009 0.80761469344006021 -1.1421396526347229
+		-6.642111535985317e-21 1.3964828443180521e-16 -1.6152293868801202
+		-0.80761469344006009 -0.80761469344006021 -1.1421396526347225
+		;
+createNode transform -n "Robot_Arm_hand_ctrl_grp" -p "Robot_Arm_Top_ctrl";
+	rename -uid "B8B2931F-477F-A41B-E912-5CAC74067850";
+	setAttr ".t" -type "double3" 9.998775148326116 0 -3.4069969068184491e-15 ;
+	setAttr ".r" -type "double3" -7.2865371720960978e-06 -0.11402287573855031 0.0036614443692174104 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 0.99999999999999956 1.0000000000000002 ;
+createNode transform -n "Robot_Arm_hand_ctrl" -p "Robot_Arm_hand_ctrl_grp";
+	rename -uid "1F62FE66-4B59-48A9-719E-9EBC613C0506";
+	setAttr ".rp" -type "double3" 3.5527136788005009e-15 3.5527136788005009e-15 1.6940658945086007e-21 ;
+	setAttr ".sp" -type "double3" 3.5527136788005009e-15 3.5527136788005009e-15 1.6940658945086007e-21 ;
+createNode nurbsCurve -n "Robot_Arm_hand_ctrlShape" -p "Robot_Arm_hand_ctrl";
+	rename -uid "473D0FF2-4D13-3C41-F8BE-66832245BEC1";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		3.5047313053906161e-15 0.78361162489122449 -0.7836116248912246
+		3.4848563555693918e-15 6.7857323231109122e-17 -1.1081941875543877
+		3.5047313053906161e-15 -0.78361162489122449 -0.78361162489122438
+		3.5527136788005009e-15 -1.1081941875543881 -5.7448982375248304e-17
+		3.6006960522103853e-15 -0.78361162489122449 0.78361162489122449
+		3.6205710020316105e-15 -1.1100856969603225e-16 1.1081941875543884
+		3.6006960522103853e-15 0.78361162489122449 0.78361162489122438
+		3.5527136788005009e-15 1.1081941875543881 1.511240500779959e-16
+		3.5047313053906161e-15 0.78361162489122449 -0.7836116248912246
+		3.4848563555693918e-15 6.7857323231109122e-17 -1.1081941875543877
+		3.5047313053906161e-15 -0.78361162489122449 -0.78361162489122438
+		;
+createNode transform -n "Robot_Arm_Finger_01_Base_ctrl_grp" -p "Robot_Arm_hand_ctrl";
+	rename -uid "AE32CD75-4992-C554-6E47-D994E7557CA3";
+	setAttr ".t" -type "double3" 1.7386817932128906 -0.13218593597420814 -0.43427309393880098 ;
+	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
+createNode transform -n "Robot_Arm_Finger_01_Base_ctrl" -p "Robot_Arm_Finger_01_Base_ctrl_grp";
+	rename -uid "30F53F55-4A9F-B984-3766-829F6D4BBC10";
+createNode nurbsCurve -n "Robot_Arm_Finger_01_Base_ctrlShape" -p "Robot_Arm_Finger_01_Base_ctrl";
+	rename -uid "EE654F58-4601-08E6-9F3F-D9B315F29AB3";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373409884731e-17 0.25557434011998392 -0.25557434011998398
+		-6.7857323231109122e-17 2.2131614764528983e-17 -0.36143669799223538
+		-4.7982373409884719e-17 -0.25557434011998392 -0.25557434011998392
+		-3.5177356190060272e-33 -0.36143669799223554 -1.8736942248855474e-17
+		4.7982373409884725e-17 -0.25557434011998392 0.25557434011998392
+		6.7857323231109171e-17 -3.6205361235758778e-17 0.3614366979922356
+		4.7982373409884719e-17 0.25557434011998392 0.25557434011998392
+		9.2536792101100989e-33 0.36143669799223554 4.9288994889917115e-17
+		-4.7982373409884731e-17 0.25557434011998392 -0.25557434011998398
+		-6.7857323231109122e-17 2.2131614764528983e-17 -0.36143669799223538
+		-4.7982373409884719e-17 -0.25557434011998392 -0.25557434011998392
+		;
+createNode transform -n "Robot_Arm_Finger_01_Tip_ctrl_grp" -p "Robot_Arm_Finger_01_Base_ctrl";
+	rename -uid "555FCB9B-4B83-0BD4-A0BE-4B98D8E7C4E1";
+	setAttr ".t" -type "double3" 1.0211657848743947 0 1.6653345369377348e-16 ;
+createNode transform -n "Robot_Arm_Finger_01_Tip_ctrl" -p "Robot_Arm_Finger_01_Tip_ctrl_grp";
+	rename -uid "ACACF1E4-4DDF-DEEE-0ACA-C9AE99A53716";
+createNode nurbsCurve -n "Robot_Arm_Finger_01_Tip_ctrlShape" -p "Robot_Arm_Finger_01_Tip_ctrl";
+	rename -uid "D6632865-4090-F357-FA42-52BE245E5A5D";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373409884731e-17 0.25557434011998392 -0.25557434011998398
+		-6.7857323231109122e-17 2.2131614764528983e-17 -0.36143669799223538
+		-4.7982373409884719e-17 -0.25557434011998392 -0.25557434011998392
+		-3.5177356190060272e-33 -0.36143669799223554 -1.8736942248855474e-17
+		4.7982373409884725e-17 -0.25557434011998392 0.25557434011998392
+		6.7857323231109171e-17 -3.6205361235758778e-17 0.3614366979922356
+		4.7982373409884719e-17 0.25557434011998392 0.25557434011998392
+		9.2536792101100989e-33 0.36143669799223554 4.9288994889917115e-17
+		-4.7982373409884731e-17 0.25557434011998392 -0.25557434011998398
+		-6.7857323231109122e-17 2.2131614764528983e-17 -0.36143669799223538
+		-4.7982373409884719e-17 -0.25557434011998392 -0.25557434011998392
+		;
+createNode transform -n "Robot_Arm_Finger_02_Base_ctrl_grp" -p "Robot_Arm_hand_ctrl";
+	rename -uid "C76EE1F3-423A-729B-31FC-82AEA051D52F";
+	setAttr ".t" -type "double3" 1.7386817932128924 -0.13218593597403405 0.43299075961115613 ;
+	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
+createNode transform -n "Robot_Arm_Finger_02_Base_ctrl" -p "Robot_Arm_Finger_02_Base_ctrl_grp";
+	rename -uid "BF5825A3-4602-AC69-5A25-0785E091E37D";
+createNode nurbsCurve -n "Robot_Arm_Finger_02_Base_ctrlShape" -p "Robot_Arm_Finger_02_Base_ctrl";
+	rename -uid "8D7AFFD7-45C1-8778-A8BB-B182E03CDC97";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373409884731e-17 0.28058509947582549 -0.28058509947582555
+		-6.7857323231109122e-17 2.4297436618052936e-17 -0.39680725307851633
+		-4.7982373409884719e-17 -0.28058509947582549 -0.28058509947582549
+		-3.5177356190060272e-33 -0.39680725307851644 -2.0570558070500249e-17
+		4.7982373409884725e-17 -0.28058509947582549 0.28058509947582549
+		6.7857323231109171e-17 -3.9748453929781825e-17 0.39680725307851655
+		4.7982373409884719e-17 0.28058509947582549 0.28058509947582549
+		9.2536792101100989e-33 0.39680725307851644 5.4112464998474503e-17
+		-4.7982373409884731e-17 0.28058509947582549 -0.28058509947582555
+		-6.7857323231109122e-17 2.4297436618052936e-17 -0.39680725307851633
+		-4.7982373409884719e-17 -0.28058509947582549 -0.28058509947582549
+		;
+createNode transform -n "Robot_Arm_Finger_02_Tip_ctrl_grp" -p "Robot_Arm_Finger_02_Base_ctrl";
+	rename -uid "4F4A81D8-451F-BCA3-F915-DA9782DE0EEE";
+	setAttr ".t" -type "double3" 1.0211657848743965 0 -8.8817841970012523e-16 ;
+createNode transform -n "Robot_Arm_Finger_02_Tip_ctrl" -p "Robot_Arm_Finger_02_Tip_ctrl_grp";
+	rename -uid "5167580B-4778-3978-5F79-C3A178775FDD";
+createNode nurbsCurve -n "Robot_Arm_Finger_02_Tip_ctrlShape" -p "Robot_Arm_Finger_02_Tip_ctrl";
+	rename -uid "D91841C7-4596-41B4-940E-289820095E58";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.7982373409884731e-17 0.28058509947582549 -0.28058509947582555
+		-6.7857323231109122e-17 2.4297436618052936e-17 -0.39680725307851633
+		-4.7982373409884719e-17 -0.28058509947582549 -0.28058509947582549
+		-3.5177356190060272e-33 -0.39680725307851644 -2.0570558070500249e-17
+		4.7982373409884725e-17 -0.28058509947582549 0.28058509947582549
+		6.7857323231109171e-17 -3.9748453929781825e-17 0.39680725307851655
+		4.7982373409884719e-17 0.28058509947582549 0.28058509947582549
+		9.2536792101100989e-33 0.39680725307851644 5.4112464998474503e-17
+		-4.7982373409884731e-17 0.28058509947582549 -0.28058509947582555
+		-6.7857323231109122e-17 2.4297436618052936e-17 -0.39680725307851633
+		-4.7982373409884719e-17 -0.28058509947582549 -0.28058509947582549
+		;
+createNode transform -n "Robot_Arm_Finger_03_Base_ctrl_grp" -p "Robot_Arm_hand_ctrl";
+	rename -uid "A8FA5C3B-4110-09F1-0673-C584EBE11780";
+	setAttr ".t" -type "double3" 2.759847562075743 0.25546073913565692 -0.41463685035710546 ;
+	setAttr ".r" -type "double3" 179.99999999999332 0 0 ;
+	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
+createNode transform -n "Robot_Arm_Finger_03_Base_ctrl" -p "Robot_Arm_Finger_03_Base_ctrl_grp";
+	rename -uid "632C13C5-4DC3-52FF-6261-A0A55F410A23";
+	setAttr ".rp" -type "double3" 0 3.5527136788005009e-15 0 ;
+	setAttr ".sp" -type "double3" 0 3.5527136788005009e-15 0 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_03_Base_ctrlShape" -p "Robot_Arm_Finger_03_Base_ctrl";
+	rename -uid "ED3F4610-4DA6-9A5E-A71D-01996374A56F";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.7283744659903657e-15 0.25688345618196096 -0.25688345618195924
+		1.7084995161691413e-15 1.7986018178629976e-15 -0.36328806768180127
+		1.7283744659903657e-15 -0.2568834561819574 -0.25688345618195918
+		1.7763568394002505e-15 -0.36328806768179961 -1.8832917580489957e-17
+		1.8243392128101353e-15 -0.2568834561819574 0.25688345618195918
+		1.8442141626313596e-15 1.7399660251964781e-15 0.3632880676818015
+		1.8243392128101353e-15 0.25688345618196096 0.25688345618195918
+		1.7763568394002505e-15 0.36328806768180316 4.9541465520805619e-17
+		1.7283744659903657e-15 0.25688345618196096 -0.25688345618195924
+		1.7084995161691413e-15 1.7986018178629976e-15 -0.36328806768180127
+		1.7283744659903657e-15 -0.2568834561819574 -0.25688345618195918
+		;
+createNode transform -n "Robot_Arm_Finger_03_Tip_ctrl_grp" -p "Robot_Arm_Finger_03_Base_ctrl";
+	rename -uid "E4A6CC9A-4466-62FE-588E-999BFD4A34C2";
+	setAttr ".t" -type "double3" -1.0211657688628506 0 9.9920072216264089e-16 ;
+createNode transform -n "Robot_Arm_Finger_03_Tip_ctrl" -p "Robot_Arm_Finger_03_Tip_ctrl_grp";
+	rename -uid "800042FD-4114-1991-FA4B-5B960DE3502D";
+	setAttr ".rp" -type "double3" 0 3.5527136788005009e-15 0 ;
+	setAttr ".sp" -type "double3" 0 3.5527136788005009e-15 0 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_03_Tip_ctrlShape" -p "Robot_Arm_Finger_03_Tip_ctrl";
+	rename -uid "F1CAAF21-47D1-567B-0D42-4DA24547EDF2";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.7283744659903657e-15 0.25688345618196096 -0.25688345618195924
+		1.7084995161691413e-15 1.7986018178629976e-15 -0.36328806768180127
+		1.7283744659903657e-15 -0.2568834561819574 -0.25688345618195918
+		1.7763568394002505e-15 -0.36328806768179961 -1.8832917580489957e-17
+		1.8243392128101353e-15 -0.2568834561819574 0.25688345618195918
+		1.8442141626313596e-15 1.7399660251964781e-15 0.3632880676818015
+		1.8243392128101353e-15 0.25688345618196096 0.25688345618195918
+		1.7763568394002505e-15 0.36328806768180316 4.9541465520805619e-17
+		1.7283744659903657e-15 0.25688345618196096 -0.25688345618195924
+		1.7084995161691413e-15 1.7986018178629976e-15 -0.36328806768180127
+		1.7283744659903657e-15 -0.2568834561819574 -0.25688345618195918
+		;
+createNode transform -n "Joints" -p "Robot_Arm";
+	rename -uid "12E0E976-4316-CBD3-ED84-2990F32869E8";
+createNode joint -n "Robot_Arm_Base_jnt" -p "Joints";
 	rename -uid "A4C80D90-4F90-FAC6-C841-319363E6836A";
-	setAttr ".t" -type "double3" 7.8455196301194369e-07 3.5449421176281248e-12 2.3536564204491319e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 7.7672622400594765e-05 7.767258730184424e-05 90.000025890856577 ;
+	setAttr ".jo" -type "double3" -90 7.767258730184424e-05 90.000025890856577 ;
 	setAttr ".radi" 0.5;
-createNode joint -n "Robot_Arm_Lower" -p "Robot_Arm_Base";
+createNode joint -n "Robot_Arm_Lower_jnt" -p "Robot_Arm_Base_jnt";
 	rename -uid "A10A7DF6-441E-4CE4-50EA-588CB24D6295";
-	setAttr ".t" -type "double3" 1.9999996423706283 2.7107480743894139e-14 -3.5575383784680614e-20 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90.418924893207659 -2.8966772509213987 0.021144296772326741 ;
+	setAttr ".jo" -type "double3" 1.8588621968395834e-15 2.5890856570046227e-05 -7.7672587304916909e-05 ;
 	setAttr ".radi" 0.80782508229959371;
-createNode joint -n "Robot_Arm_Hinge" -p "Robot_Arm_Lower";
+createNode joint -n "Robot_Arm_Hinge_jnt" -p "Robot_Arm_Lower_jnt";
 	rename -uid "06F8C713-4C95-BD7D-54C4-9CB25D113684";
-	setAttr ".t" -type "double3" 6.9512849244588137 4.163336342344337e-17 -3.3086598227135731e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -179.58168805361899 8.0880511626279283e-15 2.8966768739237936 ;
+	setAttr ".jo" -type "double3" 180 -1.2722218725854067e-14 0 ;
 	setAttr ".radi" 0.50591359883194231;
-createNode joint -n "Robot_Arm_Top" -p "Robot_Arm_Hinge";
+createNode joint -n "Robot_Arm_Top_jnt" -p "Robot_Arm_Hinge_jnt";
 	rename -uid "5C27BACC-4EA1-4E93-B48B-6F8FDB40D9A0";
-	setAttr ".t" -type "double3" 1.0569581985473633 -0.3525182381272316 -0.017339706420898004 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" -179.99999999999872 -0.11402287597137599 -89.996338562881149 ;
 	setAttr ".radi" 0.96545388698238532;
-createNode joint -n "Robot_Arm_hand" -p "Robot_Arm_Top";
+createNode joint -n "Robot_Arm_hand_jnt" -p "Robot_Arm_Top_jnt";
 	rename -uid "4F5305C7-4000-536E-DC5B-B686F2F0FB13";
-	setAttr ".t" -type "double3" 9.9987751483261125 0 -3.4694469519536142e-18 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" -7.2865439249859871e-06 -0.11402287573858252 0.0036614443692250076 ;
 	setAttr ".radi" 0.54166906470521003;
-createNode joint -n "Robot_Arm_Finger_01_Base" -p "Robot_Arm_hand";
+createNode joint -n "Robot_Arm_Finger_01_Base_jnt" -p "Robot_Arm_hand_jnt";
 	rename -uid "011A3DCC-4FB5-EE96-C56E-36B915DCA817";
-	setAttr ".t" -type "double3" 1.7386817932128906 -0.1321859359741584 -0.43427309393881686 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.4033418597069752e-14 0 0 ;
 	setAttr ".radi" 0.50109478197626189;
-createNode joint -n "Robot_Arm_Finger_01_Tip" -p "Robot_Arm_Finger_01_Base";
+createNode joint -n "Robot_Arm_Finger_01_Tip_jnt" -p "Robot_Arm_Finger_01_Base_jnt";
 	rename -uid "F85E1ECF-4935-935C-1DCA-0C8D035F98F7";
-	setAttr ".t" -type "double3" 1.0211657848743947 0 1.6653345369377348e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.50109478197626189;
-createNode joint -n "Robot_Arm_Finger_03_Base" -p "Robot_Arm_hand";
+createNode parentConstraint -n "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1" -p
+		 "Robot_Arm_Finger_01_Tip_jnt";
+	rename -uid "F9DEBBDA-4EEC-40BF-4922-3DBBED023BD1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Tip_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -3.5527136788005009e-15 -1.7763568394002505e-15 
+		4.2188474935755949e-15 ;
+	setAttr ".rst" -type "double3" 1.0211657848743929 0 1.1102230246251565e-16 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1" -p "Robot_Arm_Finger_01_Tip_jnt";
+	rename -uid "5F9BF4E6-4F32-5D91-32F9-879305ABCC6F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Tip_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Finger_01_Base_jnt_parentConstraint1" -p
+		 "Robot_Arm_Finger_01_Base_jnt";
+	rename -uid "EA6E693F-43C4-107C-3FA0-4DA52A578B2C";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Base_ctrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.7763568394002505e-15 -1.7763568394002505e-15 
+		3.7747582837255322e-15 ;
+	setAttr ".rst" -type "double3" 1.7386817932128906 -0.13218593597415662 -0.43427309393881691 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1" -p "Robot_Arm_Finger_01_Base_jnt";
+	rename -uid "14A30DA3-451A-11B3-6156-78A41E967257";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_01_Base_ctrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "Robot_Arm_Finger_03_Base_jnt" -p "Robot_Arm_hand_jnt";
 	rename -uid "2DC3A87D-46A9-7E7C-9758-CEB82A605E1A";
-	setAttr ".t" -type "double3" 1.7386817932128924 0.25546073913570488 -0.41463685035707731 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" -179.99999997192512 0 0 ;
 	setAttr ".radi" 0.50109478114807848;
-createNode joint -n "Robot_Arm_Finger_03_Tip" -p "Robot_Arm_Finger_03_Base";
+createNode joint -n "Robot_Arm_Finger_03_Tip_jnt" -p "Robot_Arm_Finger_03_Base_jnt";
 	rename -uid "FB17486B-4027-FB65-99A9-1E8E57134094";
-	setAttr ".t" -type "double3" 1.0211657688628506 1.7763568394002505e-15 -9.9920072216264089e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.50109478114807848;
-createNode joint -n "Robot_Arm_Finger_02_Base" -p "Robot_Arm_hand";
+createNode parentConstraint -n "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1" -p
+		 "Robot_Arm_Finger_03_Tip_jnt";
+	rename -uid "DFC9CF09-4BFD-98B8-955C-CA85393B0EE6";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Base_ctrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 
+		-4.0523140398818214e-15 ;
+	setAttr ".rst" -type "double3" 1.0211657688628488 3.5527136788005009e-15 -9.9920072216264089e-16 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1" -p "Robot_Arm_Finger_03_Tip_jnt";
+	rename -uid "2D8403B4-426B-00CE-E025-BD8DC4B0A073";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Base_ctrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Finger_03_Base_jnt_parentConstraint1" -p
+		 "Robot_Arm_Finger_03_Base_jnt";
+	rename -uid "117BCEAA-48B3-D1C1-ABA9-F4B2C104731B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Tip_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 0 -3.5527136788005009e-15 ;
+	setAttr ".tg[0].tor" -type "double3" 2.8074897428884315e-08 0 0 ;
+	setAttr ".lr" -type "double3" -2.8074897428884315e-08 0 0 ;
+	setAttr ".rst" -type "double3" 1.7386817932128942 0.25546073913570488 -0.41463685035707737 ;
+	setAttr ".rsrr" -type "double3" -2.8074897428884315e-08 0 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1" -p "Robot_Arm_Finger_03_Base_jnt";
+	rename -uid "4F146DFF-4F34-9FFC-9815-7DAC0B61F034";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_03_Tip_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "Robot_Arm_Finger_02_Base_jnt" -p "Robot_Arm_hand_jnt";
 	rename -uid "2B51458F-4458-07D8-F4B9-5C9FF20B9E6A";
-	setAttr ".t" -type "double3" 1.7386817932128924 -0.13218593597408557 0.43299075961114036 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".radi" 0.50109478197626189;
-createNode joint -n "Robot_Arm_Finger_02_Tip" -p "Robot_Arm_Finger_02_Base";
+createNode joint -n "Robot_Arm_Finger_02_Tip_jnt" -p "Robot_Arm_Finger_02_Base_jnt";
 	rename -uid "A5BC268A-4458-D81B-880B-D1BDE448D881";
-	setAttr ".t" -type "double3" 1.0211657848743958 5.9246612369875525e-16 -8.7848981478742391e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.50109478197626189;
+createNode parentConstraint -n "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1" -p
+		 "Robot_Arm_Finger_02_Tip_jnt";
+	rename -uid "510E8A34-4845-ECA4-703D-8195AB84DD69";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Tip_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -3.5527136788005009e-15 -3.5527136788005009e-15 
+		4.496403249731884e-15 ;
+	setAttr ".rst" -type "double3" 1.0211657848743947 0 -9.9920072216264089e-16 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1" -p "Robot_Arm_Finger_02_Tip_jnt";
+	rename -uid "03739296-407E-783E-5433-65BAE6A5096A";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Tip_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Finger_02_Base_jnt_parentConstraint1" -p
+		 "Robot_Arm_Finger_02_Base_jnt";
+	rename -uid "A734BE34-4F10-F1CE-E266-1E8F9BC7515B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Base_ctrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.7763568394002505e-15 -3.5527136788005009e-15 
+		4.1078251911130792e-15 ;
+	setAttr ".rst" -type "double3" 1.7386817932128924 -0.13218593597408557 0.43299075961114031 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1" -p "Robot_Arm_Finger_02_Base_jnt";
+	rename -uid "6B0CDF4B-4386-CEB9-30FC-258A22F684BC";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Finger_02_Base_ctrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_hand_jnt_parentConstraint1" -p "Robot_Arm_hand_jnt";
+	rename -uid "95D6E194-4403-A6A0-1979-7FAF79680003";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_hand_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -7.1054273576010019e-15 -5.3290705182007514e-15 
+		3.4763849988245742e-15 ;
+	setAttr ".tg[0].tor" -type "double3" -6.6815986222869851e-12 -2.8948017218007785e-14 
+		-2.5463662292397116e-14 ;
+	setAttr ".lr" -type "double3" 6.6815986222869818e-12 2.8983007198489768e-14 2.5462303914174402e-14 ;
+	setAttr ".rst" -type "double3" 9.9987751483261142 1.7763568394002505e-15 -3.4694469519536142e-18 ;
+	setAttr ".rsrr" -type "double3" 6.6815986222869818e-12 2.8983007198489768e-14 2.5462303914174402e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_hand_jnt_scaleConstraint1" -p "Robot_Arm_hand_jnt";
+	rename -uid "2BE57383-40BE-D6A6-6997-77818225FE8F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_hand_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Top_jnt_parentConstraint1" -p "Robot_Arm_Top_jnt";
+	rename -uid "25DC90FD-4707-EDD4-9C94-A785B688892D";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Top_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -4.4582393332603942e-16 1.7763568394002505e-15 
+		6.3143934525555778e-16 ;
+	setAttr ".tg[0].tor" -type "double3" 7.6409113478963539e-14 3.2054027649124505e-15 
+		-3.1804695948317205e-14 ;
+	setAttr ".lr" -type "double3" -7.639543256374672e-14 -3.2178268066368914e-15 3.8166656177562195e-14 ;
+	setAttr ".rst" -type "double3" 1.0569581985473633 -0.3525182381272316 -0.017339706420898 ;
+	setAttr ".rsrr" -type "double3" -7.639543256374672e-14 -3.2178268066368914e-15 3.8166656177562195e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Top_jnt_scaleConstraint1" -p "Robot_Arm_Top_jnt";
+	rename -uid "D1ED8EB7-4D7A-8064-A25C-B5B5161F371F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Top_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Hinge_jnt_parentConstraint1" -p "Robot_Arm_Hinge_jnt";
+	rename -uid "B648E194-4747-8588-F886-7AA5A735A017";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Hinge_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.7763568394002505e-15 3.8857805861880479e-16 
+		-7.090682208055199e-16 ;
+	setAttr ".tg[0].tor" -type "double3" 2.5444437451708134e-14 0 0 ;
+	setAttr ".lr" -type "double3" -2.5444437451708134e-14 0 0 ;
+	setAttr ".rst" -type "double3" 6.9424031972885141 -0.35127392411232033 0.0025646686553925419 ;
+	setAttr ".rsrr" -type "double3" -2.5444437451708134e-14 0 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Hinge_jnt_scaleConstraint1" -p "Robot_Arm_Hinge_jnt";
+	rename -uid "1342049B-4F47-A7D8-956F-6091F9A4AED7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Hinge_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Lower_jnt_parentConstraint1" -p "Robot_Arm_Lower_jnt";
+	rename -uid "A768225F-41DE-3A7B-85D5-D09CB8DCA780";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Lower_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 2.2204460492503131e-16 1.3877787807814457e-17 
+		-2.6469779601696886e-19 ;
+	setAttr ".tg[0].tor" -type "double3" 0.41831194638102753 -4.9875005154721591e-15 
+		2.896676873923798 ;
+	setAttr ".lr" -type "double3" -6.7310354017149756e-17 4.9883801017103175e-15 -4.044850767416183e-16 ;
+	setAttr ".rst" -type "double3" 1.999999642367438 -2.3536564205515873e-06 2.7551550471986415e-14 ;
+	setAttr ".rsrr" -type "double3" -6.7310354017149756e-17 4.9883801017103175e-15 -4.044850767416183e-16 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Lower_jnt_scaleConstraint1" -p "Robot_Arm_Lower_jnt";
+	rename -uid "E7066C90-4399-2CAE-C580-2CB39D783560";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Lower_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Robot_Arm_Base_jnt_parentConstraint1" -p "Robot_Arm_Base_jnt";
+	rename -uid "956818E4-4529-1187-418F-54A54934CA34";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Base_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 8.0779356694631609e-28 0 -2.1175823681357508e-22 ;
+	setAttr ".tg[0].tor" -type "double3" 6.361103614005151e-15 -1.2722214703144959e-14 
+		-1.2722255124413804e-14 ;
+	setAttr ".lr" -type "double3" -6.361109362927032e-15 1.9083328088781101e-14 1.2722218725854067e-14 ;
+	setAttr ".rst" -type "double3" 7.8455196301194369e-07 3.5449421176281248e-12 0 ;
+	setAttr ".rsrr" -type "double3" -6.361109362927032e-15 1.9083328088781101e-14 1.2722218725854067e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Robot_Arm_Base_jnt_scaleConstraint1" -p "Robot_Arm_Base_jnt";
+	rename -uid "2D53E715-4F05-55D1-7631-3CBE30786416";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Robot_Arm_Base_ctrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "4087FBF2-4C6F-CB84-8984-7488CFA425BA";
 	setAttr -s 2 ".lnk";
@@ -9733,7 +10869,7 @@ createNode script -n "RobotArm_Model:uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 332\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 980\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1180\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
 		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
 		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
@@ -9760,8 +10896,8 @@ createNode script -n "RobotArm_Model:uiConfigurationScriptNode";
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
 		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 980\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 980\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1180\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1180\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "RobotArm_Model:sceneConfigurationScriptNode";
@@ -9842,7 +10978,7 @@ createNode groupParts -n "groupParts8";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:125]";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "D5834481-466E-168C-E963-E4B59B2E0D2B";
+	rename -uid "24EF4883-4072-291A-6AA5-859FD8887AB5";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
@@ -9891,47 +11027,890 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+connectAttr "base_parentConstraint1.ctx" "RobotArm_Model1:base.tx";
+connectAttr "base_parentConstraint1.cty" "RobotArm_Model1:base.ty";
+connectAttr "base_parentConstraint1.ctz" "RobotArm_Model1:base.tz";
+connectAttr "base_parentConstraint1.crx" "RobotArm_Model1:base.rx";
+connectAttr "base_parentConstraint1.cry" "RobotArm_Model1:base.ry";
+connectAttr "base_parentConstraint1.crz" "RobotArm_Model1:base.rz";
+connectAttr "base_scaleConstraint1.csx" "RobotArm_Model1:base.sx";
+connectAttr "base_scaleConstraint1.csy" "RobotArm_Model1:base.sy";
+connectAttr "base_scaleConstraint1.csz" "RobotArm_Model1:base.sz";
 connectAttr "baseShapeOrig.w" "RobotArm_Model1:baseShape.i";
+connectAttr "RobotArm_Model1:base.ro" "base_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:base.pim" "base_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:base.rp" "base_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:base.rpt" "base_parentConstraint1.crt";
+connectAttr "Robot_Arm_Base_jnt.t" "base_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Base_jnt.rp" "base_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Base_jnt.rpt" "base_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Base_jnt.r" "base_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Base_jnt.ro" "base_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Base_jnt.s" "base_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Base_jnt.pm" "base_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Base_jnt.jo" "base_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Base_jnt.ssc" "base_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Base_jnt.is" "base_parentConstraint1.tg[0].tis";
+connectAttr "base_parentConstraint1.w0" "base_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:base.pim" "base_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Base_jnt.s" "base_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Base_jnt.pm" "base_scaleConstraint1.tg[0].tpm";
+connectAttr "base_scaleConstraint1.w0" "base_scaleConstraint1.tg[0].tw";
+connectAttr "lowerArm_parentConstraint1.ctx" "RobotArm_Model1:lowerArm.tx";
+connectAttr "lowerArm_parentConstraint1.cty" "RobotArm_Model1:lowerArm.ty";
+connectAttr "lowerArm_parentConstraint1.ctz" "RobotArm_Model1:lowerArm.tz";
+connectAttr "lowerArm_parentConstraint1.crx" "RobotArm_Model1:lowerArm.rx";
+connectAttr "lowerArm_parentConstraint1.cry" "RobotArm_Model1:lowerArm.ry";
+connectAttr "lowerArm_parentConstraint1.crz" "RobotArm_Model1:lowerArm.rz";
+connectAttr "lowerArm_scaleConstraint1.csx" "RobotArm_Model1:lowerArm.sx";
+connectAttr "lowerArm_scaleConstraint1.csy" "RobotArm_Model1:lowerArm.sy";
+connectAttr "lowerArm_scaleConstraint1.csz" "RobotArm_Model1:lowerArm.sz";
+connectAttr "RobotArm_Model1:lowerArm.ro" "lowerArm_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:lowerArm.pim" "lowerArm_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:lowerArm.rp" "lowerArm_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:lowerArm.rpt" "lowerArm_parentConstraint1.crt";
+connectAttr "Robot_Arm_Lower_jnt.t" "lowerArm_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Lower_jnt.rp" "lowerArm_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Lower_jnt.rpt" "lowerArm_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Lower_jnt.r" "lowerArm_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Lower_jnt.ro" "lowerArm_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Lower_jnt.s" "lowerArm_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Lower_jnt.pm" "lowerArm_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Lower_jnt.jo" "lowerArm_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Lower_jnt.ssc" "lowerArm_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Lower_jnt.is" "lowerArm_parentConstraint1.tg[0].tis";
+connectAttr "lowerArm_parentConstraint1.w0" "lowerArm_parentConstraint1.tg[0].tw"
+		;
+connectAttr "RobotArm_Model1:lowerArm.pim" "lowerArm_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Lower_jnt.s" "lowerArm_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Lower_jnt.pm" "lowerArm_scaleConstraint1.tg[0].tpm";
+connectAttr "lowerArm_scaleConstraint1.w0" "lowerArm_scaleConstraint1.tg[0].tw";
+connectAttr "hinge_parentConstraint1.ctx" "RobotArm_Model1:hinge.tx";
+connectAttr "hinge_parentConstraint1.cty" "RobotArm_Model1:hinge.ty";
+connectAttr "hinge_parentConstraint1.ctz" "RobotArm_Model1:hinge.tz";
+connectAttr "hinge_parentConstraint1.crx" "RobotArm_Model1:hinge.rx";
+connectAttr "hinge_parentConstraint1.cry" "RobotArm_Model1:hinge.ry";
+connectAttr "hinge_parentConstraint1.crz" "RobotArm_Model1:hinge.rz";
+connectAttr "hinge_scaleConstraint1.csx" "RobotArm_Model1:hinge.sx";
+connectAttr "hinge_scaleConstraint1.csy" "RobotArm_Model1:hinge.sy";
+connectAttr "hinge_scaleConstraint1.csz" "RobotArm_Model1:hinge.sz";
 connectAttr "groupId1.id" "RobotArm_Model1:hingeShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:hingeShape.iog.og[0].gco"
 		;
 connectAttr "groupParts1.og" "RobotArm_Model1:hingeShape.i";
+connectAttr "RobotArm_Model1:hinge.ro" "hinge_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:hinge.pim" "hinge_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:hinge.rp" "hinge_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:hinge.rpt" "hinge_parentConstraint1.crt";
+connectAttr "Robot_Arm_Hinge_jnt.t" "hinge_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Hinge_jnt.rp" "hinge_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Hinge_jnt.rpt" "hinge_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Hinge_jnt.r" "hinge_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Hinge_jnt.ro" "hinge_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Hinge_jnt.s" "hinge_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Hinge_jnt.pm" "hinge_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Hinge_jnt.jo" "hinge_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Hinge_jnt.ssc" "hinge_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Hinge_jnt.is" "hinge_parentConstraint1.tg[0].tis";
+connectAttr "hinge_parentConstraint1.w0" "hinge_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:hinge.pim" "hinge_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Hinge_jnt.s" "hinge_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Hinge_jnt.pm" "hinge_scaleConstraint1.tg[0].tpm";
+connectAttr "hinge_scaleConstraint1.w0" "hinge_scaleConstraint1.tg[0].tw";
+connectAttr "topArm_parentConstraint1.ctx" "RobotArm_Model1:topArm.tx";
+connectAttr "topArm_parentConstraint1.cty" "RobotArm_Model1:topArm.ty";
+connectAttr "topArm_parentConstraint1.ctz" "RobotArm_Model1:topArm.tz";
+connectAttr "topArm_parentConstraint1.crx" "RobotArm_Model1:topArm.rx";
+connectAttr "topArm_parentConstraint1.cry" "RobotArm_Model1:topArm.ry";
+connectAttr "topArm_parentConstraint1.crz" "RobotArm_Model1:topArm.rz";
+connectAttr "topArm_scaleConstraint1.csx" "RobotArm_Model1:topArm.sx";
+connectAttr "topArm_scaleConstraint1.csy" "RobotArm_Model1:topArm.sy";
+connectAttr "topArm_scaleConstraint1.csz" "RobotArm_Model1:topArm.sz";
 connectAttr "groupId2.id" "RobotArm_Model1:topArmShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:topArmShape.iog.og[0].gco"
 		;
 connectAttr "groupParts2.og" "RobotArm_Model1:topArmShape.i";
+connectAttr "RobotArm_Model1:topArm.ro" "topArm_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:topArm.pim" "topArm_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:topArm.rp" "topArm_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:topArm.rpt" "topArm_parentConstraint1.crt";
+connectAttr "Robot_Arm_Top_jnt.t" "topArm_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Top_jnt.rp" "topArm_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Top_jnt.rpt" "topArm_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Top_jnt.r" "topArm_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Top_jnt.ro" "topArm_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Top_jnt.s" "topArm_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Top_jnt.pm" "topArm_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Top_jnt.jo" "topArm_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Top_jnt.ssc" "topArm_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Top_jnt.is" "topArm_parentConstraint1.tg[0].tis";
+connectAttr "topArm_parentConstraint1.w0" "topArm_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:topArm.pim" "topArm_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Top_jnt.s" "topArm_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Top_jnt.pm" "topArm_scaleConstraint1.tg[0].tpm";
+connectAttr "topArm_scaleConstraint1.w0" "topArm_scaleConstraint1.tg[0].tw";
+connectAttr "hand_parentConstraint1.ctx" "RobotArm_Model1:hand.tx";
+connectAttr "hand_parentConstraint1.cty" "RobotArm_Model1:hand.ty";
+connectAttr "hand_parentConstraint1.ctz" "RobotArm_Model1:hand.tz";
+connectAttr "hand_parentConstraint1.crx" "RobotArm_Model1:hand.rx";
+connectAttr "hand_parentConstraint1.cry" "RobotArm_Model1:hand.ry";
+connectAttr "hand_parentConstraint1.crz" "RobotArm_Model1:hand.rz";
+connectAttr "hand_scaleConstraint1.csx" "RobotArm_Model1:hand.sx";
+connectAttr "hand_scaleConstraint1.csy" "RobotArm_Model1:hand.sy";
+connectAttr "hand_scaleConstraint1.csz" "RobotArm_Model1:hand.sz";
 connectAttr "RobotArm_Model1:groupId124.id" "RobotArm_Model1:handShape.iog.og[0].gid"
 		;
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:handShape.iog.og[0].gco"
 		;
+connectAttr "RobotArm_Model1:hand.ro" "hand_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:hand.pim" "hand_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:hand.rp" "hand_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:hand.rpt" "hand_parentConstraint1.crt";
+connectAttr "Robot_Arm_hand_jnt.t" "hand_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_hand_jnt.rp" "hand_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_hand_jnt.rpt" "hand_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_hand_jnt.r" "hand_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_hand_jnt.ro" "hand_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_hand_jnt.s" "hand_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_hand_jnt.pm" "hand_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_hand_jnt.jo" "hand_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_hand_jnt.ssc" "hand_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_hand_jnt.is" "hand_parentConstraint1.tg[0].tis";
+connectAttr "hand_parentConstraint1.w0" "hand_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:hand.pim" "hand_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_hand_jnt.s" "hand_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_hand_jnt.pm" "hand_scaleConstraint1.tg[0].tpm";
+connectAttr "hand_scaleConstraint1.w0" "hand_scaleConstraint1.tg[0].tw";
+connectAttr "f0_parentConstraint1.ctx" "RobotArm_Model1:f0.tx";
+connectAttr "f0_parentConstraint1.cty" "RobotArm_Model1:f0.ty";
+connectAttr "f0_parentConstraint1.ctz" "RobotArm_Model1:f0.tz";
+connectAttr "f0_parentConstraint1.crx" "RobotArm_Model1:f0.rx";
+connectAttr "f0_parentConstraint1.cry" "RobotArm_Model1:f0.ry";
+connectAttr "f0_parentConstraint1.crz" "RobotArm_Model1:f0.rz";
+connectAttr "f0_scaleConstraint1.csx" "RobotArm_Model1:f0.sx";
+connectAttr "f0_scaleConstraint1.csy" "RobotArm_Model1:f0.sy";
+connectAttr "f0_scaleConstraint1.csz" "RobotArm_Model1:f0.sz";
 connectAttr "groupId4.id" "RobotArm_Model1:fShape0.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:fShape0.iog.og[0].gco";
 connectAttr "groupParts4.og" "RobotArm_Model1:fShape0.i";
+connectAttr "RobotArm_Model1:f0.ro" "f0_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:f0.pim" "f0_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:f0.rp" "f0_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:f0.rpt" "f0_parentConstraint1.crt";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.t" "f0_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.rp" "f0_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.rpt" "f0_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.r" "f0_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.ro" "f0_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.s" "f0_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.pm" "f0_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.jo" "f0_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.ssc" "f0_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.is" "f0_parentConstraint1.tg[0].tis";
+connectAttr "f0_parentConstraint1.w0" "f0_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:f0.pim" "f0_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.s" "f0_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_03_Base_jnt.pm" "f0_scaleConstraint1.tg[0].tpm";
+connectAttr "f0_scaleConstraint1.w0" "f0_scaleConstraint1.tg[0].tw";
+connectAttr "f0b_parentConstraint1.ctx" "RobotArm_Model1:f0b.tx";
+connectAttr "f0b_parentConstraint1.cty" "RobotArm_Model1:f0b.ty";
+connectAttr "f0b_parentConstraint1.ctz" "RobotArm_Model1:f0b.tz";
+connectAttr "f0b_parentConstraint1.crx" "RobotArm_Model1:f0b.rx";
+connectAttr "f0b_parentConstraint1.cry" "RobotArm_Model1:f0b.ry";
+connectAttr "f0b_parentConstraint1.crz" "RobotArm_Model1:f0b.rz";
+connectAttr "f0b_scaleConstraint1.csx" "RobotArm_Model1:f0b.sx";
+connectAttr "f0b_scaleConstraint1.csy" "RobotArm_Model1:f0b.sy";
+connectAttr "f0b_scaleConstraint1.csz" "RobotArm_Model1:f0b.sz";
 connectAttr "groupId8.id" "RobotArm_Model1:f0bShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:f0bShape.iog.og[0].gco";
 connectAttr "groupParts8.og" "RobotArm_Model1:f0bShape.i";
+connectAttr "RobotArm_Model1:f0b.ro" "f0b_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:f0b.pim" "f0b_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:f0b.rp" "f0b_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:f0b.rpt" "f0b_parentConstraint1.crt";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.t" "f0b_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.rp" "f0b_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.rpt" "f0b_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.r" "f0b_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.ro" "f0b_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.s" "f0b_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.pm" "f0b_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.jo" "f0b_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.ssc" "f0b_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.is" "f0b_parentConstraint1.tg[0].tis";
+connectAttr "f0b_parentConstraint1.w0" "f0b_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:f0b.pim" "f0b_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.s" "f0b_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.pm" "f0b_scaleConstraint1.tg[0].tpm";
+connectAttr "f0b_scaleConstraint1.w0" "f0b_scaleConstraint1.tg[0].tw";
+connectAttr "f2_parentConstraint1.ctx" "RobotArm_Model1:f2.tx";
+connectAttr "f2_parentConstraint1.cty" "RobotArm_Model1:f2.ty";
+connectAttr "f2_parentConstraint1.ctz" "RobotArm_Model1:f2.tz";
+connectAttr "f2_parentConstraint1.crx" "RobotArm_Model1:f2.rx";
+connectAttr "f2_parentConstraint1.cry" "RobotArm_Model1:f2.ry";
+connectAttr "f2_parentConstraint1.crz" "RobotArm_Model1:f2.rz";
+connectAttr "f2_scaleConstraint1.csx" "RobotArm_Model1:f2.sx";
+connectAttr "f2_scaleConstraint1.csy" "RobotArm_Model1:f2.sy";
+connectAttr "f2_scaleConstraint1.csz" "RobotArm_Model1:f2.sz";
 connectAttr "groupId3.id" "RobotArm_Model1:fShape2.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:fShape2.iog.og[0].gco";
 connectAttr "groupParts3.og" "RobotArm_Model1:fShape2.i";
+connectAttr "RobotArm_Model1:f2.ro" "f2_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:f2.pim" "f2_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:f2.rp" "f2_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:f2.rpt" "f2_parentConstraint1.crt";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.t" "f2_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.rp" "f2_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.rpt" "f2_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.r" "f2_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.ro" "f2_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.s" "f2_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.pm" "f2_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.jo" "f2_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.ssc" "f2_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.is" "f2_parentConstraint1.tg[0].tis";
+connectAttr "f2_parentConstraint1.w0" "f2_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:f2.pim" "f2_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.s" "f2_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_01_Base_jnt.pm" "f2_scaleConstraint1.tg[0].tpm";
+connectAttr "f2_scaleConstraint1.w0" "f2_scaleConstraint1.tg[0].tw";
+connectAttr "f2b_parentConstraint1.ctx" "RobotArm_Model1:f2b.tx";
+connectAttr "f2b_parentConstraint1.cty" "RobotArm_Model1:f2b.ty";
+connectAttr "f2b_parentConstraint1.ctz" "RobotArm_Model1:f2b.tz";
+connectAttr "f2b_parentConstraint1.crx" "RobotArm_Model1:f2b.rx";
+connectAttr "f2b_parentConstraint1.cry" "RobotArm_Model1:f2b.ry";
+connectAttr "f2b_parentConstraint1.crz" "RobotArm_Model1:f2b.rz";
+connectAttr "f2b_scaleConstraint1.csx" "RobotArm_Model1:f2b.sx";
+connectAttr "f2b_scaleConstraint1.csy" "RobotArm_Model1:f2b.sy";
+connectAttr "f2b_scaleConstraint1.csz" "RobotArm_Model1:f2b.sz";
 connectAttr "groupId7.id" "RobotArm_Model1:f2bShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:f2bShape.iog.og[0].gco";
 connectAttr "groupParts7.og" "RobotArm_Model1:f2bShape.i";
+connectAttr "RobotArm_Model1:f2b.ro" "f2b_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:f2b.pim" "f2b_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:f2b.rp" "f2b_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:f2b.rpt" "f2b_parentConstraint1.crt";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.t" "f2b_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.rp" "f2b_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.rpt" "f2b_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.r" "f2b_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.ro" "f2b_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.s" "f2b_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.pm" "f2b_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.jo" "f2b_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.ssc" "f2b_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.is" "f2b_parentConstraint1.tg[0].tis";
+connectAttr "f2b_parentConstraint1.w0" "f2b_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:f2b.pim" "f2b_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.s" "f2b_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.pm" "f2b_scaleConstraint1.tg[0].tpm";
+connectAttr "f2b_scaleConstraint1.w0" "f2b_scaleConstraint1.tg[0].tw";
+connectAttr "f1_parentConstraint1.ctx" "RobotArm_Model1:f1.tx";
+connectAttr "f1_parentConstraint1.cty" "RobotArm_Model1:f1.ty";
+connectAttr "f1_parentConstraint1.ctz" "RobotArm_Model1:f1.tz";
+connectAttr "f1_parentConstraint1.crx" "RobotArm_Model1:f1.rx";
+connectAttr "f1_parentConstraint1.cry" "RobotArm_Model1:f1.ry";
+connectAttr "f1_parentConstraint1.crz" "RobotArm_Model1:f1.rz";
+connectAttr "f1_scaleConstraint1.csx" "RobotArm_Model1:f1.sx";
+connectAttr "f1_scaleConstraint1.csy" "RobotArm_Model1:f1.sy";
+connectAttr "f1_scaleConstraint1.csz" "RobotArm_Model1:f1.sz";
 connectAttr "groupId5.id" "RobotArm_Model1:fShape1.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:fShape1.iog.og[0].gco";
 connectAttr "groupParts5.og" "RobotArm_Model1:fShape1.i";
+connectAttr "RobotArm_Model1:f1.ro" "f1_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:f1.pim" "f1_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:f1.rp" "f1_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:f1.rpt" "f1_parentConstraint1.crt";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.t" "f1_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.rp" "f1_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.rpt" "f1_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.r" "f1_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.ro" "f1_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.s" "f1_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.pm" "f1_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.jo" "f1_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.ssc" "f1_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.is" "f1_parentConstraint1.tg[0].tis";
+connectAttr "f1_parentConstraint1.w0" "f1_parentConstraint1.tg[0].tw";
+connectAttr "RobotArm_Model1:f1.pim" "f1_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.s" "f1_scaleConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_02_Base_jnt.pm" "f1_scaleConstraint1.tg[0].tpm";
+connectAttr "f1_scaleConstraint1.w0" "f1_scaleConstraint1.tg[0].tw";
+connectAttr "f1b_parentConstraint1.ctx" "RobotArm_Model1:f1b.tx";
+connectAttr "f1b_parentConstraint1.cty" "RobotArm_Model1:f1b.ty";
+connectAttr "f1b_parentConstraint1.ctz" "RobotArm_Model1:f1b.tz";
+connectAttr "f1b_parentConstraint1.crx" "RobotArm_Model1:f1b.rx";
+connectAttr "f1b_parentConstraint1.cry" "RobotArm_Model1:f1b.ry";
+connectAttr "f1b_parentConstraint1.crz" "RobotArm_Model1:f1b.rz";
 connectAttr "groupId6.id" "RobotArm_Model1:f1bShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model1:f1bShape.iog.og[0].gco";
 connectAttr "groupParts6.og" "RobotArm_Model1:f1bShape.i";
-connectAttr "Robot_Arm_Base.s" "Robot_Arm_Lower.is";
-connectAttr "Robot_Arm_Lower.s" "Robot_Arm_Hinge.is";
-connectAttr "Robot_Arm_Hinge.s" "Robot_Arm_Top.is";
-connectAttr "Robot_Arm_Top.s" "Robot_Arm_hand.is";
-connectAttr "Robot_Arm_hand.s" "Robot_Arm_Finger_01_Base.is";
-connectAttr "Robot_Arm_Finger_01_Base.s" "Robot_Arm_Finger_01_Tip.is";
-connectAttr "Robot_Arm_hand.s" "Robot_Arm_Finger_03_Base.is";
-connectAttr "Robot_Arm_Finger_03_Base.s" "Robot_Arm_Finger_03_Tip.is";
-connectAttr "Robot_Arm_hand.s" "Robot_Arm_Finger_02_Base.is";
-connectAttr "Robot_Arm_Finger_02_Base.s" "Robot_Arm_Finger_02_Tip.is";
+connectAttr "RobotArm_Model1:f1b.ro" "f1b_parentConstraint1.cro";
+connectAttr "RobotArm_Model1:f1b.pim" "f1b_parentConstraint1.cpim";
+connectAttr "RobotArm_Model1:f1b.rp" "f1b_parentConstraint1.crp";
+connectAttr "RobotArm_Model1:f1b.rpt" "f1b_parentConstraint1.crt";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.t" "f1b_parentConstraint1.tg[0].tt";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.rp" "f1b_parentConstraint1.tg[0].trp";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.rpt" "f1b_parentConstraint1.tg[0].trt";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.r" "f1b_parentConstraint1.tg[0].tr";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.ro" "f1b_parentConstraint1.tg[0].tro";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.s" "f1b_parentConstraint1.tg[0].ts";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.pm" "f1b_parentConstraint1.tg[0].tpm";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.jo" "f1b_parentConstraint1.tg[0].tjo";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.ssc" "f1b_parentConstraint1.tg[0].tsc";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.is" "f1b_parentConstraint1.tg[0].tis";
+connectAttr "f1b_parentConstraint1.w0" "f1b_parentConstraint1.tg[0].tw";
+connectAttr "Robot_Arm_Base_jnt_scaleConstraint1.csx" "Robot_Arm_Base_jnt.sx";
+connectAttr "Robot_Arm_Base_jnt_scaleConstraint1.csy" "Robot_Arm_Base_jnt.sy";
+connectAttr "Robot_Arm_Base_jnt_scaleConstraint1.csz" "Robot_Arm_Base_jnt.sz";
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.ctx" "Robot_Arm_Base_jnt.tx";
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.cty" "Robot_Arm_Base_jnt.ty";
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.ctz" "Robot_Arm_Base_jnt.tz";
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.crx" "Robot_Arm_Base_jnt.rx";
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.cry" "Robot_Arm_Base_jnt.ry";
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.crz" "Robot_Arm_Base_jnt.rz";
+connectAttr "Robot_Arm_Base_jnt.s" "Robot_Arm_Lower_jnt.is";
+connectAttr "Robot_Arm_Lower_jnt_scaleConstraint1.csx" "Robot_Arm_Lower_jnt.sx";
+connectAttr "Robot_Arm_Lower_jnt_scaleConstraint1.csy" "Robot_Arm_Lower_jnt.sy";
+connectAttr "Robot_Arm_Lower_jnt_scaleConstraint1.csz" "Robot_Arm_Lower_jnt.sz";
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.ctx" "Robot_Arm_Lower_jnt.tx"
+		;
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.cty" "Robot_Arm_Lower_jnt.ty"
+		;
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.ctz" "Robot_Arm_Lower_jnt.tz"
+		;
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.crx" "Robot_Arm_Lower_jnt.rx"
+		;
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.cry" "Robot_Arm_Lower_jnt.ry"
+		;
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.crz" "Robot_Arm_Lower_jnt.rz"
+		;
+connectAttr "Robot_Arm_Lower_jnt.s" "Robot_Arm_Hinge_jnt.is";
+connectAttr "Robot_Arm_Hinge_jnt_scaleConstraint1.csx" "Robot_Arm_Hinge_jnt.sx";
+connectAttr "Robot_Arm_Hinge_jnt_scaleConstraint1.csy" "Robot_Arm_Hinge_jnt.sy";
+connectAttr "Robot_Arm_Hinge_jnt_scaleConstraint1.csz" "Robot_Arm_Hinge_jnt.sz";
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.ctx" "Robot_Arm_Hinge_jnt.tx"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.cty" "Robot_Arm_Hinge_jnt.ty"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.ctz" "Robot_Arm_Hinge_jnt.tz"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.crx" "Robot_Arm_Hinge_jnt.rx"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.cry" "Robot_Arm_Hinge_jnt.ry"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.crz" "Robot_Arm_Hinge_jnt.rz"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.s" "Robot_Arm_Top_jnt.is";
+connectAttr "Robot_Arm_Top_jnt_scaleConstraint1.csx" "Robot_Arm_Top_jnt.sx";
+connectAttr "Robot_Arm_Top_jnt_scaleConstraint1.csy" "Robot_Arm_Top_jnt.sy";
+connectAttr "Robot_Arm_Top_jnt_scaleConstraint1.csz" "Robot_Arm_Top_jnt.sz";
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.ctx" "Robot_Arm_Top_jnt.tx";
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.cty" "Robot_Arm_Top_jnt.ty";
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.ctz" "Robot_Arm_Top_jnt.tz";
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.crx" "Robot_Arm_Top_jnt.rx";
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.cry" "Robot_Arm_Top_jnt.ry";
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.crz" "Robot_Arm_Top_jnt.rz";
+connectAttr "Robot_Arm_Top_jnt.s" "Robot_Arm_hand_jnt.is";
+connectAttr "Robot_Arm_hand_jnt_scaleConstraint1.csx" "Robot_Arm_hand_jnt.sx";
+connectAttr "Robot_Arm_hand_jnt_scaleConstraint1.csy" "Robot_Arm_hand_jnt.sy";
+connectAttr "Robot_Arm_hand_jnt_scaleConstraint1.csz" "Robot_Arm_hand_jnt.sz";
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.ctx" "Robot_Arm_hand_jnt.tx";
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.cty" "Robot_Arm_hand_jnt.ty";
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.ctz" "Robot_Arm_hand_jnt.tz";
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.crx" "Robot_Arm_hand_jnt.rx";
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.cry" "Robot_Arm_hand_jnt.ry";
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.crz" "Robot_Arm_hand_jnt.rz";
+connectAttr "Robot_Arm_hand_jnt.s" "Robot_Arm_Finger_01_Base_jnt.is";
+connectAttr "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.csx" "Robot_Arm_Finger_01_Base_jnt.sx"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.csy" "Robot_Arm_Finger_01_Base_jnt.sy"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.csz" "Robot_Arm_Finger_01_Base_jnt.sz"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.ctx" "Robot_Arm_Finger_01_Base_jnt.tx"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.cty" "Robot_Arm_Finger_01_Base_jnt.ty"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.ctz" "Robot_Arm_Finger_01_Base_jnt.tz"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.crx" "Robot_Arm_Finger_01_Base_jnt.rx"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.cry" "Robot_Arm_Finger_01_Base_jnt.ry"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.crz" "Robot_Arm_Finger_01_Base_jnt.rz"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.s" "Robot_Arm_Finger_01_Tip_jnt.is";
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.ctx" "Robot_Arm_Finger_01_Tip_jnt.tx"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.cty" "Robot_Arm_Finger_01_Tip_jnt.ty"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.ctz" "Robot_Arm_Finger_01_Tip_jnt.tz"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.crx" "Robot_Arm_Finger_01_Tip_jnt.rx"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.cry" "Robot_Arm_Finger_01_Tip_jnt.ry"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.crz" "Robot_Arm_Finger_01_Tip_jnt.rz"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.csx" "Robot_Arm_Finger_01_Tip_jnt.sx"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.csy" "Robot_Arm_Finger_01_Tip_jnt.sy"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.csz" "Robot_Arm_Finger_01_Tip_jnt.sz"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.ro" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.pim" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.rp" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.rpt" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.jo" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.t" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.rp" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.rpt" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.r" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.ro" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.s" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.pm" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.w0" "Robot_Arm_Finger_01_Tip_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.ssc" "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt.pim" "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.s" "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_ctrl.pm" "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.w0" "Robot_Arm_Finger_01_Tip_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.ro" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.pim" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.rp" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.rpt" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.jo" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.t" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.rp" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.rpt" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.r" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.ro" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.s" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.pm" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.w0" "Robot_Arm_Finger_01_Base_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.ssc" "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt.pim" "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.s" "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_ctrl.pm" "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.w0" "Robot_Arm_Finger_01_Base_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_hand_jnt.s" "Robot_Arm_Finger_03_Base_jnt.is";
+connectAttr "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.csx" "Robot_Arm_Finger_03_Base_jnt.sx"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.csy" "Robot_Arm_Finger_03_Base_jnt.sy"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.csz" "Robot_Arm_Finger_03_Base_jnt.sz"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.ctx" "Robot_Arm_Finger_03_Base_jnt.tx"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.cty" "Robot_Arm_Finger_03_Base_jnt.ty"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.ctz" "Robot_Arm_Finger_03_Base_jnt.tz"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.crx" "Robot_Arm_Finger_03_Base_jnt.rx"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.cry" "Robot_Arm_Finger_03_Base_jnt.ry"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.crz" "Robot_Arm_Finger_03_Base_jnt.rz"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.s" "Robot_Arm_Finger_03_Tip_jnt.is";
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.ctx" "Robot_Arm_Finger_03_Tip_jnt.tx"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.cty" "Robot_Arm_Finger_03_Tip_jnt.ty"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.ctz" "Robot_Arm_Finger_03_Tip_jnt.tz"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.crx" "Robot_Arm_Finger_03_Tip_jnt.rx"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.cry" "Robot_Arm_Finger_03_Tip_jnt.ry"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.crz" "Robot_Arm_Finger_03_Tip_jnt.rz"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.csx" "Robot_Arm_Finger_03_Tip_jnt.sx"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.csy" "Robot_Arm_Finger_03_Tip_jnt.sy"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.csz" "Robot_Arm_Finger_03_Tip_jnt.sz"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.ro" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.pim" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.rp" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.rpt" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.jo" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.t" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.rp" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.rpt" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.r" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.ro" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.s" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.pm" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.w0" "Robot_Arm_Finger_03_Tip_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.ssc" "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt.pim" "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.s" "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_ctrl.pm" "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.w0" "Robot_Arm_Finger_03_Tip_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.ro" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.pim" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.rp" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.rpt" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.jo" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.t" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.rp" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.rpt" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.r" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.ro" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.s" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.pm" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.w0" "Robot_Arm_Finger_03_Base_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.ssc" "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt.pim" "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.s" "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_03_Tip_ctrl.pm" "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.w0" "Robot_Arm_Finger_03_Base_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_hand_jnt.s" "Robot_Arm_Finger_02_Base_jnt.is";
+connectAttr "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.csx" "Robot_Arm_Finger_02_Base_jnt.sx"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.csy" "Robot_Arm_Finger_02_Base_jnt.sy"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.csz" "Robot_Arm_Finger_02_Base_jnt.sz"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.ctx" "Robot_Arm_Finger_02_Base_jnt.tx"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.cty" "Robot_Arm_Finger_02_Base_jnt.ty"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.ctz" "Robot_Arm_Finger_02_Base_jnt.tz"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.crx" "Robot_Arm_Finger_02_Base_jnt.rx"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.cry" "Robot_Arm_Finger_02_Base_jnt.ry"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.crz" "Robot_Arm_Finger_02_Base_jnt.rz"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.s" "Robot_Arm_Finger_02_Tip_jnt.is";
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.ctx" "Robot_Arm_Finger_02_Tip_jnt.tx"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.cty" "Robot_Arm_Finger_02_Tip_jnt.ty"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.ctz" "Robot_Arm_Finger_02_Tip_jnt.tz"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.crx" "Robot_Arm_Finger_02_Tip_jnt.rx"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.cry" "Robot_Arm_Finger_02_Tip_jnt.ry"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.crz" "Robot_Arm_Finger_02_Tip_jnt.rz"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.csx" "Robot_Arm_Finger_02_Tip_jnt.sx"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.csy" "Robot_Arm_Finger_02_Tip_jnt.sy"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.csz" "Robot_Arm_Finger_02_Tip_jnt.sz"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.ro" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.pim" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.rp" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.rpt" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.jo" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.t" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.rp" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.rpt" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.r" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.ro" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.s" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.pm" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.w0" "Robot_Arm_Finger_02_Tip_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.ssc" "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt.pim" "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.s" "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_ctrl.pm" "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.w0" "Robot_Arm_Finger_02_Tip_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.ro" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.pim" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.rp" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.rpt" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.jo" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.t" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.rp" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.rpt" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.r" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.ro" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.s" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.pm" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.w0" "Robot_Arm_Finger_02_Base_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.ssc" "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt.pim" "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.s" "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_ctrl.pm" "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.w0" "Robot_Arm_Finger_02_Base_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_hand_jnt.ro" "Robot_Arm_hand_jnt_parentConstraint1.cro";
+connectAttr "Robot_Arm_hand_jnt.pim" "Robot_Arm_hand_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_hand_jnt.rp" "Robot_Arm_hand_jnt_parentConstraint1.crp";
+connectAttr "Robot_Arm_hand_jnt.rpt" "Robot_Arm_hand_jnt_parentConstraint1.crt";
+connectAttr "Robot_Arm_hand_jnt.jo" "Robot_Arm_hand_jnt_parentConstraint1.cjo";
+connectAttr "Robot_Arm_hand_ctrl.t" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_hand_ctrl.rp" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_hand_ctrl.rpt" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_hand_ctrl.r" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_hand_ctrl.ro" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_hand_ctrl.s" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_hand_ctrl.pm" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_hand_jnt_parentConstraint1.w0" "Robot_Arm_hand_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_hand_jnt.ssc" "Robot_Arm_hand_jnt_scaleConstraint1.tsc";
+connectAttr "Robot_Arm_hand_jnt.pim" "Robot_Arm_hand_jnt_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_hand_ctrl.s" "Robot_Arm_hand_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_hand_ctrl.pm" "Robot_Arm_hand_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_hand_jnt_scaleConstraint1.w0" "Robot_Arm_hand_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Top_jnt.ro" "Robot_Arm_Top_jnt_parentConstraint1.cro";
+connectAttr "Robot_Arm_Top_jnt.pim" "Robot_Arm_Top_jnt_parentConstraint1.cpim";
+connectAttr "Robot_Arm_Top_jnt.rp" "Robot_Arm_Top_jnt_parentConstraint1.crp";
+connectAttr "Robot_Arm_Top_jnt.rpt" "Robot_Arm_Top_jnt_parentConstraint1.crt";
+connectAttr "Robot_Arm_Top_jnt.jo" "Robot_Arm_Top_jnt_parentConstraint1.cjo";
+connectAttr "Robot_Arm_Top_ctrl.t" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Top_ctrl.rp" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Top_ctrl.rpt" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Top_ctrl.r" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Top_ctrl.ro" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Top_ctrl.s" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Top_ctrl.pm" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Top_jnt_parentConstraint1.w0" "Robot_Arm_Top_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Top_jnt.ssc" "Robot_Arm_Top_jnt_scaleConstraint1.tsc";
+connectAttr "Robot_Arm_Top_jnt.pim" "Robot_Arm_Top_jnt_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Top_ctrl.s" "Robot_Arm_Top_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Top_ctrl.pm" "Robot_Arm_Top_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Top_jnt_scaleConstraint1.w0" "Robot_Arm_Top_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.ro" "Robot_Arm_Hinge_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.pim" "Robot_Arm_Hinge_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.rp" "Robot_Arm_Hinge_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.rpt" "Robot_Arm_Hinge_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.jo" "Robot_Arm_Hinge_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.t" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.rp" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.rpt" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.r" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.ro" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.s" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.pm" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_parentConstraint1.w0" "Robot_Arm_Hinge_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.ssc" "Robot_Arm_Hinge_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Hinge_jnt.pim" "Robot_Arm_Hinge_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.s" "Robot_Arm_Hinge_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Hinge_ctrl.pm" "Robot_Arm_Hinge_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Hinge_jnt_scaleConstraint1.w0" "Robot_Arm_Hinge_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Lower_jnt.ro" "Robot_Arm_Lower_jnt_parentConstraint1.cro"
+		;
+connectAttr "Robot_Arm_Lower_jnt.pim" "Robot_Arm_Lower_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Lower_jnt.rp" "Robot_Arm_Lower_jnt_parentConstraint1.crp"
+		;
+connectAttr "Robot_Arm_Lower_jnt.rpt" "Robot_Arm_Lower_jnt_parentConstraint1.crt"
+		;
+connectAttr "Robot_Arm_Lower_jnt.jo" "Robot_Arm_Lower_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.t" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.rp" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.rpt" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.r" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.ro" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.s" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.pm" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Lower_jnt_parentConstraint1.w0" "Robot_Arm_Lower_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Lower_jnt.ssc" "Robot_Arm_Lower_jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Robot_Arm_Lower_jnt.pim" "Robot_Arm_Lower_jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.s" "Robot_Arm_Lower_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Lower_ctrl.pm" "Robot_Arm_Lower_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Lower_jnt_scaleConstraint1.w0" "Robot_Arm_Lower_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Base_jnt.ro" "Robot_Arm_Base_jnt_parentConstraint1.cro";
+connectAttr "Robot_Arm_Base_jnt.pim" "Robot_Arm_Base_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Robot_Arm_Base_jnt.rp" "Robot_Arm_Base_jnt_parentConstraint1.crp";
+connectAttr "Robot_Arm_Base_jnt.rpt" "Robot_Arm_Base_jnt_parentConstraint1.crt";
+connectAttr "Robot_Arm_Base_jnt.jo" "Robot_Arm_Base_jnt_parentConstraint1.cjo";
+connectAttr "Robot_Arm_Base_ctrl.t" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Robot_Arm_Base_ctrl.rp" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Robot_Arm_Base_ctrl.rpt" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Robot_Arm_Base_ctrl.r" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Robot_Arm_Base_ctrl.ro" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Robot_Arm_Base_ctrl.s" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Base_ctrl.pm" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Base_jnt_parentConstraint1.w0" "Robot_Arm_Base_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Robot_Arm_Base_jnt.pim" "Robot_Arm_Base_jnt_scaleConstraint1.cpim";
+connectAttr "Robot_Arm_Base_ctrl.s" "Robot_Arm_Base_jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Robot_Arm_Base_ctrl.pm" "Robot_Arm_Base_jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Robot_Arm_Base_jnt_scaleConstraint1.w0" "Robot_Arm_Base_jnt_scaleConstraint1.tg[0].tw"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
