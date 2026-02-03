@@ -1,32 +1,33 @@
 //Maya ASCII 2024 scene
 //Name: Robot_Rig.ma
-//Last modified: Mon, Feb 02, 2026 01:04:41 PM
+//Last modified: Mon, Feb 02, 2026 05:16:11 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
 requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "545C475F-4E07-BE4E-7577-60A880804635";
+fileInfo "UUID" "86B0148F-40C1-6D2F-AD7F-F69BA62A0ED6";
 createNode transform -s -n "persp";
 	rename -uid "F1F41B70-42F0-A45C-A9FB-87B296C4FC4C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 25.102761537046455 11.005913940492338 0.46919192692113887 ;
-	setAttr ".r" -type "double3" 344.66164727006225 80.999999999930964 1.0165773509761305e-14 ;
+	setAttr ".t" -type "double3" 35.271018390661048 18.557807568237656 1.1820693473256227 ;
+	setAttr ".r" -type "double3" 344.06164726998122 441.39999999858759 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "33BA2929-4E4A-D6E0-5054-96BA97F93964";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.617803616858197;
+	setAttr ".coi" 35.929086770119405;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.00084739724432714159 9.9383156739751719 -11.708847827584353 ;
+	setAttr ".tp" -type "double3" -0.41697615385055542 10.202583312988281 -13.02930736541748 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "BCEDE7B3-4C17-ADB2-2480-61BD8B2FF5FE";
@@ -38,7 +39,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 75.839754428927378;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -64,14 +65,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "307F3643-402B-E27D-1CD8-CAB7D635F83E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 0 0 ;
+	setAttr ".t" -type "double3" 1000.1 3.1471498927360435 -1.6743430412933826 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "D02A7B17-459A-AED5-FA98-6584972A01CA";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 30.701401708368788;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -128,7 +129,7 @@ createNode mesh -n "baseShapeOrig" -p "RobotArm_Model:base";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 11 ".gtag";
+	setAttr -s 13 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 9 "f[223:226]" "f[241:242]" "f[244:247]" "f[265]" "f[267]" "f[284:285]" "f[301]" "f[304]" "f[306]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -151,6 +152,10 @@ createNode mesh -n "baseShapeOrig" -p "RobotArm_Model:base";
 	setAttr ".gtag[9].gtagcmp" -type "componentList" 18 "e[1:3]" "e[5]" "e[7]" "e[18]" "e[20]" "e[48]" "e[50]" "e[77]" "e[79]" "e[172]" "e[174]" "e[241]" "e[243]" "e[283]" "e[285]" "e[319]" "e[321]" "e[361]";
 	setAttr ".gtag[10].gtagnm" -type "string" "cluster11";
 	setAttr ".gtag[10].gtagcmp" -type "componentList" 18 "e[400]" "e[409]" "e[413]" "e[417]" "e[419]" "e[440]" "e[447]" "e[454]" "e[462:463]" "e[470]" "e[479]" "e[486]" "e[492]" "e[499]" "e[506]" "e[513]" "e[521]" "e[528]";
+	setAttr ".gtag[11].gtagnm" -type "string" "cluster1_3";
+	setAttr ".gtag[11].gtagcmp" -type "componentList" 18 "e[1:3]" "e[5]" "e[7]" "e[18]" "e[20]" "e[48]" "e[50]" "e[77]" "e[79]" "e[172]" "e[174]" "e[241]" "e[243]" "e[283]" "e[285]" "e[319]" "e[321]" "e[361]";
+	setAttr ".gtag[12].gtagnm" -type "string" "cluster11_1";
+	setAttr ".gtag[12].gtagcmp" -type "componentList" 18 "e[400]" "e[409]" "e[413]" "e[417]" "e[419]" "e[440]" "e[447]" "e[454]" "e[462:463]" "e[470]" "e[479]" "e[486]" "e[492]" "e[499]" "e[506]" "e[513]" "e[521]" "e[528]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 382 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.67199624 0.53507656 0.67526919
@@ -1194,7 +1199,7 @@ createNode mesh -n "RobotArm_Model:lowerArmShape" -p "RobotArm_Model:lowerArm";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.57366633415222168 0.84971600770950317 ;
+	setAttr ".pv" -type "double2" 0.48651325702667236 0.75229799747467041 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -1255,7 +1260,7 @@ createNode mesh -n "lowerArmShapeOrig" -p "RobotArm_Model:lowerArm";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 8 ".gtag";
+	setAttr -s 9 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 19 "f[10:14]" "f[19]" "f[22]" "f[26:29]" "f[32]" "f[42:45]" "f[47]" "f[49:87]" "f[96:127]" "f[132:141]" "f[143:145]" "f[150:153]" "f[158:161]" "f[170:185]" "f[189:190]" "f[196:197]" "f[203:204]" "f[208:229]" "f[238:257]";
 	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
@@ -1272,6 +1277,8 @@ createNode mesh -n "lowerArmShapeOrig" -p "RobotArm_Model:lowerArm";
 	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "f[145]";
 	setAttr ".gtag[7].gtagnm" -type "string" "cluster2_1";
 	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[145]";
+	setAttr ".gtag[8].gtagnm" -type "string" "cluster2_2";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[145]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 394 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.54901105 0.81648695 0.55104518
@@ -2112,7 +2119,7 @@ createNode mesh -n "hingeShapeOrig" -p "RobotArm_Model:hinge";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 19 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 13 "f[0:1]" "f[5:6]" "f[14]" "f[30]" "f[32]" "f[41]" "f[46]" "f[59]" "f[89]" "f[91]" "f[95:97]" "f[107]" "f[110]";
 	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
@@ -2147,6 +2154,10 @@ createNode mesh -n "hingeShapeOrig" -p "RobotArm_Model:hinge";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 1 "f[78]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster3_1";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 1 "f[156:175]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster2_1";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 1 "f[78]";
+	setAttr ".gtag[18].gtagnm" -type "string" "cluster3_2";
+	setAttr ".gtag[18].gtagcmp" -type "componentList" 1 "f[156:175]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 314 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.85304606 0.0043930784 0.85256284
@@ -2830,7 +2841,7 @@ createNode mesh -n "RobotArm_Model:topArmShape" -p "RobotArm_Model:topArm";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.75495842099189758 0.8529706597328186 ;
+	setAttr ".pv" -type "double2" 0.75495842099189758 0.87550187110900879 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2842,7 +2853,7 @@ createNode mesh -n "topArmShapeOrig" -p "RobotArm_Model:topArm";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 9 ".gtag";
+	setAttr -s 10 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 44 "f[260:342]" "f[345]" "f[347]" "f[349:351]" "f[354]" "f[357:359]" "f[364:370]" "f[373]" "f[376:381]" "f[383]" "f[385:386]" "f[390:394]" "f[396]" "f[401:402]" "f[404]" "f[411:438]" "f[440:445]" "f[448:451]" "f[453:457]" "f[459:461]" "f[463]" "f[465:467]" "f[474:478]" "f[485:487]" "f[490:491]" "f[518:570]" "f[574:575]" "f[582:585]" "f[589:596]" "f[599:603]" "f[606:608]" "f[624:625]" "f[628]" "f[642]" "f[646]" "f[655:656]" "f[664]" "f[679:680]" "f[700]" "f[702]" "f[723]" "f[725:726]" "f[732]" "f[761]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -2861,6 +2872,8 @@ createNode mesh -n "topArmShapeOrig" -p "RobotArm_Model:topArm";
 	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:259]";
 	setAttr ".gtag[8].gtagnm" -type "string" "cluster4_1";
 	setAttr ".gtag[8].gtagcmp" -type "componentList" 17 "e[100]" "e[118:119]" "e[164]" "e[167]" "e[220]" "e[223]" "e[301]" "e[304]" "e[364:365]" "e[408]" "e[411]" "e[450]" "e[453]" "e[475]" "e[478]" "e[492]" "e[495:496]";
+	setAttr ".gtag[9].gtagnm" -type "string" "cluster4_2";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 17 "e[100]" "e[118:119]" "e[164]" "e[167]" "e[220]" "e[223]" "e[301]" "e[304]" "e[364:365]" "e[408]" "e[411]" "e[450]" "e[453]" "e[475]" "e[478]" "e[492]" "e[495:496]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 863 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.76214629 0.8467502 0.7693342
@@ -6828,7 +6841,7 @@ createNode mesh -n "fShape0Orig" -p "RobotArm_Model:f0";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 18 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 17 "f[29:31]" "f[56]" "f[62]" "f[66]" "f[69]" "f[76]" "f[84:85]" "f[89]" "f[91]" "f[93]" "f[95:96]" "f[99:100]" "f[104]" "f[109:111]" "f[130]" "f[134]" "f[137]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -6863,6 +6876,8 @@ createNode mesh -n "fShape0Orig" -p "RobotArm_Model:f0";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster7";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster6_1";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 274 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.50462866 0.096148849 0.50462598
@@ -7322,7 +7337,7 @@ createNode mesh -n "f0bShapeOrig" -p "RobotArm_Model:f0b";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 18 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 12 "f[22:23]" "f[26]" "f[45]" "f[56]" "f[68:70]" "f[72]" "f[75:77]" "f[79:83]" "f[85]" "f[87:95]" "f[115]" "f[122]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -7357,6 +7372,8 @@ createNode mesh -n "f0bShapeOrig" -p "RobotArm_Model:f0b";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster10";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster10_1";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 222 ".uvst[0].uvsp[0:221]" -type "float2" 0.9936651 0.10453366
 		 0.99364865 0.091737434 0.99493575 0.091735587 0.99491251 0.10453146 0.98928386 0.091751739
@@ -7765,7 +7782,7 @@ createNode mesh -n "fShape2Orig" -p "RobotArm_Model:f2";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 18 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 17 "f[29:31]" "f[56]" "f[62]" "f[66]" "f[69]" "f[76]" "f[84:85]" "f[89]" "f[91]" "f[93]" "f[95:96]" "f[99:100]" "f[104]" "f[109:111]" "f[130]" "f[134]" "f[137]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -7800,6 +7817,8 @@ createNode mesh -n "fShape2Orig" -p "RobotArm_Model:f2";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster6";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster5_1";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 274 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.98672527 0.0025281906 0.98878986
@@ -8259,7 +8278,7 @@ createNode mesh -n "f2bShapeOrig" -p "RobotArm_Model:f2b";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 18 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 12 "f[22:23]" "f[26]" "f[45]" "f[56]" "f[68:70]" "f[72]" "f[75:77]" "f[79:83]" "f[85]" "f[87:95]" "f[115]" "f[122]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -8294,6 +8313,8 @@ createNode mesh -n "f2bShapeOrig" -p "RobotArm_Model:f2b";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster9";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster9_1";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 222 ".uvst[0].uvsp[0:221]" -type "float2" 0.99516845 0.076970086
 		 0.99518514 0.089766413 0.9938978 0.089768201 0.99392128 0.076972321 0.99954981 0.089752078
@@ -8701,7 +8722,7 @@ createNode mesh -n "fShape1Orig" -p "RobotArm_Model:f1";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 18 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 17 "f[29:31]" "f[56]" "f[62]" "f[66]" "f[69]" "f[76]" "f[84:85]" "f[89]" "f[91]" "f[93]" "f[95:96]" "f[99:100]" "f[104]" "f[109:111]" "f[130]" "f[134]" "f[137]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -8736,6 +8757,8 @@ createNode mesh -n "fShape1Orig" -p "RobotArm_Model:f1";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster5";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster7_1";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 9 "f[73:75]" "f[79:80]" "f[83]" "f[88]" "f[92]" "f[98]" "f[101:103]" "f[105:106]" "f[108]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 274 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.88468581 0.02582562 0.8867504
@@ -9194,7 +9217,7 @@ createNode mesh -n "f1bShapeOrig" -p "RobotArm_Model:f1b";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 17 ".gtag";
+	setAttr -s 18 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 12 "f[22:23]" "f[26]" "f[45]" "f[56]" "f[68:70]" "f[72]" "f[75:77]" "f[79:83]" "f[85]" "f[87:95]" "f[115]" "f[122]";
 	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
@@ -9229,6 +9252,8 @@ createNode mesh -n "f1bShapeOrig" -p "RobotArm_Model:f1b";
 	setAttr ".gtag[15].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
 	setAttr ".gtag[16].gtagnm" -type "string" "cluster8_1";
 	setAttr ".gtag[16].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
+	setAttr ".gtag[17].gtagnm" -type "string" "cluster8_2";
+	setAttr ".gtag[17].gtagcmp" -type "componentList" 3 "f[97:105]" "f[107]" "f[109:113]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 222 ".uvst[0].uvsp[0:221]" -type "float2" 0.053080589 0.068923831
 		 0.065876991 0.068907201 0.065878749 0.070194542 0.053082883 0.070171118 0.065862596
@@ -9632,102 +9657,392 @@ createNode camera -n "backShape" -p "back";
 	setAttr ".hc" -type "string" "viewSet -b %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode joint -n "Robot_Base_01_jnt";
-	rename -uid "77551F5D-4F3A-5FCA-26CE-49A55F50C02B";
+createNode joint -n "Robot_Arm_Base_jnt";
+	rename -uid "37FF9F2D-47F6-B152-362D-F480D5D44011";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 89.999999999999488 1.024528569833831e-05 90.000003415095193 ;
+	setAttr ".jo" -type "double3" -89.999999999998266 1.0245285488421699e-05 90.000003415095208 ;
 	setAttr ".radi" 0.55172411943304311;
-createNode joint -n "Robot_Base_02_jnt" -p "Robot_Base_01_jnt";
-	rename -uid "3CE49282-44B7-A7C6-C13F-41A213CBE852";
-	setAttr ".t" -type "double3" 1.9999996423721671 3.8857748091599925e-15 -1.7072986902782116e-21 ;
+createNode joint -n "Robot_Arm_Lower_jnt" -p "Robot_Arm_Base_jnt";
+	rename -uid "5B2A1A31-437B-0E20-96D5-0EA6E723C69D";
+	setAttr ".t" -type "double3" 1.9999996423721671 3.5527182316025924e-15 -4.4408743637616879e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 0.00045702614383266314 0.021143073759867535 2.4766116721577092 ;
+	setAttr ".jo" -type "double3" 0.00045702614383475874 -0.021143073759964486 -2.4766116721577083 ;
 	setAttr ".radi" 0.80770142793162769;
-createNode joint -n "Robot_Swivel_Elbow_jnt" -p "Robot_Base_02_jnt";
-	rename -uid "58F7A8F6-461F-D21F-8D02-D08BD908A344";
-	setAttr ".t" -type "double3" 6.9488942733448038 -5.5193931529370626e-15 4.5801182316673714e-17 ;
+createNode joint -n "Robot_Arm_Hinge_jnt" -p "Robot_Arm_Lower_jnt";
+	rename -uid "C7432B9D-4076-B181-8508-B39046BFA0C9";
+	setAttr ".t" -type "double3" 6.9488942733448038 5.5511151231257827e-15 -4.5644911461639737e-17 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 0.0062412162026841429 0.8836099671413411 -18.398222802456612 ;
+	setAttr ".jo" -type "double3" 0.0062412161979177585 -0.88360996714063111 18.398222802456655 ;
 	setAttr ".radi" 0.50513414861732764;
-createNode joint -n "Robot_Elbow_jnt" -p "Robot_Swivel_Elbow_jnt";
-	rename -uid "2CB0B3E2-4D78-2FDA-33C6-01AE07AE3CA3";
-	setAttr ".t" -type "double3" 1.0992602066016668 -1.8006674912220792e-16 -1.2737157211435475e-17 ;
+createNode joint -n "Robot_Arm_Top_jnt" -p "Robot_Arm_Hinge_jnt";
+	rename -uid "3669EB28-439A-F447-C967-368D7ABB553E";
+	setAttr ".t" -type "double3" 1.0992602066016683 -1.3322676295501878e-15 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 0.86914575628241597 -0.36199505018175854 -74.078230288359407 ;
-	setAttr ".radi" 0.96545388698238521;
-createNode joint -n "Robot_Wrist_jnt" -p "Robot_Elbow_jnt";
-	rename -uid "CFA424AE-4A1F-18BC-CBFC-D0A036A526D4";
-	setAttr ".t" -type "double3" 9.9987751483261142 -2.58190353816047e-15 5.8963293122255306e-17 ;
+	setAttr ".jo" -type "double3" 0.86914575628234725 0.36199505017923522 74.07823028835945 ;
+	setAttr ".radi" 1.1944514180608907;
+createNode joint -n "Robot_Arm_Hand_jnt" -p "Robot_Arm_Top_jnt";
+	rename -uid "84585AB1-454D-2E63-B995-8F897C7AC783";
+	setAttr ".t" -type "double3" 9.9987751483261214 3.5527136788005009e-15 3.1225022567582528e-17 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" -0.017030450918987739 -13.163469341604262 -8.3586044553960299 ;
-	setAttr ".radi" 0.96545388698238521;
-createNode joint -n "Robot_Finger_01_Knuckle_01_jnt" -p "Robot_Wrist_jnt";
-	rename -uid "8F77D808-4508-C3B8-98E3-C4B68E8EE647";
-	setAttr ".t" -type "double3" 1.8055413080156995 3.2751579226442118e-15 -5.5511151231257827e-17 ;
+	setAttr ".jo" -type "double3" 0.0089035795773206947 -14.059645994871158 -4.3462851810878353 ;
+	setAttr ".radi" 0.54166592972494976;
+createNode joint -n "Robot_Arm_Finger_01_Knuckle_01_jnt" -p "Robot_Arm_Hand_jnt";
+	rename -uid "5685CDF5-4E77-3E62-9BE5-A6A22BA18E0E";
+	setAttr ".t" -type "double3" 1.7965938961310126 -1.7763568394002505e-15 2.2204460492503131e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 1.7399458809774051 13.163804885821349 7.5976982569862344 ;
+	setAttr ".jo" -type "double3" 0.8402390964780575 13.921116748476727 3.4884054516667802 ;
+	setAttr ".radi" 0.50109803716418344;
+createNode joint -n "Robot_Arm_Finger_01_Knuckle_02_jnt" -p "Robot_Arm_Finger_01_Knuckle_01_jnt";
+	rename -uid "06367AC8-4519-4B24-3A44-3DBB27F5B5AB";
+	setAttr ".t" -type "double3" 1.0212287185075457 -1.7763568394002505e-15 -2.0539125955565396e-15 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.50109803716418344;
+createNode joint -n "Robot_Arm_Finger_02_Knuckle_01_jnt" -p "Robot_Arm_Hand_jnt";
+	rename -uid "7964EFDE-4535-DFF8-C6B6-AFB3D853C528";
+	setAttr ".t" -type "double3" 1.5875776930032206 0.01541775318988492 -0.84141744958538478 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 0.84023909647805728 13.921116748476814 3.4884054516667562 ;
+	setAttr ".radi" 0.50109803716418355;
+createNode joint -n "Robot_Arm_Finger_02_Knuckle_02_jnt" -p "Robot_Arm_Finger_02_Knuckle_01_jnt";
+	rename -uid "CBBAF56A-4BDD-621F-5D4A-AF897E5790C7";
+	setAttr ".t" -type "double3" 1.021228718507551 1.7763568394002505e-15 -5.5511151231257827e-17 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.50109803716418355;
+createNode joint -n "Robot_Arm_Finger_03_Knuckle_01_jnt" -p "Robot_Arm_Hand_jnt";
+	rename -uid "987E7C89-4D8A-A2A8-8FB4-609E9AB727C8";
+	setAttr ".t" -type "double3" 1.5637887184083983 0.38653112275581414 -0.8155598998668192 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 1.3164218984427216 13.884903485431899 5.4700098214537141 ;
 	setAttr ".radi" 0.50109803633605154;
-createNode joint -n "Robot_Finger_01_Knuckle_02_jnt" -p "Robot_Finger_01_Knuckle_01_jnt";
-	rename -uid "730B3B62-4E24-7A6D-CBBA-B38DF3EE30F2";
-	setAttr ".t" -type "double3" 1.0212287024969953 3.1089957967991693e-18 -9.1603543763731211e-17 ;
+createNode joint -n "Robot_Arm_Finger_03_Knuckle_02_jnt" -p "Robot_Arm_Finger_03_Knuckle_01_jnt";
+	rename -uid "6161EAC6-4C39-0538-C2A8-44902A39C257";
+	setAttr ".t" -type "double3" 1.0212287024969946 3.5527136788005009e-15 -1.4432899320127035e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.50109803633605154;
-createNode joint -n "Robot_Finger_02_Knuckle_01_jnt" -p "Robot_Wrist_jnt";
-	rename -uid "938B8732-49B2-220F-D9A3-178B0B36249A";
-	setAttr ".t" -type "double3" 1.7552037191984298 0.38352871468103356 0.03205275265737606 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 2.1885191158258595 13.097852473947116 9.5720812610715065 ;
-	setAttr ".radi" 0.50109803716418355;
-createNode joint -n "Robot_Finger_02_Knuckle_02_jnt" -p "Robot_Finger_02_Knuckle_01_jnt";
-	rename -uid "2F990E71-41E9-93EF-586F-72A884642406";
-	setAttr ".t" -type "double3" 1.0212287185075497 1.8683256874278596e-15 -6.5193019109992315e-16 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".radi" 0.50109803716418355;
-createNode joint -n "Robot_Finger_03_Knuckle_01_jnt" -p "Robot_Wrist_jnt";
-	rename -uid "23073A6B-4A9C-0E94-A789-83BB6011196A";
-	setAttr ".t" -type "double3" 1.5560393184350492 0.38352871468103389 -0.81203262995677927 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 2.1885191158258595 13.097852473947141 9.5720812610714869 ;
-	setAttr ".radi" 0.50109803716418355;
-createNode joint -n "Robot_finger_03_Knucle_02_jnt" -p "Robot_Finger_03_Knuckle_01_jnt";
-	rename -uid "AE15F3A3-4187-DBEB-1F2C-7FAC827FA939";
-	setAttr ".t" -type "double3" 1.0212287185075499 2.2226355738952095e-15 -5.0902780590946483e-16 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".radi" 0.50109803716418355;
+createNode transform -n "Robot_Arm_Base_grp";
+	rename -uid "97DC8EDE-4FE7-A315-0E72-898A9A96EAB5";
+	setAttr ".r" -type "double3" -90.000000000249301 90.2865466411386 90.000003414981208 ;
+	setAttr ".s" -type "double3" 5.6839871396137491 5.6839871396137491 5.6839871396137491 ;
+createNode transform -n "Robot_Arm_Base_ctrl" -p "Robot_Arm_Base_grp";
+	rename -uid "94AC4C56-4D3A-DBD7-52F1-64B93427E0E6";
+createNode nurbsCurve -n "Robot_Arm_Base_ctrlShape" -p "Robot_Arm_Base_ctrl";
+	rename -uid "7EE28856-41BB-4B85-215F-FD84CFC44404";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+createNode transform -n "Robot_Arm_Lower_grp" -p "Robot_Arm_Base_ctrl";
+	rename -uid "71CA59F1-4066-81D3-7CD0-6A9D00164BF9";
+	setAttr ".t" -type "double3" -0.0017596738597383853 -0.35186121700625783 -8.3096893580770381e-13 ;
+	setAttr ".r" -type "double3" -0.021145094803051476 -0.00035128424894808469 -2.4766115230114649 ;
+	setAttr ".s" -type "double3" 0.32679466318233158 0.17593284000075232 0.32679466318233164 ;
+createNode transform -n "Robot_Arm_Lower_ctrl" -p "Robot_Arm_Lower_grp";
+	rename -uid "68128A2E-4C74-B5F2-BB70-3C9A797A5371";
+	setAttr ".rp" -type "double3" 0 4.4408920985006271e-16 1.0842021724855047e-19 ;
+	setAttr ".sp" -type "double3" 0 4.4408920985006271e-16 1.0842021724855047e-19 ;
+createNode nurbsCurve -n "Robot_Arm_Lower_ctrlShape" -p "Robot_Arm_Lower_ctrl";
+	rename -uid "830D024F-46A1-309D-CA4A-6F8F98A3202D";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122438 2.7002697833491606e-16 -0.78361162489122438
+		6.7857323231109109e-17 2.8990192815614042e-16 -1.1081941875543873
+		-0.78361162489122438 2.7002697833491601e-16 -0.78361162489122416
+		-1.1081941875543879 2.2204460492503131e-16 -5.7394772266624004e-17
+		-0.78361162489122438 1.7406223151514658e-16 0.78361162489122427
+		-1.1100856969603224e-16 1.5418728169392215e-16 1.1081941875543879
+		0.78361162489122438 1.7406223151514658e-16 0.78361162489122416
+		1.1081941875543879 2.2204460492503131e-16 1.5117826018662013e-16
+		0.78361162489122438 2.7002697833491606e-16 -0.78361162489122438
+		6.7857323231109109e-17 2.8990192815614042e-16 -1.1081941875543873
+		-0.78361162489122438 2.7002697833491601e-16 -0.78361162489122416
+		;
+createNode transform -n "Robot_Arm_Hinge_grp" -p "Robot_Arm_Lower_ctrl";
+	rename -uid "0F765556-48E0-5F77-7852-80951CA6307A";
+	setAttr ".t" -type "double3" -0.018708674239546259 -6.9488073774767205 5.1851849636880276e-13 ;
+	setAttr ".r" -type "double3" -0.53127331942129052 -0.0016332018065527087 31.709644386949265 ;
+	setAttr ".s" -type "double3" 0.75439326696066444 1.126266771983188 0.67640215954502059 ;
+	setAttr ".sh" -type "double3" 0.39504876506387521 0.010138445190242379 0.016408660130797986 ;
+createNode transform -n "Robot_Arm_Hinge_ctrl" -p "Robot_Arm_Hinge_grp";
+	rename -uid "1FDBEE16-4B85-7CB9-4556-3C9B9BC8474D";
+	setAttr ".rp" -type "double3" 0 2.6645352591003757e-15 2.7755575615628914e-17 ;
+	setAttr ".sp" -type "double3" 0 2.6645352591003757e-15 2.7755575615628914e-17 ;
+createNode nurbsCurve -n "Robot_Arm_Hinge_ctrlShape" -p "Robot_Arm_Hinge_ctrl";
+	rename -uid "AB5ABC74-4DB4-8537-35BB-C7B02E91FB08";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 1.8243392128101353e-15 -0.7836116248912246
+		6.7857323231109122e-17 1.8442141626313596e-15 -1.1081941875543877
+		-0.78361162489122449 1.8243392128101353e-15 -0.78361162489122438
+		-1.1081941875543881 1.7763568394002505e-15 -4.3571194567433847e-17
+		-0.78361162489122449 1.7283744659903657e-15 0.78361162489122449
+		-1.1100856969603225e-16 1.7084995161691413e-15 1.1081941875543884
+		0.78361162489122449 1.7283744659903657e-15 0.78361162489122438
+		1.1081941875543881 1.7763568394002505e-15 1.6500183788581036e-16
+		0.78361162489122449 1.8243392128101353e-15 -0.7836116248912246
+		6.7857323231109122e-17 1.8442141626313596e-15 -1.1081941875543877
+		-0.78361162489122449 1.8243392128101353e-15 -0.78361162489122438
+		;
+createNode transform -n "Robot_Arm_Top_grp" -p "Robot_Arm_Hinge_grp";
+	rename -uid "FA5AC05D-4101-D379-6286-29BD3064BB00";
+	setAttr ".t" -type "double3" -0.004375783331653782 -0.87497375715982084 2.4841240175987878e-14 ;
+	setAttr ".r" -type "double3" 0.35768543085070875 -0.87092806646521104 74.072766021726238 ;
+	setAttr ".s" -type "double3" 1.1506840154788176 0.7959759605431117 1.150684015478818 ;
+createNode transform -n "Robot_Arm_Top_ctrl" -p "Robot_Arm_Top_grp";
+	rename -uid "85BAE831-41DB-0216-6142-EBB0DA90A755";
+	setAttr ".rp" -type "double3" 1.7763568394002505e-15 -1.3877787807814457e-17 -5.2041704279304213e-18 ;
+	setAttr ".sp" -type "double3" 1.7763568394002505e-15 -1.3877787807814457e-17 -5.2041704279304213e-18 ;
+createNode nurbsCurve -n "Robot_Arm_Top_ctrlShape" -p "Robot_Arm_Top_ctrl";
+	rename -uid "ACAC2A45-44CE-A85D-2628-7B94CA6CA535";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122527 4.1043479505977491e-17 -0.78361162489122438
+		9.5603574293123439e-16 6.0918429327201881e-17 -1.1081941875543875
+		-0.78361162489122349 4.1043479505977478e-17 -0.78361162489122416
+		-1.108194187554387 -6.9388939039072245e-18 -5.9183705851225099e-17
+		-0.78361162489122349 -5.4921267313791941e-17 0.78361162489122427
+		7.77169850004093e-16 -7.4796217135016387e-17 1.1081941875543881
+		0.78361162489122527 -5.4921267313791935e-17 0.78361162489122416
+		1.1081941875543888 -6.9388939039072376e-18 1.4938932660201907e-16
+		0.78361162489122527 4.1043479505977491e-17 -0.78361162489122438
+		9.5603574293123439e-16 6.0918429327201881e-17 -1.1081941875543875
+		-0.78361162489122349 4.1043479505977478e-17 -0.78361162489122416
+		;
+createNode transform -n "Robot_Arm_Hand_grp" -p "Robot_Arm_Top_ctrl";
+	rename -uid "3B0056A0-4394-15C9-9650-C6876712FA1B";
+	setAttr ".t" -type "double3" -0.034589638628846231 -9.9986501137217481 1.3112427810213489e-13 ;
+	setAttr ".r" -type "double3" -9.8616013287151727 0.060781306878988986 -6.2792593470777094 ;
+	setAttr ".s" -type "double3" 0.87219316037962913 0.98151589893029956 0.88307482181873853 ;
+	setAttr ".sh" -type "double3" -0.056209955803366796 -0.019659067862899598 0.17602635204020456 ;
+createNode transform -n "Robot_Arm_Hand_ctrl" -p "Robot_Arm_Hand_grp";
+	rename -uid "3F62B540-4A57-7BB2-C496-2F925AD9B6F4";
+	setAttr ".rp" -type "double3" 1.7763568394002505e-15 0 0 ;
+	setAttr ".sp" -type "double3" 1.7763568394002505e-15 0 0 ;
+createNode nurbsCurve -n "Robot_Arm_Hand_ctrlShape" -p "Robot_Arm_Hand_ctrl";
+	rename -uid "8880C9C1-4297-8693-EBFD-57BEB6BD32A9";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122538 4.7982373409884744e-17 -0.78361162489122482
+		9.5603574293123439e-16 6.7857323231109134e-17 -1.1081941875543879
+		-0.7836116248912236 4.7982373409884731e-17 -0.7836116248912246
+		-1.1081941875543873 3.5177356190060279e-33 -5.7448982375248316e-17
+		-0.7836116248912236 -4.7982373409884738e-17 0.78361162489122471
+		7.77169850004093e-16 -6.7857323231109183e-17 1.1081941875543886
+		0.78361162489122538 -4.7982373409884731e-17 0.7836116248912246
+		1.108194187554389 -9.2536792101101017e-33 1.5112405007799592e-16
+		0.78361162489122538 4.7982373409884744e-17 -0.78361162489122482
+		9.5603574293123439e-16 6.7857323231109134e-17 -1.1081941875543879
+		-0.7836116248912236 4.7982373409884731e-17 -0.7836116248912246
+		;
+createNode transform -n "Robot_Arm_Finger_01_Knuckle_01_grp" -p "Robot_Arm_Hand_ctrl";
+	rename -uid "0A564BCF-49C2-4F39-55B0-1A9E2F886C53";
+	setAttr ".t" -type "double3" -0.0071481784125628778 -1.7965714297385116 1.6875389974302379e-14 ;
+	setAttr ".r" -type "double3" 11.141322283987432 -0.88365441241288234 4.1174241133062441 ;
+	setAttr ".s" -type "double3" 0.33911382985869681 0.98834723727813234 0.34246295416346301 ;
+	setAttr ".sh" -type "double3" 0.025830096361354204 -0.0078965595581802998 -0.10761680992291708 ;
+createNode transform -n "Robot_Arm_Finger_01_Knuckle_01_ctrl" -p "Robot_Arm_Finger_01_Knuckle_01_grp";
+	rename -uid "4571ED1B-4FB4-77E2-8077-218175CE9B26";
+	setAttr ".rp" -type "double3" 1.7763568394002505e-14 7.1054273576010019e-15 -6.6613381477509392e-16 ;
+	setAttr ".sp" -type "double3" 1.7763568394002505e-14 7.1054273576010019e-15 -6.6613381477509392e-16 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_01_Knuckle_01_ctrlShape" -p "Robot_Arm_Finger_01_Knuckle_01_ctrl";
+	rename -uid "E00CA784-4686-EC8F-97C1-AA8E2A2F5613";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489123148 3.6006960522103853e-15 -0.78361162489122493
+		7.1732846808321106e-15 3.6205710020316097e-15 -1.1081941875543879
+		-0.78361162489121727 3.6006960522103853e-15 -0.78361162489122471
+		-1.1081941875543808 3.5527136788005009e-15 -5.0153819222531093e-16
+		-0.78361162489121727 3.5047313053906161e-15 0.78361162489122393
+		6.99441878790497e-15 3.4848563555693918e-15 1.1081941875543877
+		0.78361162489123148 3.5047313053906161e-15 0.78361162489122382
+		1.108194187554395 3.5527136788005009e-15 -2.9296515977206672e-16
+		0.78361162489123148 3.6006960522103853e-15 -0.78361162489122493
+		7.1732846808321106e-15 3.6205710020316097e-15 -1.1081941875543879
+		-0.78361162489121727 3.6006960522103853e-15 -0.78361162489122471
+		;
+createNode transform -n "Robot_Arm_Finger_01_Knuckle_02_grp" -p "Robot_Arm_Finger_01_Knuckle_01_ctrl";
+	rename -uid "4B45A3D8-485D-3414-FC5A-BCA04AD64060";
+	setAttr ".t" -type "double3" -0.01199317460747551 -1.0212159480504734 8.659739592076221e-15 ;
+	setAttr ".s" -type "double3" 0.96354134706805405 0.99999999999999989 0.96354134706805428 ;
+createNode transform -n "Robot_Arm_Finger_01_Knuckle_02_ctrl" -p "Robot_Arm_Finger_01_Knuckle_02_grp";
+	rename -uid "75E8579A-46E7-906E-DB8F-44B8F42C1501";
+	setAttr ".rp" -type "double3" 0 3.5527136788005009e-15 4.4408920985006262e-16 ;
+	setAttr ".sp" -type "double3" 0 3.5527136788005009e-15 4.4408920985006262e-16 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_01_Knuckle_02_ctrlShape" -p "Robot_Arm_Finger_01_Knuckle_02_ctrl";
+	rename -uid "2AB6DD0D-480E-303D-DC8A-D2AE00256CF5";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 1.8243392128101353e-15 -0.78361162489122438
+		6.7857323231109122e-17 1.8442141626313596e-15 -1.1081941875543875
+		-0.78361162489122449 1.8243392128101353e-15 -0.78361162489122416
+		-1.1081941875543881 1.7763568394002505e-15 1.6459562254978299e-16
+		-0.78361162489122449 1.7283744659903657e-15 0.78361162489122471
+		-1.1100856969603225e-16 1.7084995161691413e-15 1.1081941875543886
+		0.78361162489122449 1.7283744659903657e-15 0.7836116248912246
+		1.1081941875543881 1.7763568394002505e-15 3.7316865500302721e-16
+		0.78361162489122449 1.8243392128101353e-15 -0.78361162489122438
+		6.7857323231109122e-17 1.8442141626313596e-15 -1.1081941875543875
+		-0.78361162489122449 1.8243392128101353e-15 -0.78361162489122416
+		;
+createNode transform -n "Robot_Arm_Finger_02_Knuckle_01_grp" -p "Robot_Arm_Hand_ctrl";
+	rename -uid "2DC6C6D2-46AA-118A-5738-2A92FDD4DBF9";
+	setAttr ".t" -type "double3" 0.0059495219081471262 -1.587634944273498 -0.66942453697148707 ;
+	setAttr ".r" -type "double3" 11.141322283987382 -0.88365441241615827 4.1174241133054919 ;
+	setAttr ".s" -type "double3" 0.33325636971474681 0.98834723727813201 0.33654764511921786 ;
+	setAttr ".sh" -type "double3" 0.025830096361349333 -0.0078965595581792086 -0.10761680992291897 ;
+createNode transform -n "Robot_Arm_Finger_02_Knuckle_01_ctrl" -p "Robot_Arm_Finger_02_Knuckle_01_grp";
+	rename -uid "5825F859-4429-9A2F-8747-6FADF74AAA21";
+	setAttr ".rp" -type "double3" 0 -7.1054273576010019e-15 4.4408920985006262e-16 ;
+	setAttr ".sp" -type "double3" 0 -7.1054273576010019e-15 4.4408920985006262e-16 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_02_Knuckle_01_ctrlShape" -p "Robot_Arm_Finger_02_Knuckle_01_ctrl";
+	rename -uid "3A1F644F-4E14-CDC8-87D3-D1BC01BBC561";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122471 -3.5047313053906161e-15 -0.78361162489122438
+		6.7857323231109134e-17 -3.4848563555693918e-15 -1.1081941875543875
+		-0.78361162489122471 -3.5047313053906161e-15 -0.78361162489122416
+		-1.1081941875543884 -3.5527136788005009e-15 1.6459562254978299e-16
+		-0.78361162489122471 -3.6006960522103853e-15 0.78361162489122471
+		-1.1100856969603227e-16 -3.6205710020316105e-15 1.1081941875543886
+		0.78361162489122471 -3.6006960522103853e-15 0.7836116248912246
+		1.1081941875543884 -3.5527136788005009e-15 3.7316865500302721e-16
+		0.78361162489122471 -3.5047313053906161e-15 -0.78361162489122438
+		6.7857323231109134e-17 -3.4848563555693918e-15 -1.1081941875543875
+		-0.78361162489122471 -3.5047313053906161e-15 -0.78361162489122416
+		;
+createNode transform -n "Robot_Arm_Finger_02_Knuckle_02_grp" -p "Robot_Arm_Finger_02_Knuckle_01_ctrl";
+	rename -uid "B7118EA4-4D34-C17E-95A5-6E87DE3C84F3";
+	setAttr ".t" -type "double3" -0.012203971905439204 -1.0212159480504823 1.2434497875801753e-14 ;
+	setAttr ".s" -type "double3" 0.74182664150055133 1.0000000000000002 0.741826641500551 ;
+createNode transform -n "Robot_Arm_Finger_02_Knuckle_02_ctrl" -p "Robot_Arm_Finger_02_Knuckle_02_grp";
+	rename -uid "ECA47ADD-4504-E8DA-0166-C7850817302E";
+	setAttr ".rp" -type "double3" 0 0 2.2204460492503131e-16 ;
+	setAttr ".sp" -type "double3" 0 0 2.2204460492503131e-16 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_02_Knuckle_02_ctrlShape" -p "Robot_Arm_Finger_02_Knuckle_02_ctrl";
+	rename -uid "7BEB7E95-4EEF-7F59-C59D-A2922493AAAE";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.78361162489122438
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543875
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122416
+		-1.1081941875543881 3.5177356190060272e-33 1.6459562254978299e-16
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122471
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543886
+		0.78361162489122449 -4.7982373409884719e-17 0.7836116248912246
+		1.1081941875543881 -9.2536792101100989e-33 3.7316865500302721e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.78361162489122438
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543875
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122416
+		;
+createNode transform -n "Robot_Arm_Finger_03_Knuckle_01_grp" -p "Robot_Arm_Hand_ctrl";
+	rename -uid "6D8306E3-4562-21F7-53B3-48B9004A0188";
+	setAttr ".t" -type "double3" 0.30129510729940545 -1.5657021986963144 -0.6488524912454543 ;
+	setAttr ".r" -type "double3" 11.095827581027416 -1.3435829837376039 6.4577935707967704 ;
+	setAttr ".s" -type "double3" 0.36001173806311726 0.4455816615849304 0.36306630562263564 ;
+	setAttr ".sh" -type "double3" 0.040407594951361599 -0.012367518479103685 -0.10719502227818023 ;
+createNode transform -n "Robot_Arm_Finger_03_Knuckle_01_ctrl" -p "Robot_Arm_Finger_03_Knuckle_01_grp";
+	rename -uid "1DC2DA96-4273-9B4A-75BF-42B739D9166A";
+	setAttr ".rp" -type "double3" 7.1054273576010019e-15 7.1054273576010019e-15 2.2204460492503131e-16 ;
+	setAttr ".sp" -type "double3" 7.1054273576010019e-15 7.1054273576010019e-15 2.2204460492503131e-16 ;
+createNode nurbsCurve -n "Robot_Arm_Finger_03_Knuckle_01_ctrlShape" -p "Robot_Arm_Finger_03_Knuckle_01_ctrl";
+	rename -uid "63154DE1-4471-B496-B328-7DAD59EC02C1";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122804 3.6006960522103853e-15 -0.78361162489122427
+		3.6205710020316097e-15 3.6205710020316097e-15 -1.1081941875543873
+		-0.78361162489122094 3.6006960522103853e-15 -0.78361162489122405
+		-1.1081941875543846 3.5527136788005009e-15 5.3573320087267363e-17
+		-0.78361162489122094 3.5047313053906161e-15 0.78361162489122438
+		3.4417051091044687e-15 3.4848563555693918e-15 1.1081941875543881
+		0.78361162489122804 3.5047313053906161e-15 0.78361162489122427
+		1.1081941875543917 3.5527136788005009e-15 2.6214635254051155e-16
+		0.78361162489122804 3.6006960522103853e-15 -0.78361162489122427
+		3.6205710020316097e-15 3.6205710020316097e-15 -1.1081941875543873
+		-0.78361162489122094 3.6006960522103853e-15 -0.78361162489122405
+		;
+createNode transform -n "Robot_Arm_Finger_03_Knuckle_02_grp" -p "Robot_Arm_Finger_03_Knuckle_01_ctrl";
+	rename -uid "6660E03C-42BE-BF6F-8E25-C2840498AEDD";
+	setAttr ".t" -type "double3" -0.011312583561061018 -2.2620438425205691 3.7858605139717838e-14 ;
+	setAttr ".s" -type "double3" 0.74814795304573656 2.2150495028035766 0.748147953045736 ;
+createNode transform -n "Robot_Arm_Finger_03_Knuckle_02_ctrl" -p "Robot_Arm_Finger_03_Knuckle_02_grp";
+	rename -uid "519DF439-4459-1FFC-BB5B-ADB9BC076E6E";
+createNode nurbsCurve -n "Robot_Arm_Finger_03_Knuckle_02_ctrlShape" -p "Robot_Arm_Finger_03_Knuckle_02_ctrl";
+	rename -uid "7D9A21E1-4502-542A-B8B6-90800C809D92";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.78361162489122482
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543879
+		-0.78361162489122449 4.7982373409884719e-17 -0.7836116248912246
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248316e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122471
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543886
+		0.78361162489122449 -4.7982373409884719e-17 0.7836116248912246
+		1.1081941875543881 -9.2536792101100989e-33 1.5112405007799592e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.78361162489122482
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543879
+		-0.78361162489122449 4.7982373409884719e-17 -0.7836116248912246
+		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DB5F5811-400B-AA01-EFCC-23B71FC7E546";
+	rename -uid "CFEDB8DD-48AC-21E7-C7AD-AC927BBB38C8";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F070D0ED-40C9-C9C5-AFCA-C2BF822BEFCA";
+	rename -uid "2F944431-4BCB-B8A3-B877-10B58B7DACF9";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "99430BA4-4EF8-B1B8-5278-CEA23A38C8A8";
+	rename -uid "2F2F2474-4CBD-2BFA-5C88-FA96FBB5C6A6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B34B6F7C-44B7-DBDB-EB2B-2BA7AF55051F";
+	rename -uid "8761FE54-4062-0576-5D63-568C7E027D13";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "3EF0D752-4393-7E06-DD1F-E3A7006FD1DD";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9409A27F-438C-52BE-9BB2-6CA88F895CF3";
+	rename -uid "88E9CAC9-4B99-132F-7354-A3B8E47F5DDF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F44829A0-4E80-9220-3AC6-098415E16690";
 	setAttr ".g" yes;
@@ -9861,8 +10176,15 @@ createNode groupParts -n "groupParts8";
 	rename -uid "246D4CBA-4DE6-2D8A-A364-6895B72C8BB5";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:125]";
+createNode makeNurbCircle -n "makeNurbCircle1";
+	rename -uid "C6E45A1F-4A30-B812-31C8-5A9AD159333D";
+	setAttr ".nr" -type "double3" 0 1 0 ;
+createNode transformGeometry -n "transformGeometry1";
+	rename -uid "387E0B68-47F6-E938-9768-7BA014670F67";
+	setAttr ".txf" -type "matrix" 0.99999999999999978 0 0 0 0 0.99999999999999978 0 0
+		 0 0 0.99999999999999978 0 0 0 0 1;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "DA07AD7C-4929-444F-6CAD-A589CE2EBEA1";
+	rename -uid "B4535015-4A4A-0211-3A47-55B962832194";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
@@ -9942,19 +10264,20 @@ connectAttr "groupParts5.og" "RobotArm_Model:fShape1.i";
 connectAttr "groupId6.id" "RobotArm_Model:f1bShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RobotArm_Model:f1bShape.iog.og[0].gco";
 connectAttr "groupParts6.og" "RobotArm_Model:f1bShape.i";
-connectAttr "Robot_Base_01_jnt.s" "Robot_Base_02_jnt.is";
-connectAttr "Robot_Base_02_jnt.s" "Robot_Swivel_Elbow_jnt.is";
-connectAttr "Robot_Swivel_Elbow_jnt.s" "Robot_Elbow_jnt.is";
-connectAttr "Robot_Elbow_jnt.s" "Robot_Wrist_jnt.is";
-connectAttr "Robot_Wrist_jnt.s" "Robot_Finger_01_Knuckle_01_jnt.is";
-connectAttr "Robot_Finger_01_Knuckle_01_jnt.s" "Robot_Finger_01_Knuckle_02_jnt.is"
+connectAttr "Robot_Arm_Base_jnt.s" "Robot_Arm_Lower_jnt.is";
+connectAttr "Robot_Arm_Lower_jnt.s" "Robot_Arm_Hinge_jnt.is";
+connectAttr "Robot_Arm_Hinge_jnt.s" "Robot_Arm_Top_jnt.is";
+connectAttr "Robot_Arm_Top_jnt.s" "Robot_Arm_Hand_jnt.is";
+connectAttr "Robot_Arm_Hand_jnt.s" "Robot_Arm_Finger_01_Knuckle_01_jnt.is";
+connectAttr "Robot_Arm_Finger_01_Knuckle_01_jnt.s" "Robot_Arm_Finger_01_Knuckle_02_jnt.is"
 		;
-connectAttr "Robot_Wrist_jnt.s" "Robot_Finger_02_Knuckle_01_jnt.is";
-connectAttr "Robot_Finger_02_Knuckle_01_jnt.s" "Robot_Finger_02_Knuckle_02_jnt.is"
+connectAttr "Robot_Arm_Hand_jnt.s" "Robot_Arm_Finger_02_Knuckle_01_jnt.is";
+connectAttr "Robot_Arm_Finger_02_Knuckle_01_jnt.s" "Robot_Arm_Finger_02_Knuckle_02_jnt.is"
 		;
-connectAttr "Robot_Wrist_jnt.s" "Robot_Finger_03_Knuckle_01_jnt.is";
-connectAttr "Robot_Finger_03_Knuckle_01_jnt.s" "Robot_finger_03_Knucle_02_jnt.is"
+connectAttr "Robot_Arm_Hand_jnt.s" "Robot_Arm_Finger_03_Knuckle_01_jnt.is";
+connectAttr "Robot_Arm_Finger_03_Knuckle_01_jnt.s" "Robot_Arm_Finger_03_Knuckle_02_jnt.is"
 		;
+connectAttr "transformGeometry1.og" "Robot_Arm_Base_ctrlShape.cr";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -9981,6 +10304,7 @@ connectAttr "f0bShapeOrig.w" "groupParts7.ig";
 connectAttr "groupId7.id" "groupParts7.gi";
 connectAttr "f2bShapeOrig.w" "groupParts8.ig";
 connectAttr "groupId8.id" "groupParts8.gi";
+connectAttr "makeNurbCircle1.oc" "transformGeometry1.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "RobotArm_Model:lowerArmShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "RobotArm_Model:baseShape.iog" ":initialShadingGroup.dsm" -na;
