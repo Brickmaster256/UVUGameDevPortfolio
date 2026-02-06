@@ -41,6 +41,7 @@ public class IDList : ScriptableObject
             idList.Add(fullList[randomIndex]);
             
         }
+        
     }
 
     public int GetIDCount(Id id)
@@ -67,27 +68,30 @@ public class IDList : ScriptableObject
     public void CompareOtherList()
     {
         int countTarget = idList.Count;
-        int currentCount = 0;
+        
+        int correctCount = 0;
+        
         List<Id> currentList = new List<Id>();
+
 
         foreach (Id id in otherList.GetIDList())
         {
             currentList.Add(id);
         }
-
         
         foreach (Id go in idList)
         {
             if (currentList.Contains(go))
             {
-                currentCount++;
+               
+                correctCount++;
                 currentList.Remove(go);
             }
+           
         }
         
         
-        
-        if (currentCount == countTarget)
+        if (correctCount == countTarget && currentList.Count == 0)
         {
             OnMatch.Invoke();
         }
