@@ -1361,6 +1361,7 @@ GameObject:
   - component: {fileID: 513523886}
   - component: {fileID: 513523888}
   - component: {fileID: 513523890}
+  - component: {fileID: 513523891}
   m_Layer: 6
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -1652,6 +1653,23 @@ MonoBehaviour:
   applicationQuitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &513523891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513523878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2483b9bd782f9449a5972b61b7d51a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CameraFloorOffsetObject: {fileID: 1796077599}
+  m_RequestedTrackingMode: 1
+  m_TrackingOriginMode: 1
+  m_TrackingSpace: 0
+  m_CameraYOffset: 1.8
 --- !u!1 &513945804
 GameObject:
   m_ObjectHideFlags: 0
@@ -10516,7 +10534,7 @@ Transform:
   m_GameObject: {fileID: 1796077599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
