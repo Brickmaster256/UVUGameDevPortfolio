@@ -31,11 +31,11 @@ public class IDList : ScriptableObject
         return idList;
     }
 
-    public void AddRandomtolist(int times)
+    public void AddRandomtolist(IntData times)
     {
         List<Id> fullList = new List<Id>();
         fullList = singleList.GetIDList();
-        for (int index = 0; index < times; index++)
+        for (int index = 0; index < times.Value; index++)
         {
             int randomIndex =  Random.Range(0, fullList.Count);
             idList.Add(fullList[randomIndex]);

@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: CheckList
   m_EditorClassIdentifier: 
   idList:
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
   - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
+  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
+  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
   - {fileID: 11400000, guid: ba417aea8f7493d479f07a1c9e8d988f, type: 2}
   - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
   - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
+  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
   otherList: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
   singleList: {fileID: 11400000, guid: 219d54ff8570945439ff504ab75cc353, type: 2}
   OnMatch:
@@ -37,4 +39,16 @@ MonoBehaviour:
         m_CallState: 2
   OnNoMatch:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 9c20ae6d4507e194c8fa8743e2a961c6, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
