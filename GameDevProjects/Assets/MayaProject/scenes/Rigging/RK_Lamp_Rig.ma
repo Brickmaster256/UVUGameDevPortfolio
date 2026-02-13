@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: RK_Lamp_Rig_2.0
-//Last modified: Fri, Feb 13, 2026 01:43:11 PM
+//Name: RK_Lamp_Rig.ma
+//Last modified: Fri, Feb 13, 2026 01:45:03 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "94C7B00D-4C20-0813-0E5B-30B48251AFB5";
+fileInfo "UUID" "17C4FB2B-46D6-0AF8-DB05-7C99DD996B20";
 createNode transform -s -n "persp";
 	rename -uid "278F2A6C-4E92-E096-3192-06B0A1653AAA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -47.188261820281177 18.936519589324465 13.980621422579045 ;
+	setAttr ".t" -type "double3" -70.123623717343676 23.930752290185932 21.168128162205722 ;
 	setAttr ".r" -type "double3" -11.738352729539907 -432.59999999986491 2.6589638970691666e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B1FD58ED-4424-5C77-1126-E0885CF200CF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 48.90419854573139;
+	setAttr ".coi" 73.452791962702534;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3536,7 +3536,7 @@ createNode parentConstraint -n "RK_Head_Jnt_parentConstraint1" -p "RK_Head_Jnt";
 	setAttr ".tg[0].tot" -type "double3" 0 3.5527136788005009e-15 0 ;
 	setAttr ".tg[1].tot" -type "double3" 0 -3.5527136788005009e-15 3.5527136788005009e-15 ;
 	setAttr ".tg[1].tor" -type "double3" 90 -50.312027473222884 90 ;
-	setAttr ".lr" -type "double3" 0 0 1.2722218725854067e-14 ;
+	setAttr ".lr" -type "double3" 0 0 2.5444437451708128e-14 ;
 	setAttr ".rst" -type "double3" 16.505187493804389 -1.0658141036401503e-14 0 ;
 	setAttr ".rsrr" -type "double3" 0 0 6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -3738,15 +3738,15 @@ createNode camera -n "backShape" -p "back";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "255BFE1C-4809-3CE1-CE94-62B415A0070E";
+	rename -uid "AF58C945-46A4-85E9-DF16-13A20ACF2F21";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AA966541-4B7E-F768-A5A1-33AE70BB59A9";
+	rename -uid "CBF8091F-4DA3-D58F-E1F9-239E4653DE82";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "31E5F8B8-421B-A95B-D8BF-60B6EAE76667";
+	rename -uid "0D6F49AD-4C8E-06A3-45EC-68B60AE57072";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0BA74C5A-44C5-E32F-524A-AF90354C95ED";
+	rename -uid "A926EE74-4CB9-A84C-DE1F-B69EC02288C0";
 	setAttr ".cdl" 3;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
@@ -3754,7 +3754,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "B5E7DFD4-4E97-3398-2FE7-5D9790DFFD7C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AE2FFFE1-4EC0-4486-0869-E8A0D54E0189";
+	rename -uid "C7144179-4440-71D3-25D1-44A618410BA9";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E28980D3-450D-C436-845D-FCBFB8BAD3AD";
 	setAttr ".g" yes;
@@ -3850,73 +3850,73 @@ createNode displayLayer -n "Joint_layer";
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 3;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "524BFD1D-47F4-00D4-EF9F-F3BCDD180FEF";
+	rename -uid "CCE4D842-45A5-63B2-3D27-308FF82ADE52";
 	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "283818D1-42F6-4A2E-5D83-81893E9BBBA3";
+	rename -uid "5DFE6507-4B4E-6087-BF4C-058096395AEA";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -299.19044599474415 -650.25876882496959 ;
-	setAttr ".tgi[0].vh" -type "double2" 1431.5375115650932 220.15597247701092 ;
+	setAttr ".tgi[0].vl" -type "double2" -299.70524737051102 -651.19045031449264 ;
+	setAttr ".tgi[0].vh" -type "double2" 1433.0385356692257 220.23808648662006 ;
 	setAttr -s 20 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 667.14288330078125;
-	setAttr ".tgi[0].ni[0].y" -477.14285278320312;
+	setAttr ".tgi[0].ni[0].x" 444.047607421875;
+	setAttr ".tgi[0].ni[0].y" 61.904758453369141;
 	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" 884.28570556640625;
-	setAttr ".tgi[0].ni[1].y" -297.14285278320312;
+	setAttr ".tgi[0].ni[1].x" 1108.3333740234375;
+	setAttr ".tgi[0].ni[1].y" 61.904758453369141;
 	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" 592.85711669921875;
-	setAttr ".tgi[0].ni[2].y" -208.57142639160156;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" 664.28570556640625;
-	setAttr ".tgi[0].ni[3].y" 175.71427917480469;
+	setAttr ".tgi[0].ni[2].x" -104.54073333740234;
+	setAttr ".tgi[0].ni[2].y" 99.234954833984375;
+	setAttr ".tgi[0].ni[2].nvs" 18306;
+	setAttr ".tgi[0].ni[3].x" 451.42855834960938;
+	setAttr ".tgi[0].ni[3].y" -567.14288330078125;
 	setAttr ".tgi[0].ni[3].nvs" 18304;
 	setAttr ".tgi[0].ni[4].x" 281.42855834960938;
 	setAttr ".tgi[0].ni[4].y" -454.28570556640625;
 	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" 451.42855834960938;
-	setAttr ".tgi[0].ni[5].y" -567.14288330078125;
+	setAttr ".tgi[0].ni[5].x" 884.28570556640625;
+	setAttr ".tgi[0].ni[5].y" -118.57142639160156;
 	setAttr ".tgi[0].ni[5].nvs" 18304;
 	setAttr ".tgi[0].ni[6].x" 331.5916748046875;
 	setAttr ".tgi[0].ni[6].y" -87.412384033203125;
 	setAttr ".tgi[0].ni[6].nvs" 18306;
-	setAttr ".tgi[0].ni[7].x" 884.28570556640625;
-	setAttr ".tgi[0].ni[7].y" -118.57142639160156;
+	setAttr ".tgi[0].ni[7].x" 222.61903381347656;
+	setAttr ".tgi[0].ni[7].y" 61.904758453369141;
 	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" -102.85713958740234;
-	setAttr ".tgi[0].ni[8].y" -25.714284896850586;
+	setAttr ".tgi[0].ni[8].x" 667.14288330078125;
+	setAttr ".tgi[0].ni[8].y" -477.14285278320312;
 	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" -104.54073333740234;
-	setAttr ".tgi[0].ni[9].y" 99.234954833984375;
-	setAttr ".tgi[0].ni[9].nvs" 18306;
-	setAttr ".tgi[0].ni[10].x" 665.4761962890625;
+	setAttr ".tgi[0].ni[9].x" 592.85711669921875;
+	setAttr ".tgi[0].ni[9].y" -208.57142639160156;
+	setAttr ".tgi[0].ni[9].nvs" 18304;
+	setAttr ".tgi[0].ni[10].x" 1329.7618408203125;
 	setAttr ".tgi[0].ni[10].y" 61.904758453369141;
 	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" 222.61903381347656;
+	setAttr ".tgi[0].ni[11].x" 886.90472412109375;
 	setAttr ".tgi[0].ni[11].y" 61.904758453369141;
 	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" 444.047607421875;
-	setAttr ".tgi[0].ni[12].y" 61.904758453369141;
+	setAttr ".tgi[0].ni[12].x" -297.14285278320312;
+	setAttr ".tgi[0].ni[12].y" -181.42857360839844;
 	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 1108.3333740234375;
-	setAttr ".tgi[0].ni[13].y" 61.904758453369141;
+	setAttr ".tgi[0].ni[13].x" 68.571426391601562;
+	setAttr ".tgi[0].ni[13].y" 194.28572082519531;
 	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 886.90472412109375;
-	setAttr ".tgi[0].ni[14].y" 61.904758453369141;
+	setAttr ".tgi[0].ni[14].x" 1030;
+	setAttr ".tgi[0].ni[14].y" -477.14285278320312;
 	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" 1329.7618408203125;
-	setAttr ".tgi[0].ni[15].y" 61.904758453369141;
+	setAttr ".tgi[0].ni[15].x" 664.28570556640625;
+	setAttr ".tgi[0].ni[15].y" 175.71427917480469;
 	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" 664.28570556640625;
-	setAttr ".tgi[0].ni[16].y" -375.71429443359375;
+	setAttr ".tgi[0].ni[16].x" 665.4761962890625;
+	setAttr ".tgi[0].ni[16].y" 61.904758453369141;
 	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" -297.14285278320312;
-	setAttr ".tgi[0].ni[17].y" -181.42857360839844;
+	setAttr ".tgi[0].ni[17].x" 664.28570556640625;
+	setAttr ".tgi[0].ni[17].y" -375.71429443359375;
 	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" 68.571426391601562;
-	setAttr ".tgi[0].ni[18].y" 194.28572082519531;
+	setAttr ".tgi[0].ni[18].x" -102.85713958740234;
+	setAttr ".tgi[0].ni[18].y" -25.714284896850586;
 	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" 1030;
-	setAttr ".tgi[0].ni[19].y" -477.14285278320312;
+	setAttr ".tgi[0].ni[19].x" 884.28570556640625;
+	setAttr ".tgi[0].ni[19].y" -297.14285278320312;
 	setAttr ".tgi[0].ni[19].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -3963,7 +3963,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "geo_layer.di" "base_geo.do";
 connectAttr "base_geo_parentConstraint1.ctx" "base_geo.tx";
 connectAttr "base_geo_parentConstraint1.cty" "base_geo.ty";
@@ -4216,13 +4215,13 @@ connectAttr "FK_Lower_Arm_Ctrl.pm" "FK_Lower_Arm_Jnt_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "FK_Lower_Arm_Jnt_scaleConstraint1.w0" "FK_Lower_Arm_Jnt_scaleConstraint1.tg[0].tw"
 		;
+connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.ctx" "IK_Lower_Arm_Jnt.tx";
+connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.cty" "IK_Lower_Arm_Jnt.ty";
+connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.ctz" "IK_Lower_Arm_Jnt.tz";
 connectAttr "IK_Lower_Arm_Jnt_scaleConstraint1.csx" "IK_Lower_Arm_Jnt.sx";
 connectAttr "IK_Lower_Arm_Jnt_scaleConstraint1.csy" "IK_Lower_Arm_Jnt.sy";
 connectAttr "IK_Lower_Arm_Jnt_scaleConstraint1.csz" "IK_Lower_Arm_Jnt.sz";
 connectAttr "Transform.s" "IK_Lower_Arm_Jnt.is";
-connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.ctx" "IK_Lower_Arm_Jnt.tx";
-connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.cty" "IK_Lower_Arm_Jnt.ty";
-connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.ctz" "IK_Lower_Arm_Jnt.tz";
 connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.crx" "IK_Lower_Arm_Jnt.rx";
 connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.cry" "IK_Lower_Arm_Jnt.ry";
 connectAttr "IK_Lower_Arm_Jnt_parentConstraint1.crz" "IK_Lower_Arm_Jnt.rz";
@@ -4264,27 +4263,26 @@ connectAttr "IK_Base_Ctrl.s" "IK_Lower_Arm_Jnt_scaleConstraint1.tg[0].ts";
 connectAttr "IK_Base_Ctrl.pm" "IK_Lower_Arm_Jnt_scaleConstraint1.tg[0].tpm";
 connectAttr "IK_Lower_Arm_Jnt_scaleConstraint1.w0" "IK_Lower_Arm_Jnt_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.csx" "RK_Lower_Arm_Jnt.sx";
-connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.csy" "RK_Lower_Arm_Jnt.sy";
-connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.csz" "RK_Lower_Arm_Jnt.sz";
-connectAttr "Transform.s" "RK_Lower_Arm_Jnt.is";
 connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.ctx" "RK_Lower_Arm_Jnt.tx";
 connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.cty" "RK_Lower_Arm_Jnt.ty";
 connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.ctz" "RK_Lower_Arm_Jnt.tz";
 connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.crx" "RK_Lower_Arm_Jnt.rx";
 connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.cry" "RK_Lower_Arm_Jnt.ry";
 connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.crz" "RK_Lower_Arm_Jnt.rz";
-connectAttr "RK_Lower_Arm_Jnt.s" "RK_Upper_Arm_Jnt.is";
-connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.csx" "RK_Upper_Arm_Jnt.sx";
-connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.csy" "RK_Upper_Arm_Jnt.sy";
-connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.csz" "RK_Upper_Arm_Jnt.sz";
+connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.csx" "RK_Lower_Arm_Jnt.sx";
+connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.csy" "RK_Lower_Arm_Jnt.sy";
+connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.csz" "RK_Lower_Arm_Jnt.sz";
+connectAttr "Transform.s" "RK_Lower_Arm_Jnt.is";
 connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.ctx" "RK_Upper_Arm_Jnt.tx";
 connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.cty" "RK_Upper_Arm_Jnt.ty";
 connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.ctz" "RK_Upper_Arm_Jnt.tz";
 connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.crx" "RK_Upper_Arm_Jnt.rx";
 connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.cry" "RK_Upper_Arm_Jnt.ry";
 connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.crz" "RK_Upper_Arm_Jnt.rz";
-connectAttr "RK_Upper_Arm_Jnt.s" "RK_Head_Jnt.is";
+connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.csx" "RK_Upper_Arm_Jnt.sx";
+connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.csy" "RK_Upper_Arm_Jnt.sy";
+connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.csz" "RK_Upper_Arm_Jnt.sz";
+connectAttr "RK_Lower_Arm_Jnt.s" "RK_Upper_Arm_Jnt.is";
 connectAttr "RK_Head_Jnt_parentConstraint1.ctx" "RK_Head_Jnt.tx";
 connectAttr "RK_Head_Jnt_parentConstraint1.cty" "RK_Head_Jnt.ty";
 connectAttr "RK_Head_Jnt_parentConstraint1.ctz" "RK_Head_Jnt.tz";
@@ -4294,6 +4292,7 @@ connectAttr "RK_Head_Jnt_parentConstraint1.crz" "RK_Head_Jnt.rz";
 connectAttr "RK_Head_Jnt_scaleConstraint1.csx" "RK_Head_Jnt.sx";
 connectAttr "RK_Head_Jnt_scaleConstraint1.csy" "RK_Head_Jnt.sy";
 connectAttr "RK_Head_Jnt_scaleConstraint1.csz" "RK_Head_Jnt.sz";
+connectAttr "RK_Upper_Arm_Jnt.s" "RK_Head_Jnt.is";
 connectAttr "RK_Head_Jnt.ro" "RK_Head_Jnt_parentConstraint1.cro";
 connectAttr "RK_Head_Jnt.pim" "RK_Head_Jnt_parentConstraint1.cpim";
 connectAttr "RK_Head_Jnt.rp" "RK_Head_Jnt_parentConstraint1.crp";
@@ -4451,16 +4450,16 @@ connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.w1" "RK_Lower_Arm_Jnt_scaleConstr
 		;
 connectAttr "Transform_Ctrl.Arm_IKFK" "RK_Lower_Arm_Jnt_scaleConstraint1.w0";
 connectAttr "Arm_IKFK.ox" "RK_Lower_Arm_Jnt_scaleConstraint1.w1";
-connectAttr "Base_Jnt_scaleConstraint1.csx" "Base_Jnt.sx";
-connectAttr "Base_Jnt_scaleConstraint1.csy" "Base_Jnt.sy";
-connectAttr "Base_Jnt_scaleConstraint1.csz" "Base_Jnt.sz";
-connectAttr "Transform.s" "Base_Jnt.is";
 connectAttr "Base_Jnt_parentConstraint1.ctx" "Base_Jnt.tx";
 connectAttr "Base_Jnt_parentConstraint1.cty" "Base_Jnt.ty";
 connectAttr "Base_Jnt_parentConstraint1.ctz" "Base_Jnt.tz";
 connectAttr "Base_Jnt_parentConstraint1.crx" "Base_Jnt.rx";
 connectAttr "Base_Jnt_parentConstraint1.cry" "Base_Jnt.ry";
 connectAttr "Base_Jnt_parentConstraint1.crz" "Base_Jnt.rz";
+connectAttr "Base_Jnt_scaleConstraint1.csx" "Base_Jnt.sx";
+connectAttr "Base_Jnt_scaleConstraint1.csy" "Base_Jnt.sy";
+connectAttr "Base_Jnt_scaleConstraint1.csz" "Base_Jnt.sz";
+connectAttr "Transform.s" "Base_Jnt.is";
 connectAttr "Base_Jnt.ro" "Base_Jnt_parentConstraint1.cro";
 connectAttr "Base_Jnt.pim" "Base_Jnt_parentConstraint1.cpim";
 connectAttr "Base_Jnt.rp" "Base_Jnt_parentConstraint1.crp";
@@ -4523,44 +4522,44 @@ connectAttr "layerManager.dli[1]" "geo_layer.id";
 connectAttr "Transform_Ctrl.Arm_IKFK" "Arm_IKFK.ix";
 connectAttr "layerManager.dli[2]" "Control_Layer.id";
 connectAttr "layerManager.dli[3]" "Joint_layer.id";
-connectAttr "Control_Layer.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
-connectAttr "Skeleton.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
-connectAttr "lower_arm_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "RK_Head_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "base_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "Transform_Ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
+connectAttr "lower_arm_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "base_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "lower_arm_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
+connectAttr "Joint_layer.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn";
 connectAttr "Arm_IKFK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn";
-connectAttr "Joint_layer.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn";
-connectAttr "Transform_CtrlShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "RK_Head_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "Transform_Ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn";
-connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "Control_Layer.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
+connectAttr "lower_arm_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "RK_Head_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "RK_Head_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "RK_Lower_Arm_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "head_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "RK_Upper_Arm_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "upper_arm_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
 		;
-connectAttr "RK_Lower_Arm_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+connectAttr "upper_arm_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "head_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+connectAttr "base_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
 		;
-connectAttr "head_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+connectAttr "RK_Upper_Arm_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
 		;
-connectAttr "upper_arm_geo_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+connectAttr "head_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
 		;
-connectAttr "upper_arm_geo_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+connectAttr "Transform_CtrlShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
 		;
+connectAttr "Skeleton.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn";
 connectAttr "base_geoSG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Arm_IKFK.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of RK_Lamp_Rig_2.0
+// End of RK_Lamp_Rig.ma
