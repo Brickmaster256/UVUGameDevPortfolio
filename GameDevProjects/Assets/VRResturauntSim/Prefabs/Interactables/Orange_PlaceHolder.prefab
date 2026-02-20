@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6439794275098361848}
   - component: {fileID: 5665246286496645357}
   - component: {fileID: 2247853765169905020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Orange_PlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
