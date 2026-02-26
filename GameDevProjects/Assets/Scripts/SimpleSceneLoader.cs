@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,5 +10,13 @@ public class SimpleSceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    public void  LoadSceneByIndex(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
 
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+    }
 }
