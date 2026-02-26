@@ -1,0 +1,34 @@
+{
+    "name": "ResturauntControls",
+    "maps": [
+        {
+            "name": "Pause",
+            "id": "ede7d4b1-c05a-481f-9e5b-9947b731b496",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "1e09bfa8-1d86-462d-a1e0-3698cf2fb521",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2f3e7fe2-ba43-45a5-a5ed-75c3d233cf86",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
