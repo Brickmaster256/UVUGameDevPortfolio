@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 109.72065
   minValue: 0
-  maxValue: 120
+  maxValue: 180
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls:
