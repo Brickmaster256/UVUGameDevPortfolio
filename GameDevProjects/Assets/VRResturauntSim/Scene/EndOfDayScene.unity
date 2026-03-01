@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 8ceea6b5d17500549aae4c5779d3828d, type: 2}
+  action: {fileID: 11400000, guid: 32981ddf43827194d95d3dbad35c06a7, type: 2}
   startEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2342,7 +2342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f8f7ab48a174d409848f7c98c2133d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameActionObj: {fileID: 0}
+  gameActionObj: {fileID: 11400000, guid: 32981ddf43827194d95d3dbad35c06a7, type: 2}
   awakeEvent:
     m_PersistentCalls:
       m_Calls: []
