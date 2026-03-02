@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: DennyTheSuperDuck.ma
-//Last modified: Sun, Mar 01, 2026 03:45:21 PM
+//Last modified: Sun, Mar 01, 2026 07:54:16 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "6CD835CE-4EFA-E8C6-51B6-05A3F4419790";
+fileInfo "UUID" "053D718C-49C9-C5D3-6D64-CCB28D24913A";
 createNode transform -s -n "persp";
 	rename -uid "2B37DE02-4CDA-101A-CFF8-13AEF92C9763";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -27.553391962777201 26.449023008580756 17.826314586321608 ;
-	setAttr ".r" -type "double3" 1056.2616472900563 664.19999999995366 -2.8292552375601639e-15 ;
+	setAttr ".t" -type "double3" 27.441921683564519 20.527034651802282 17.924552491766313 ;
+	setAttr ".r" -type "double3" 1062.8616472900412 1139.8000000000973 -3.1614598017231199e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "50B6F941-408C-4A35-6B4A-7E9E59E4D25F";
 	setAttr -k off ".v" no;
@@ -29601,7 +29601,7 @@ createNode polySplit -n "polySplit9";
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "24B4658C-47E3-2B34-B976-0BA2B11EE94E";
+	rename -uid "A4B42F26-4B81-0F9F-C27D-29B9DAC974F6";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
