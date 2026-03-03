@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idList: []
   otherList: {fileID: 0}
+  singleList: {fileID: 0}
+  OnMatch:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNoMatch:
+    m_PersistentCalls:
+      m_Calls: []
