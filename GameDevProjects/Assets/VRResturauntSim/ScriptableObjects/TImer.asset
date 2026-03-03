@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
   m_Name: TImer
   m_EditorClassIdentifier: 
-  value: 61.77237
+  value: 44.286743
   minValue: 0
-  maxValue: 120
+  maxValue: 210
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls:
