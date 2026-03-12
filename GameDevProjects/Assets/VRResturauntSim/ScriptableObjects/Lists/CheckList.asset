@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: CheckList
   m_EditorClassIdentifier: 
   idList:
-  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
-  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
+  - {fileID: 11400000, guid: 46a991070818fef4490de444fb20acf8, type: 2}
+  - {fileID: 11400000, guid: f792a2a0234705748a3230ea714ca79c, type: 2}
   - {fileID: 11400000, guid: ba417aea8f7493d479f07a1c9e8d988f, type: 2}
-  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
-  - {fileID: 11400000, guid: 5f6cff74fe2d2924480c78883d4a0735, type: 2}
+  - {fileID: 11400000, guid: 46a991070818fef4490de444fb20acf8, type: 2}
+  - {fileID: 11400000, guid: 46a991070818fef4490de444fb20acf8, type: 2}
+  - {fileID: 11400000, guid: ba417aea8f7493d479f07a1c9e8d988f, type: 2}
   otherList: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
   singleList: {fileID: 11400000, guid: 219d54ff8570945439ff504ab75cc353, type: 2}
   OnMatch:
@@ -41,6 +40,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: IntData, Assembly-CSharp
         m_MethodName: UpdateValue
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: f57c69c9253699b478caf253f1162ee4, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
