@@ -14,12 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idList:
   - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
-  - {fileID: 11400000, guid: 231cdf068093a8441be221c623b03a28, type: 2}
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
   - {fileID: 11400000, guid: e626963228126a94ca3b0387a5876a8d, type: 2}
-  - {fileID: 11400000, guid: cdb4480d9c1abae4695addddd600e7a9, type: 2}
-  - {fileID: 11400000, guid: f792a2a0234705748a3230ea714ca79c, type: 2}
-  - {fileID: 11400000, guid: f792a2a0234705748a3230ea714ca79c, type: 2}
+  - {fileID: 11400000, guid: e626963228126a94ca3b0387a5876a8d, type: 2}
+  - {fileID: 11400000, guid: 231cdf068093a8441be221c623b03a28, type: 2}
   otherList: {fileID: 11400000, guid: 40ab9f71b73907842a5798bc83ae63e1, type: 2}
   singleList: {fileID: 11400000, guid: 219d54ff8570945439ff504ab75cc353, type: 2}
   OnMatch:
@@ -49,14 +46,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: eac94e81a7c7cc7439334241d00c19fa, type: 2}
+      - m_Target: {fileID: 11400000, guid: 2d4c8f85cb461e34e8c72a7490b14ef0, type: 2}
         m_TargetAssemblyTypeName: IntData, Assembly-CSharp
         m_MethodName: UpdateValue
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
