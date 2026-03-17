@@ -6,11 +6,33 @@ using UnityEngine.Events;
 public class IDList : ScriptableObject
 {
     public List<Id> idList;
+    public List<FoodID> foodList;
 
     public IDList otherList;
     public IDList singleList;
     
     public UnityEvent OnMatch, OnNoMatch;
+
+    [SerializeField] private float totalPrice;
+
+    public float GetTotalPrice()
+    {
+        return totalPrice;
+    }
+
+    public void setTotalPriceOfList()
+    { 
+        float tempPrice = 0;
+
+        
+        foreach (FoodID food in foodList)
+        {
+            tempPrice += food.Price;
+        }
+        
+        totalPrice = tempPrice;
+           
+    }
 
     public void AddToList(Id id)
     {

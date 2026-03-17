@@ -10,6 +10,7 @@ public class IntDataChanger : MonoBehaviour
     public float multiplier;
     public float amount;
     public int amountInt;
+    public IDList list;
     
 
     public void IntAddMultipler(IntData data)
@@ -21,6 +22,11 @@ public class IntDataChanger : MonoBehaviour
     {
         intdata.Value += (int)(data * multiplier);
 
+    }
+
+    public void setFloatDataToListTotal()
+    {
+        floatdata.Value = list.GetTotalPrice();
     }
 
     public void FloatAddMultipler(FloatData data)
