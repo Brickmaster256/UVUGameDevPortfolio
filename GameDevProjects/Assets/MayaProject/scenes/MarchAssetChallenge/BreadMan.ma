@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: BreadMan.ma
-//Last modified: Sun, Mar 15, 2026 08:36:55 PM
+//Last modified: Mon, Mar 16, 2026 10:07:18 AM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "8A74EE05-4BC2-536D-250D-A69CE22FF354";
+fileInfo "UUID" "70731C08-4F0A-E610-425F-8B85C82FC269";
 createNode transform -s -n "persp";
 	rename -uid "960E7F6F-41A4-D7C8-5EDE-F2BE281D4A74";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -25.543372846359215 28.455043343135515 -20.237616745893561 ;
-	setAttr ".r" -type "double3" 692.66164726573709 233.39999999992341 0 ;
+	setAttr ".t" -type "double3" -21.714821345921983 26.754210426750099 -34.149459218262045 ;
+	setAttr ".r" -type "double3" 700.46164726572192 211.79999999991452 0 ;
 	setAttr ".rp" -type "double3" 1.5809575870662229e-13 -3.1974423109204508e-14 -2.2737367544323206e-13 ;
 	setAttr ".rpt" -type "double3" -1.6650136314952692e-13 -1.5938390286642263e-13 2.3726333809561626e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D17B064A-417F-DF07-7697-B6AB99E246C3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 36.831742743131038;
+	setAttr ".coi" 43.363815713636399;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -81,6 +81,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "polySurface1";
 	rename -uid "C958ADB9-4294-3074-11A1-4B8DA5ADFD47";
+	setAttr ".r" -type "double3" 0 354 0 ;
 createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	rename -uid "E9752E37-4EE5-7888-F949-A0A8886BAFF6";
 	setAttr -k off ".v";
@@ -11514,9 +11515,6 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "C00EE10E-473B-3A0A-C2B7-ECB7E24A169E";
 	setAttr ".ai_translator" -type "string" "maya";
 	setAttr ".output_mode" 0;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "1CA1D645-4072-5C6C-7BB0-E786E072C117";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "CA37324E-4556-B737-726B-3DB3FF30169C";
 	setAttr ".b" -type "string" (
@@ -11565,6 +11563,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "B00797D7-4268-11BD-CEA5-0FAFDDF1AA41";
 	setAttr ".b" -type "string" "playbackOptions -min -2 -max 24 -ast -2 -aet 134 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "A8BD019C-49E3-1398-2D7D-D38DEFCC8A6D";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 17;
 	setAttr ".unw" 17;
@@ -11608,6 +11609,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
