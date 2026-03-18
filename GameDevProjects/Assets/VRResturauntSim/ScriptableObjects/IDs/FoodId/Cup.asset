@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f26ab332625f846aaeecc227f3562b, type: 3}
   m_Name: Cup
   m_EditorClassIdentifier: 
-  price: 1
+  price: 0.75

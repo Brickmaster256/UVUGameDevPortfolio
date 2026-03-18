@@ -9,7 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f26ab332625f846aaeecc227f3562b, type: 3}
-  m_Name: Orange
+  m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
+  m_Name: PlayerSales
   m_EditorClassIdentifier: 
-  price: 2
+  value: 0
+  minValue: 0
+  maxValue: 10000000
+  valueOutOfRange:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
