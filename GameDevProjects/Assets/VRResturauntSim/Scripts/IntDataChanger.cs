@@ -8,8 +8,6 @@ public class IntDataChanger : MonoBehaviour
     public IntData intdata;
     public FloatData floatdata;
     public float multiplier;
-    public float amount;
-    public int amountInt;
     public IDList list;
     
 
@@ -18,6 +16,14 @@ public class IntDataChanger : MonoBehaviour
         data.Value += (int)(intdata.Value * multiplier);
 
     }
+
+    public void addIntData(IntData data)
+    {
+        
+        intdata.UpdateValue(data.Value);
+        
+    }
+    
     public void IntAddMultipler(int data)
     {
         intdata.Value += (int)(data * multiplier);
@@ -26,7 +32,12 @@ public class IntDataChanger : MonoBehaviour
 
     public void setFloatDataToListTotal()
     {
-        floatdata.Value = list.GetTotalPrice();
+        
+        float listTotal = list.GetTotalPrice();
+        
+        
+        floatdata.UpdateValue(listTotal);
+        
     }
 
     public void FloatAddMultipler(FloatData data)
@@ -37,8 +48,7 @@ public class IntDataChanger : MonoBehaviour
     public void FloatAddMultipler(IntData data)
     {
         
-        amount = data.Value * multiplier;
-        floatdata.UpdateValue(amount);
+        
         Debug.Log(floatdata.Value);
     }
     

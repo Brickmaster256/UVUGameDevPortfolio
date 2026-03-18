@@ -11,6 +11,8 @@ public class IDList : ScriptableObject
     public IDList otherList;
     public IDList singleList;
     
+    
+    
     public UnityEvent OnMatch, OnNoMatch;
 
     [SerializeField] private float totalPrice;
@@ -47,20 +49,29 @@ public class IDList : ScriptableObject
     public void ClearList()
     {
         idList.Clear();
+        foodList.Clear();
     }
     public List<Id> GetIDList()
     {
         return idList;
     }
 
+    public List<FoodID> GetFoodList()
+    {
+        return foodList;
+    }
+
     public void AddRandomtolist(IntData times)
     {
         List<Id> fullList = new List<Id>();
+        List<FoodID> tempList = new List<FoodID>();
         fullList = singleList.GetIDList();
+        tempList = singleList.GetFoodList();
         for (int index = 0; index < times.Value; index++)
         {
             int randomIndex =  Random.Range(0, fullList.Count);
             idList.Add(fullList[randomIndex]);
+            foodList.Add(tempList[randomIndex]);
             
         }
         

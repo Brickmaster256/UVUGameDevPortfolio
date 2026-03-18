@@ -734,6 +734,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: cfe28f093afd9bc44ba1157331cbba84, type: 2}
+        m_TargetAssemblyTypeName: IDList, Assembly-CSharp
+        m_MethodName: setTotalPriceOfList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 8ceea6b5d17500549aae4c5779d3828d, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: RaiseAction
@@ -12071,30 +12083,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Pressed
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 219d54ff8570945439ff504ab75cc353, type: 2}
-        m_TargetAssemblyTypeName: IDList, Assembly-CSharp
-        m_MethodName: setTotalPriceOfList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1894945734}
-        m_TargetAssemblyTypeName: IntDataChanger, Assembly-CSharp
-        m_MethodName: setFloatDataToListTotal
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   m_HoverExited:
@@ -28704,7 +28692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1812433995}
   - component: {fileID: 1812433997}
-  - component: {fileID: 1812433996}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -28750,41 +28737,6 @@ Transform:
   - {fileID: 1214399579}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1812433996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812433994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: f57c69c9253699b478caf253f1162ee4, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1812433997}
-        m_TargetAssemblyTypeName: IntDataChanger, Assembly-CSharp
-        m_MethodName: FloatAddMultipler
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: eac94e81a7c7cc7439334241d00c19fa, type: 2}
-          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
 --- !u!114 &1812433997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28800,8 +28752,6 @@ MonoBehaviour:
   intdata: {fileID: 11400000, guid: 10daec54c3fd0d64bab27955fed10429, type: 2}
   floatdata: {fileID: 11400000, guid: eac94e81a7c7cc7439334241d00c19fa, type: 2}
   multiplier: 5
-  amount: 0
-  amountInt: 0
   list: {fileID: 0}
 --- !u!1 &1825261555
 GameObject:
@@ -29899,6 +29849,7 @@ GameObject:
   - component: {fileID: 1894945732}
   - component: {fileID: 1894945731}
   - component: {fileID: 1894945734}
+  - component: {fileID: 1894945735}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -30007,9 +29958,42 @@ MonoBehaviour:
   intdata: {fileID: 0}
   floatdata: {fileID: 11400000, guid: 039474580e039c74da29ddbd4bf4e844, type: 2}
   multiplier: 0
-  amount: 0
-  amountInt: 0
-  list: {fileID: 11400000, guid: 219d54ff8570945439ff504ab75cc353, type: 2}
+  list: {fileID: 11400000, guid: cfe28f093afd9bc44ba1157331cbba84, type: 2}
+--- !u!114 &1894945735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: f57c69c9253699b478caf253f1162ee4, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1894945734}
+        m_TargetAssemblyTypeName: IntDataChanger, Assembly-CSharp
+        m_MethodName: setFloatDataToListTotal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
 --- !u!1001 &1895771342
 PrefabInstance:
   m_ObjectHideFlags: 0

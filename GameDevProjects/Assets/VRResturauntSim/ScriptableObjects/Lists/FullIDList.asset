@@ -22,7 +22,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f792a2a0234705748a3230ea714ca79c, type: 2}
   foodList:
   - {fileID: 11400000, guid: 193c765006ec1754da1028ccdbb683bd, type: 2}
-  - {fileID: 11400000, guid: 193c765006ec1754da1028ccdbb683bd, type: 2}
+  - {fileID: 11400000, guid: c4e14af840757414da384c3e52bcc9cf, type: 2}
+  - {fileID: 11400000, guid: 37a78ebba370f6a4487f0e04358c61ab, type: 2}
+  - {fileID: 11400000, guid: 51dc1235b19ad564189955548f14eb03, type: 2}
+  - {fileID: 11400000, guid: c7e301ef89594154f8d7bd255bae5efd, type: 2}
+  - {fileID: 11400000, guid: 60b3e2d1a1b8a934aa9f4d9f9649b8b7, type: 2}
+  - {fileID: 11400000, guid: d1b0d23b75231fe4498010fd967e039d, type: 2}
   otherList: {fileID: 0}
   singleList: {fileID: 0}
   OnMatch:
