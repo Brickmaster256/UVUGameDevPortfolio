@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SodaDispencer.ma
-//Last modified: Thu, Mar 19, 2026 05:16:41 PM
+//Last modified: Thu, Mar 19, 2026 06:13:38 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "3A83BA5F-4EAF-F2A1-31F0-2B85D14CFDC8";
+fileInfo "UUID" "BB2C7F9A-45BB-85C5-3B09-98BFF899310C";
 createNode transform -s -n "persp";
 	rename -uid "B270A018-4747-69F7-EF04-C6A686808EC4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.2006443167669829 -16.027705682814727 23.619206924633481 ;
-	setAttr ".r" -type "double3" 42.261647270171359 -353.80000000001331 -3.9990841390362604e-16 ;
+	setAttr ".t" -type "double3" 3.7302934992735914 19.048028189485041 42.660311530414482 ;
+	setAttr ".r" -type "double3" -15.938352729828576 -355.80000000001223 1.9931994584565498e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "46686AB9-40D6-D147-DAC7-D3A471276F8D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 33.540871480350859;
+	setAttr ".coi" 45.589166439609926;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -7227,7 +7227,7 @@ createNode polyTweakUV -n "polyTweakUV59";
 		 -0.30860519 1.049097061 -1.059407473 0.35316584 -0.7071082 0.94312561 -1.059331656
 		 0.35316956;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "365C1656-489A-2159-A610-9CBC59C0F2EF";
+	rename -uid "90C8F9D3-4F0D-9F11-7121-38B79FCD0EF9";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
