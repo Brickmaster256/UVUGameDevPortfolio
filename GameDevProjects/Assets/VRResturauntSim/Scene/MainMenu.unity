@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 26960509}
   - component: {fileID: 26960508}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (2)
+  m_Name: SideWalkTile (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,12 +234,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26960507}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 12.271, y: 0, z: 9.132}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &46207171
 GameObject:
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 46207173}
   - component: {fileID: 46207172}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (4)
+  m_Name: SideWalkTile (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,10 +319,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: 14.365, y: 0, z: 7.0350003}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &53580226
 GameObject:
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 53580228}
   - component: {fileID: 53580227}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (24)
+  m_Name: SideWalkTile (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -402,10 +402,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: -5.975, y: 0, z: -6.36}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &74614987
 GameObject:
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 74614989}
   - component: {fileID: 74614988}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (6)
+  m_Name: SideWalkTile (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,10 +485,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: 14.365, y: 0, z: 1.6820002}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &106180110
 GameObject:
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 243540117}
   - component: {fileID: 243540116}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA
+  m_Name: SideWalkTile (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,12 +716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243540115}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -5.9789987, y: 0, z: 9.115}
   m_LocalScale: {x: 1.5113, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &317060740
 GameObject:
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 317060742}
   - component: {fileID: 317060741}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (10)
+  m_Name: SideWalkTile (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,10 +801,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: -5.975, y: 0, z: 7.0350003}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &342923481
 GameObject:
@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 398055726}
   - component: {fileID: 398055725}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (27)
+  m_Name: SideWalkTile (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1362,12 +1362,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398055724}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -3.837, y: 0, z: -8.499}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406603630
 GameObject:
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 523075528}
   - component: {fileID: 523075527}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (1)
+  m_Name: SideWalkTile (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1685,12 +1685,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523075526}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 9.596, y: 0, z: 9.133}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560169092
 GameObject:
@@ -1779,7 +1779,7 @@ GameObject:
   - component: {fileID: 579126954}
   - component: {fileID: 579126953}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (21)
+  m_Name: SideWalkTile (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,12 +1843,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579126952}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -1.146, y: 0, z: -8.509001}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593973662
 GameObject:
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 609368921}
   - component: {fileID: 609368920}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (9)
+  m_Name: SideWalkTile (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2016,12 +2016,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609368919}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 14.37, y: 0, z: -8.51}
   m_LocalScale: {x: 1.5113, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619219115
 GameObject:
@@ -2161,7 +2161,7 @@ GameObject:
   - component: {fileID: 621818158}
   - component: {fileID: 621818157}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (17)
+  m_Name: SideWalkTile (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2225,12 +2225,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621818156}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 4.235, y: 0, z: -8.501}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &624303123
 GameObject:
@@ -2514,7 +2514,7 @@ GameObject:
   - component: {fileID: 653347746}
   - component: {fileID: 653347745}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (15)
+  m_Name: SideWalkTile (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2578,12 +2578,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653347744}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -5.97, y: 0, z: -8.51}
   m_LocalScale: {x: 1.5113, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &659860272
 GameObject:
@@ -3217,7 +3217,7 @@ GameObject:
   - component: {fileID: 832504853}
   - component: {fileID: 832504852}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA
+  m_Name: SideWalkTile (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3281,12 +3281,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832504851}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 1.552, y: 0, z: 9.13}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843082578
 GameObject:
@@ -3944,7 +3944,7 @@ GameObject:
   - component: {fileID: 918203729}
   - component: {fileID: 918203728}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (22)
+  m_Name: SideWalkTile (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4013,7 +4013,7 @@ Transform:
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
 --- !u!1 &959716013
 GameObject:
@@ -4193,6 +4193,69 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &977012511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977012512}
+  m_Layer: 0
+  m_Name: SideWalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &977012512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977012511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 832504854}
+  - {fileID: 1853912464}
+  - {fileID: 1370990858}
+  - {fileID: 621818159}
+  - {fileID: 1185102949}
+  - {fileID: 1174359781}
+  - {fileID: 523075529}
+  - {fileID: 918203730}
+  - {fileID: 1022883101}
+  - {fileID: 26960510}
+  - {fileID: 2011945639}
+  - {fileID: 46207174}
+  - {fileID: 317060743}
+  - {fileID: 1669509253}
+  - {fileID: 1207321901}
+  - {fileID: 74614990}
+  - {fileID: 1232538669}
+  - {fileID: 1610577406}
+  - {fileID: 1120940792}
+  - {fileID: 1298138397}
+  - {fileID: 1442344149}
+  - {fileID: 1612690860}
+  - {fileID: 53580229}
+  - {fileID: 1519932167}
+  - {fileID: 1588428802}
+  - {fileID: 1895979511}
+  - {fileID: 398055727}
+  - {fileID: 579126955}
+  - {fileID: 243540118}
+  - {fileID: 1956798451}
+  - {fileID: 609368922}
+  - {fileID: 653347747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020173162
@@ -4510,7 +4573,7 @@ GameObject:
   - component: {fileID: 1022883100}
   - component: {fileID: 1022883099}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (19)
+  m_Name: SideWalkTile (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4574,12 +4637,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022883098}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 9.596, y: 0, z: -8.499001}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025886374
 GameObject:
@@ -4950,7 +5013,7 @@ GameObject:
   - component: {fileID: 1120940791}
   - component: {fileID: 1120940790}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (13)
+  m_Name: SideWalkTile (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5016,10 +5079,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: -5.975, y: 0, z: -0.9879999}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1174359778
 GameObject:
@@ -5033,7 +5096,7 @@ GameObject:
   - component: {fileID: 1174359780}
   - component: {fileID: 1174359779}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (18)
+  m_Name: SideWalkTile (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5097,12 +5160,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174359778}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 6.913, y: 0, z: -8.499001}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185102946
 GameObject:
@@ -5116,7 +5179,7 @@ GameObject:
   - component: {fileID: 1185102948}
   - component: {fileID: 1185102947}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA
+  m_Name: SideWalkTile (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5180,12 +5243,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185102946}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 6.913, y: 0, z: 9.133}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1190700585
 PrefabInstance:
@@ -5390,7 +5453,7 @@ GameObject:
   - component: {fileID: 1207321900}
   - component: {fileID: 1207321899}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (11)
+  m_Name: SideWalkTile (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5456,10 +5519,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: -5.974999, y: 0, z: 4.3620005}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1232538666
 GameObject:
@@ -5473,7 +5536,7 @@ GameObject:
   - component: {fileID: 1232538668}
   - component: {fileID: 1232538667}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (12)
+  m_Name: SideWalkTile (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5539,10 +5602,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: -5.975, y: 0, z: 1.6820002}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1298138394
 GameObject:
@@ -5556,7 +5619,7 @@ GameObject:
   - component: {fileID: 1298138396}
   - component: {fileID: 1298138395}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (8)
+  m_Name: SideWalkTile (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5622,10 +5685,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: 14.365, y: 0, z: -3.6679997}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1001 &1329673367
 PrefabInstance:
@@ -5680,7 +5743,22 @@ PrefabInstance:
       value: Lighting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3752026982769588116, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 2303294424909319808, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 2529154890649765562, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 6338345480222674967, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 693614090841867459, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 1427005584077945180, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 4563622938811025485, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 8572181937333849961, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 360035603662850898, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 2865425848957529924, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 61916137682384554, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 4395535764283650152, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 1457175224030770811, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 1727302763028730506, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
+    - {fileID: 2750799686237939788, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 131bd4f5c8b776149a70165713c9f956, type: 3}
@@ -5696,7 +5774,7 @@ GameObject:
   - component: {fileID: 1370990857}
   - component: {fileID: 1370990856}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA
+  m_Name: SideWalkTile (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5760,12 +5838,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370990855}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 4.235, y: 0, z: 9.1310005}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1373131729
 PrefabInstance:
@@ -6093,7 +6171,7 @@ GameObject:
   - component: {fileID: 1442344148}
   - component: {fileID: 1442344147}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (23)
+  m_Name: SideWalkTile (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6159,10 +6237,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: 14.365, y: 0, z: -6.36}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1489116910
 GameObject:
@@ -6393,7 +6471,7 @@ GameObject:
   - component: {fileID: 1519932166}
   - component: {fileID: 1519932165}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA
+  m_Name: SideWalkTile (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6457,12 +6535,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519932164}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -1.146, y: 0, z: 9.123}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1569110488
 GameObject:
@@ -6581,7 +6659,7 @@ GameObject:
   - component: {fileID: 1588428801}
   - component: {fileID: 1588428800}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (25)
+  m_Name: SideWalkTile (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6645,12 +6723,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588428799}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -3.62, y: 0, z: 1.14}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610577403
 GameObject:
@@ -6664,7 +6742,7 @@ GameObject:
   - component: {fileID: 1610577405}
   - component: {fileID: 1610577404}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (7)
+  m_Name: SideWalkTile (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6730,10 +6808,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: 14.365, y: 0, z: -0.9879999}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1612690857
 GameObject:
@@ -6747,7 +6825,7 @@ GameObject:
   - component: {fileID: 1612690859}
   - component: {fileID: 1612690858}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (14)
+  m_Name: SideWalkTile (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6813,10 +6891,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: -5.975, y: 0, z: -3.6679997}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1659731453
 GameObject:
@@ -6864,7 +6942,7 @@ GameObject:
   - component: {fileID: 1669509252}
   - component: {fileID: 1669509251}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (5)
+  m_Name: SideWalkTile (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6930,10 +7008,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50005925, y: -0.49994072, z: -0.49993938, w: 0.5000606}
   m_LocalPosition: {x: 14.365, y: 0, z: 4.3620005}
-  m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
+  m_LocalScale: {x: 2.6595, y: 1.5113001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.986}
 --- !u!1 &1669697281
 GameObject:
@@ -8068,7 +8146,7 @@ GameObject:
   - component: {fileID: 1853912463}
   - component: {fileID: 1853912462}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (16)
+  m_Name: SideWalkTile (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8132,12 +8210,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853912461}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 1.552, y: 0, z: -8.502001}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866596932
 GameObject:
@@ -8285,7 +8363,7 @@ GameObject:
   - component: {fileID: 1895979510}
   - component: {fileID: 1895979509}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (26)
+  m_Name: SideWalkTile (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8349,12 +8427,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895979508}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: -3.837, y: 0, z: 9.13}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1896202866
 GameObject:
@@ -8534,7 +8612,7 @@ GameObject:
   - component: {fileID: 1956798450}
   - component: {fileID: 1956798449}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (3)
+  m_Name: SideWalkTile (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8598,12 +8676,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956798448}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 14.37, y: 0, z: 9.133}
   m_LocalScale: {x: 1.5113, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973372734
 GameObject:
@@ -8928,7 +9006,7 @@ GameObject:
   - component: {fileID: 2011945638}
   - component: {fileID: 2011945637}
   m_Layer: 0
-  m_Name: CeilingTile1_bakedHDA (20)
+  m_Name: SideWalkTile (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8992,12 +9070,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011945636}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710576, y: 0, z: -0, w: 0.7071078}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071078}
   m_LocalPosition: {x: 12.271, y: 0, z: -8.5}
   m_LocalScale: {x: 2.6595, y: 1.5113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 977012512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024151711
 GameObject:
@@ -9722,40 +9800,9 @@ SceneRoots:
   - {fileID: 342923485}
   - {fileID: 2041689731}
   - {fileID: 362994273}
-  - {fileID: 832504854}
-  - {fileID: 1853912464}
-  - {fileID: 1370990858}
-  - {fileID: 621818159}
-  - {fileID: 1185102949}
-  - {fileID: 1174359781}
-  - {fileID: 523075529}
-  - {fileID: 918203730}
-  - {fileID: 1022883101}
-  - {fileID: 26960510}
-  - {fileID: 2011945639}
-  - {fileID: 46207174}
-  - {fileID: 317060743}
-  - {fileID: 1669509253}
-  - {fileID: 1207321901}
-  - {fileID: 74614990}
-  - {fileID: 1232538669}
-  - {fileID: 1610577406}
-  - {fileID: 1120940792}
-  - {fileID: 1298138397}
-  - {fileID: 1442344149}
-  - {fileID: 1612690860}
-  - {fileID: 53580229}
-  - {fileID: 1519932167}
-  - {fileID: 1588428802}
-  - {fileID: 1895979511}
-  - {fileID: 398055727}
-  - {fileID: 579126955}
-  - {fileID: 243540118}
-  - {fileID: 1956798451}
-  - {fileID: 609368922}
-  - {fileID: 653347747}
   - {fileID: 752026873}
   - {fileID: 1896202869}
   - {fileID: 880878832}
   - {fileID: 843082581}
   - {fileID: 1736792685}
+  - {fileID: 977012512}
