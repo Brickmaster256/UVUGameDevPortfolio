@@ -32,6 +32,7 @@ public class AIPatrolWithPause : AiBase
     {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
+            Debug.Log("Made It");
            OnTargetReached.Invoke();
         }
     }
