@@ -1586,8 +1586,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.011903777, y: 0.006335911, z: 0.012233895}
-  m_Center: {x: -9.748914e-10, y: 0.0031679554, z: 0.000000002017575}
+  m_Size: {x: 0.011903777, y: 0.002352734, z: 0.012233895}
+  m_Center: {x: -9.748914e-10, y: 0.001176367, z: 0.000000002017575}
 --- !u!1001 &81148446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52485,8 +52485,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279308566
-  m_fontColor: {r: 0.084905684, g: 0.06528126, b: 0.06528126, a: 1}
+    rgba: 4281281214
+  m_fontColor: {r: 0.745283, g: 0.16522783, b: 0.1837877, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
