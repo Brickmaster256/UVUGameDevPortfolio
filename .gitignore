@@ -9734,3 +9734,5 @@ TowerDefense/Assets/Houdini Engine/Unity.meta
 TowerDefense/Assets/Houdini Engine.meta
 GameDevProjects/Assets/HoudiniEngineAssetCache/Baked/Carpet2/Meshes/Carpet__1.0_meshes.asset
 GameDevProjects/Assets/HoudiniEngineAssetCache/Baked/Carpet2/Meshes.meta
+*.asset
+/TowerDefense/Assets/HoudiniEngineAssetCache
