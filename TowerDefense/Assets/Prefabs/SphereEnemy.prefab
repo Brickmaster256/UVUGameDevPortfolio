@@ -105,6 +105,8 @@ MonoBehaviour:
   huntTarget: {fileID: 0}
   target: {fileID: 0}
   positions: {fileID: 11400000, guid: 41691328c5c3a164e9bdb9222adc9362, type: 2}
+  list: {fileID: 11400000, guid: f69920c69097c3040b03407edd798100, type: 2}
+  objsTransforms: []
   OnTargetReached:
     m_PersistentCalls:
       m_Calls:

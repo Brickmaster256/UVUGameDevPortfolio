@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ListBeheavior : MonoBehaviour
+[CreateAssetMenu(fileName = "ListBeheavior")]
+public class ListBeheavior : ScriptableObject
 {
     public List<GameObject> objs;
+    
+    public Transform[] objsTransforms;
     
     [SerializeField] private int listIndex = 0;
 
@@ -15,6 +18,17 @@ public class ListBeheavior : MonoBehaviour
     public void SetListIndex(IntData obj)
     {
         listIndex = obj.Value;
+    }
+
+    public void AddToArray(Transform obj)
+    {
+        objsTransforms[listIndex] = obj;
+        listIndex++;
+    }
+
+    public Transform[] GetTransforms()
+    {
+        return objsTransforms;
     }
 
     public GameObject GetGameObject()

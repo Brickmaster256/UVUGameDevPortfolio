@@ -13,6 +13,8 @@ public class AINavigate : MonoBehaviour
     public Transform target;
     
     public Vector3DataCollection positions;
+    public ListBeheavior list;
+    public Transform[] objsTransforms;
     
     public UnityEvent OnTargetReached;
     
@@ -37,6 +39,8 @@ public class AINavigate : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         index = 0;
+        objsTransforms = list.GetTransforms();
+        
         
     }
     
@@ -53,8 +57,8 @@ public class AINavigate : MonoBehaviour
     public void Patrol()
     {
         patrolOn = true;
-        agent.SetDestination(positions.vector3Datas[index].value);
-        index = (index + 1) % positions.vector3Datas.Count;
+        agent.SetDestination(objsTransforms[index].position);
+        index = (index + 1) % objsTransforms.Length;
         
     }
 
