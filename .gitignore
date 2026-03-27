@@ -9739,3 +9739,6 @@ GameDevProjects/Assets/HoudiniEngineAssetCache/Baked/Carpet2/Meshes.meta
 TowerDefense/Assets/ArtisanDream.Tools.meta
 /TowerDefense/Assets/ArtisanDream.Tools
 /TowerDefense/Assets/TextMesh Pro
+/GameDevProjects/Assets/HoudiniEngineAssetCache
+*.hdanc
+/GameDevProjects/Assets/VRResturauntSim/Models/DigitalAssets/backup
