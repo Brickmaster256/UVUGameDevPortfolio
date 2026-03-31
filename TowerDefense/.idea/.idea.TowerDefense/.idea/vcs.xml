@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../GameDevProjects/Assets/ArtisanDream.Tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/ArtisanDream.Tools" vcs="Git" />
   </component>
 </project>

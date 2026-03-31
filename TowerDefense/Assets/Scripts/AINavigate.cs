@@ -57,8 +57,8 @@ public class AINavigate : MonoBehaviour
     public void Patrol()
     {
         patrolOn = true;
-        agent.SetDestination(objsTransforms[index].position);
-        index = (index + 1) % objsTransforms.Length;
+        agent.SetDestination(positions.vector3Datas[index].value);
+        index = (index + 1) % positions.vector3Datas.Count;
         
     }
 
