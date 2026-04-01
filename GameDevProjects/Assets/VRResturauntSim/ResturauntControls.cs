@@ -35,6 +35,15 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Walking"",
+                    ""type"": ""Value"",
+                    ""id"": ""fa7e814c-1b52-4e27-a52b-b4c7fa42cc83"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -59,6 +68,45 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c93807af-4a73-436f-be19-600dbaa40f8b"",
+                    ""path"": ""<XRController>{LeftHand}/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Walking"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Walking"",
+            ""id"": ""847d5a2b-9b63-44fe-aeb7-6110b33418ba"",
+            ""actions"": [
+                {
+                    ""name"": ""Joystick"",
+                    ""type"": ""Value"",
+                    ""id"": ""c73eb139-2722-4220-8f83-7dc455bba2b0"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""33b80cc7-1a0f-46d4-87f5-45fef65787ba"",
+                    ""path"": ""<XRController>{LeftHand}/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Joystick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -68,6 +116,10 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
         // Pause
         m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
         m_Pause_Pause = m_Pause.FindAction("Pause", throwIfNotFound: true);
+        m_Pause_Walking = m_Pause.FindAction("Walking", throwIfNotFound: true);
+        // Walking
+        m_Walking = asset.FindActionMap("Walking", throwIfNotFound: true);
+        m_Walking_Joystick = m_Walking.FindAction("Joystick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -130,11 +182,13 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Pause;
     private List<IPauseActions> m_PauseActionsCallbackInterfaces = new List<IPauseActions>();
     private readonly InputAction m_Pause_Pause;
+    private readonly InputAction m_Pause_Walking;
     public struct PauseActions
     {
         private @ResturauntControls m_Wrapper;
         public PauseActions(@ResturauntControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Pause => m_Wrapper.m_Pause_Pause;
+        public InputAction @Walking => m_Wrapper.m_Pause_Walking;
         public InputActionMap Get() { return m_Wrapper.m_Pause; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -147,6 +201,9 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @Walking.started += instance.OnWalking;
+            @Walking.performed += instance.OnWalking;
+            @Walking.canceled += instance.OnWalking;
         }
 
         private void UnregisterCallbacks(IPauseActions instance)
@@ -154,6 +211,9 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @Walking.started -= instance.OnWalking;
+            @Walking.performed -= instance.OnWalking;
+            @Walking.canceled -= instance.OnWalking;
         }
 
         public void RemoveCallbacks(IPauseActions instance)
@@ -171,8 +231,59 @@ public partial class @ResturauntControls: IInputActionCollection2, IDisposable
         }
     }
     public PauseActions @Pause => new PauseActions(this);
+
+    // Walking
+    private readonly InputActionMap m_Walking;
+    private List<IWalkingActions> m_WalkingActionsCallbackInterfaces = new List<IWalkingActions>();
+    private readonly InputAction m_Walking_Joystick;
+    public struct WalkingActions
+    {
+        private @ResturauntControls m_Wrapper;
+        public WalkingActions(@ResturauntControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Joystick => m_Wrapper.m_Walking_Joystick;
+        public InputActionMap Get() { return m_Wrapper.m_Walking; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(WalkingActions set) { return set.Get(); }
+        public void AddCallbacks(IWalkingActions instance)
+        {
+            if (instance == null || m_Wrapper.m_WalkingActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_WalkingActionsCallbackInterfaces.Add(instance);
+            @Joystick.started += instance.OnJoystick;
+            @Joystick.performed += instance.OnJoystick;
+            @Joystick.canceled += instance.OnJoystick;
+        }
+
+        private void UnregisterCallbacks(IWalkingActions instance)
+        {
+            @Joystick.started -= instance.OnJoystick;
+            @Joystick.performed -= instance.OnJoystick;
+            @Joystick.canceled -= instance.OnJoystick;
+        }
+
+        public void RemoveCallbacks(IWalkingActions instance)
+        {
+            if (m_Wrapper.m_WalkingActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IWalkingActions instance)
+        {
+            foreach (var item in m_Wrapper.m_WalkingActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_WalkingActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public WalkingActions @Walking => new WalkingActions(this);
     public interface IPauseActions
     {
         void OnPause(InputAction.CallbackContext context);
+        void OnWalking(InputAction.CallbackContext context);
+    }
+    public interface IWalkingActions
+    {
+        void OnJoystick(InputAction.CallbackContext context);
     }
 }
