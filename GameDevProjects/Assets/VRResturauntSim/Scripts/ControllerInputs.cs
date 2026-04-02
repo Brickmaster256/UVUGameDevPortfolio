@@ -29,8 +29,6 @@ public class ControllerInputs : MonoBehaviour
         {
             JoyStickReleased.Invoke();
         }
-
-        Debug.Log(axis);
     }
     
 
