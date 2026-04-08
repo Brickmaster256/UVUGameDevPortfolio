@@ -12,7 +12,7 @@ public class SimpleSceneLoader : MonoBehaviour
     }
     public void  LoadSceneByIndex(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadSceneAsync(sceneIndex);
     }
 
     public void OnApplicationQuit()
