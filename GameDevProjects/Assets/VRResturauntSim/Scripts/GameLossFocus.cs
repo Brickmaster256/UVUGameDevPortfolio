@@ -12,14 +12,14 @@ public class GameLossFocus : MonoBehaviour
 
     public void OnEnable()
     {
-        //InputFocus.InputFocusAcquired += OnInputFocusAcquired;
-        //InputFocus.InputFocusLost += OnInputFocusLost;
+       InputFocus.InputFocusAcquired += OnInputFocusAcquired;
+       InputFocus.InputFocusLost += OnInputFocusLost;
     }
 
     public void OnDisable()
     {
-        //InputFocus.InputFocusAcquired -= OnInputFocusAcquired;
-        //InputFocus.InputFocusLost -= OnInputFocusLost;
+        InputFocus.InputFocusAcquired -= OnInputFocusAcquired;
+        InputFocus.InputFocusLost -= OnInputFocusLost;
     }
     
     
