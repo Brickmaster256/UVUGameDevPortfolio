@@ -509,6 +509,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: HexaDonut
       objectReference: {fileID: 0}
+    - target: {fileID: 8508186717517004449, guid: c31b5c3466cde984593af8c3b92f04c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8839
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508186717517004449, guid: c31b5c3466cde984593af8c3b92f04c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8839
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508186717517004449, guid: c31b5c3466cde984593af8c3b92f04c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8839
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508186717517004449, guid: c31b5c3466cde984593af8c3b92f04c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00099283
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -7517096133833609502, guid: c31b5c3466cde984593af8c3b92f04c1, type: 3}
