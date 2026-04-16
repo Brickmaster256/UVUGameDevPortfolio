@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Door.ma
-//Last modified: Wed, Apr 15, 2026 09:27:02 PM
+//Last modified: Thu, Apr 16, 2026 09:43:24 AM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "655BD9A8-4FBC-EF94-9488-5B8C24FE0870";
+fileInfo "UUID" "DE362EDC-48CE-7386-64CF-BB8135DDF589";
 createNode transform -s -n "persp";
 	rename -uid "395C54AA-4C76-0CBB-3E4E-4AB713C7B41C";
 	setAttr ".v" no;
@@ -3543,9 +3543,6 @@ createNode polyTweakUV -n "polyTweakUV2";
 		 -0.41014063 -0.42944413 -0.41324377 -0.39984596 -0.34787273 -0.47449183 -0.37852746
 		 -0.43874741 -0.43242556 -0.47646874 -0.37493283 -0.38944387 -0.34925467 -0.42840505
 		 -0.40167409 -0.42803836 -0.40146184;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "1FF72F1A-4A3E-BC22-B794-67BC9348A0EE";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "2081A9F8-4F27-411D-70EE-9CB9D57CD30F";
 	setAttr ".b" -type "string" (
@@ -3594,6 +3591,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "B79A0A99-4B24-0A8C-E01A-1489D79DACB8";
 	setAttr ".b" -type "string" "playbackOptions -min -2 -max 24 -ast -2 -aet 134 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "DD4296CF-4D5C-9FE2-8F1F-1AA97C8B50E0";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
 	setAttr ".unw" -2;
