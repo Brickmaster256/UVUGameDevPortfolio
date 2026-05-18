@@ -47,7 +47,7 @@ public class FirstPersonController : MonoBehaviour
 
             if (playerInputHandler.JumpTrigger)
             {
-                Debug.Log("Jump");
+                
                 currentMovement.y = jumpForce;
             }
         }
@@ -56,7 +56,7 @@ public class FirstPersonController : MonoBehaviour
             currentMovement.y += Physics.gravity.y * gravityMultiplier *  Time.deltaTime;
             
         }
-        Debug.Log(controller.isGrounded);
+        
     }
 
     private void HandleMovement()
