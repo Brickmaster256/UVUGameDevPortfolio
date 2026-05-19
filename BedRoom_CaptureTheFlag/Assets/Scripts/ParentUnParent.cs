@@ -8,4 +8,10 @@ public class ParentUnParent : MonoBehaviour
     {
         go.transform.SetParent(null);
     }
+
+    public void ParentWithZeroedTransform(GameObject go)
+    {
+        transform.SetParent(go.transform);
+        transform.localPosition = Vector3.zero;
+    }
 }
