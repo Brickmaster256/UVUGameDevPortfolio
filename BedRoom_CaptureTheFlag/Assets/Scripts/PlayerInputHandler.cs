@@ -18,16 +18,22 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private string rotation = "Rotation";
     [SerializeField] private string jump = "Jump";
     [SerializeField] private string sprint = "Sprint";
+    
 
     private InputAction movementAction;
     private InputAction rotationAction;
     private InputAction jumpAction;
     private InputAction sprintAction;
+    
 
     public Vector2 MovementInput { get; private set; }
     public Vector2 RotationInput { get; private set; }
     public bool JumpTrigger { get; private set; }
     public bool SprintTrigger { get; private set; }
+    
+    
+    
+    
 
     private void Awake()
     {
@@ -54,6 +60,8 @@ public class PlayerInputHandler : MonoBehaviour
         
         sprintAction.performed += inputInfo => SprintTrigger = true;
         sprintAction.canceled += inputInfo => SprintTrigger = false;
+        
+        
         
     }
 

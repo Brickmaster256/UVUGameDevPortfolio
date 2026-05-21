@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FirstPersonController : MonoBehaviour
 {
     [Header("Movement Speeds")] 
@@ -24,7 +25,9 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 currentMovement;
     private float verticalRotation;
     private float CurrentSpeed => moveSpeed * (playerInputHandler.SprintTrigger ? sprintMultiplier : 1);
-
+    
+    
+    
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -58,6 +61,8 @@ public class FirstPersonController : MonoBehaviour
         }
         
     }
+    
+    
 
     private void HandleMovement()
     {
@@ -93,5 +98,6 @@ public class FirstPersonController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
+        
     }
 }
