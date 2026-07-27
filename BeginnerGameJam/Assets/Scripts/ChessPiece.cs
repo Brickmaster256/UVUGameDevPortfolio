@@ -12,7 +12,7 @@ public class ChessPiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        RevealSpaces();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -26,6 +26,11 @@ public class ChessPiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     }
 
     public void OnPointerUp(PointerEventData eventData)
+    {
+        
+    }
+
+    public void RevealSpaces()
     {
         
     }
