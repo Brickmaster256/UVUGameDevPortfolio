@@ -47,30 +47,22 @@ public class FirstPersonController : MonoBehaviour
     private void HandleJumping()
     {
         
-        //if (controller.isGrounded)
-       // {
-           // currentMovement.y = -0.5f;
+
+        if (controller.isGrounded)
+        {
+            currentMovement.y = -0.5f;
 
             if (playerInputHandler.JumpTrigger)
             {
-                currentMovement.y += jumpForce;
-                //currentMovement.y = jumpForce;
+                currentMovement.y = jumpForce;
             }
-            else if (playerInputHandler.CrouchTrigger)
-            {
-                currentMovement.y -= crouchMultiplier;
-            }
-            else
-            {
-                currentMovement.y = 0;
-            }
-        //}
-       // else
-       // {
-            //currentMovement.y += Physics.gravity.y * gravityMultiplier *  Time.deltaTime;
             
-       // }
-       
+        }
+        else
+        {
+            currentMovement.y += Physics.gravity.y * gravityMultiplier * Time.deltaTime;
+        }
+
     }
 
     
@@ -82,7 +74,7 @@ public class FirstPersonController : MonoBehaviour
         currentMovement.x = worldDirection.x * CurrentSpeed;
         currentMovement.z = worldDirection.z * CurrentSpeed;
         
-        
+        Debug.Log(controller.isGrounded);
         HandleJumping();
         
         controller.Move(currentMovement * Time.deltaTime);
