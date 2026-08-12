@@ -74,7 +74,7 @@ public class FirstPersonController : MonoBehaviour
         currentMovement.x = worldDirection.x * CurrentSpeed;
         currentMovement.z = worldDirection.z * CurrentSpeed;
         
-        Debug.Log(controller.isGrounded);
+        
         HandleJumping();
         
         controller.Move(currentMovement * Time.deltaTime);
