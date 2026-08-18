@@ -6,12 +6,23 @@ public class InteractionController : MonoBehaviour
     public UnityEvent MainInteractTrigger;
     
     [SerializeField] private InteractionInputHandler interactionInputHandler;
+    
+    private bool isInteracting = false;
 
     private void HandleMainInteract()
     {
         if (interactionInputHandler.MainInteractTrigger)
         {
-            MainInteractTrigger.Invoke();
+            if (!isInteracting)
+            {
+                MainInteractTrigger.Invoke();
+                isInteracting = true;
+            }
+            
+        }
+        else
+        {
+            isInteracting = false;
         }
     }
 
