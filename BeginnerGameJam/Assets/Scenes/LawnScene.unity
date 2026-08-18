@@ -1204,8 +1204,10 @@ GameObject:
   - component: {fileID: 600075765}
   - component: {fileID: 600075764}
   - component: {fileID: 600075763}
+  - component: {fileID: 600075767}
+  - component: {fileID: 600075766}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: CashAmount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,6 +1375,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600075761}
   m_CullTransparentMesh: 1
+--- !u!114 &600075766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600075761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameActionHandler
+  action: {fileID: 11400000, guid: 68d016189dcf0324681c9e5852009521, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 600075767}
+        m_TargetAssemblyTypeName: CashCalculator, Assembly-CSharp
+        m_MethodName: calculate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
+--- !u!114 &600075767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600075761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343b5e3bb56875640a1ab9b20aaa16ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CashCalculator
+  OnCashChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a0e128ae189ed484e84633194023ca96, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  grassHealth: {fileID: 11400000, guid: 4ae03d48ccfbb824e9cec67b46d96326, type: 2}
+  cash: {fileID: 11400000, guid: 3db1acae5e4388f4891be1647a990a20, type: 2}
+  cashMultpiplier: 0.01
 --- !u!1 &659005878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,10 +2158,10 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 4ae03d48ccfbb824e9cec67b46d96326, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 3
+      - m_Target: {fileID: 11400000, guid: 68d016189dcf0324681c9e5852009521, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2117,8 +2184,20 @@ MonoBehaviour:
         m_CallState: 2
   respondLateEvent:
     m_PersistentCalls:
-      m_Calls: []
-  holdTime: 1
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4ae03d48ccfbb824e9cec67b46d96326, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  holdTime: 0.1
 --- !u!114 &773231397
 MonoBehaviour:
   m_ObjectHideFlags: 0
