@@ -12498,6 +12498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4828489672982301589, guid: 2e4071c1c9d7eb04cb9b4b3c6a9ae565, type: 3}
+      propertyPath: sprintMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8693229478168049207, guid: 2e4071c1c9d7eb04cb9b4b3c6a9ae565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
