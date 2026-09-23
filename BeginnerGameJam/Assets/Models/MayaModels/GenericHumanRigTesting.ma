@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: GenericHumanRigTesting.ma
-//Last modified: Sun, Sep 20, 2026 04:40:10 PM
+//Last modified: Tue, Sep 22, 2026 10:26:33 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,18 +13,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "74102CB2-487D-2F96-7883-0C93A65BFBBC";
+fileInfo "UUID" "33F8ECE4-4B26-9BBA-F398-8F89AA919A28";
 createNode transform -s -n "persp";
 	rename -uid "40A82F5A-411E-5797-3316-CAACBC18D0B5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 337.77198379875551 348.13591967664905 332.19023072280004 ;
+	setAttr ".t" -type "double3" 4.6168455802479116 3.820044403632096 3.9571152494831381 ;
 	setAttr ".r" -type "double3" -32.138352721175494 769.39999999974827 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1708B3CF-4B0D-6A9E-2FD2-E79C189B94C4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 442.22790910297346;
+	setAttr ".coi" 7.1810001709558371;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -89449,10 +89449,10 @@ createNode reverse -n "L_Leg_IkFKReverse1";
 createNode reverse -n "reverse2";
 	rename -uid "17C8EB8C-40C8-7091-1210-84A58A8C5225";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "AFFF8EB1-49FD-8BEA-390A-758206AE4677";
+	rename -uid "EF706809-4C53-6C63-85C7-069FE0D875E9";
 	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "AB56FD11-434F-E4A5-CF33-92845546B44E";
+	rename -uid "B63CB0F2-4408-FDCF-D401-089C4BF98288";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 797.24805127595971 2283.1126450577963 ;
 	setAttr ".tgi[0].vh" -type "double2" 2418.0087774228969 3098.2228546083475 ;
