@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: walls.ma
-//Last modified: Thu, Oct 08, 2026 10:39:39 AM
+//Last modified: Thu, Oct 08, 2026 12:08:52 PM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.6.2";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "B583538A-46C4-942B-559C-919F55FE2115";
+fileInfo "UUID" "5ADA5AA6-4B5D-985B-C4A6-25AC6D5CBC3C";
 createNode transform -s -n "persp";
 	rename -uid "95AD84B5-47FD-20EB-B13D-B78D05D86F71";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -29.076861177358079 10.579725331950309 -9.3614697363423645 ;
-	setAttr ".r" -type "double3" -37.538352706510352 2734.1999999992518 0 ;
+	setAttr ".t" -type "double3" -45.89523826134559 22.319284958079951 -44.357222889647886 ;
+	setAttr ".r" -type "double3" -25.538352706505453 2752.5999999991873 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EE65B657-4750-1F26-3EE3-48803B1DF2BC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.999611591628938;
+	setAttr ".coi" 58.812442620563473;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -84154,21 +84154,38 @@ createNode camera -n "BuildingIndustrialTall:BuildingIndustrialTall:bottomShape"
 	setAttr ".hc" -type "string" "viewSet -bo %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "back";
+	rename -uid "D54BE00E-48B0-3FC8-8635-93BFEFA0F00F";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" 0 0 -1000.1 ;
+	setAttr ".r" -type "double3" 0 180 0 ;
+createNode camera -n "backShape" -p "back";
+	rename -uid "C71C9345-487C-9B42-6DCC-52AF6FB311D0";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".coi" 1000.1;
+	setAttr ".ow" 30;
+	setAttr ".imn" -type "string" "back1";
+	setAttr ".den" -type "string" "back1_depth";
+	setAttr ".man" -type "string" "back1_mask";
+	setAttr ".hc" -type "string" "viewSet -b %camera";
+	setAttr ".o" yes;
+	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2090F98A-4425-214D-188D-0694EB655F45";
+	rename -uid "8B6861E5-4401-4246-B5B2-4CB1BD26C7DC";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C4B376A3-479D-DB4D-69CC-40B78C621FA0";
+	rename -uid "6BADED23-4126-1B22-77C4-A18CA0D51B6B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0A0E2573-4E8D-E422-3FDB-16BBE975353A";
+	rename -uid "345B4ACC-4534-62E9-E11C-56B9ED9FD073";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "439938C5-4632-D6AB-784C-F68C967DA8B0";
+	rename -uid "AB15CB52-4E3C-F794-F918-50B3087735F1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "D5140D60-496E-E235-56B0-80A4213E6437";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "31027DEF-48F3-10BA-0B6C-EFB7C0015F1E";
+	rename -uid "7AF11A7E-4EA6-54B0-B95D-9EA79FBAFD7D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4C751B8D-4075-389A-9982-DF86CC415BA0";
 	setAttr ".g" yes;
