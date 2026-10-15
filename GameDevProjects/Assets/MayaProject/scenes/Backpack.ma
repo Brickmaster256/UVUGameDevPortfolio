@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Backpack.ma
-//Last modified: Wed, Oct 14, 2026 04:53:36 PM
+//Last modified: Wed, Oct 14, 2026 05:16:13 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26300)";
-fileInfo "UUID" "49A663B9-41B7-512E-1AAD-26BE6EAD34C7";
+fileInfo "UUID" "E08D5B54-4577-71EF-F434-37ABDB412082";
 createNode transform -s -n "persp";
 	rename -uid "25E71F0B-4DC2-CA5E-DBC6-FA8EAE84CABB";
 	setAttr ".v" no;
@@ -4410,7 +4410,6 @@ createNode materialInfo -n "materialInfo1";
 createNode shadingEngine -n "standardSurface2SG";
 	rename -uid "B5F8E2F3-4729-6637-4E60-9791CD604F0E";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "FF7B53F3-4398-BD75-8F2F-B6BA2DD2342D";
@@ -4446,11 +4445,8 @@ createNode place2dTexture -n "place2dTexture1";
 	rename -uid "0D6428AC-498D-5171-A6E5-A89A33C0F7BD";
 createNode standardSurface -n "standardSurface2";
 	rename -uid "3E9FEF6A-4A6B-79EC-2F19-D1805C960EB0";
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "5F2C6E3F-4BAF-51D5-A91B-C3A4927130F1";
-	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "5C5E754F-46A5-506C-4D05-71989D7F6819";
+	rename -uid "7190BA8B-414B-D0EA-959A-85BB487C17C6";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -511.66338058459365 -693.23482940148324 ;
 	setAttr ".tgi[0].vh" -type "double2" 293.93324168426034 -184.79140218059717 ;
@@ -4497,6 +4493,9 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[13].x" 30.970504760742188;
 	setAttr ".tgi[0].ni[13].y" 128.27655029296875;
 	setAttr ".tgi[0].ni[13].nvs" 2387;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "1D0C24DD-49D1-5F37-AB80-F0AA8A7491BE";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" -2;
 	setAttr ".unw" -2;
